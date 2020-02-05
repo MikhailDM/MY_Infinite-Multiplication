@@ -219,6 +219,9 @@
                                                         <rect key="frame" x="262.66666666666669" y="0.0" width="111.33333333333331" height="80"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                         <state key="normal" title="OK"/>
+                                                        <connections>
+                                                            <action selector="checkPressed:" destination="D0W-ZK-u20" eventType="touchUpInside" id="EbU-9O-CwQ"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -289,6 +292,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="answerLabel" destination="W1c-NJ-PCh" id="gal-4k-eYt"/>
+                        <outlet property="equationLabel" destination="Jv7-rU-fVW" id="75S-wA-pEk"/>
                         <outletCollection property="numsButtons" destination="K3S-M9-fCn" collectionClass="NSMutableArray" id="iHL-nv-osX"/>
                         <outletCollection property="numsButtons" destination="518-tZ-wnp" collectionClass="NSMutableArray" id="ahk-Ab-wgS"/>
                         <outletCollection property="numsButtons" destination="kJO-Il-Xfy" collectionClass="NSMutableArray" id="l0L-Nd-KPD"/>

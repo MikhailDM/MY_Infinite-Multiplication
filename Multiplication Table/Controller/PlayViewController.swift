@@ -12,10 +12,11 @@ class PlayViewController: UIViewController {
 //MARK: - LABELS
     @IBOutlet var numsButtons: [UIButton]!
     @IBOutlet weak var answerLabel: UILabel!
+    @IBOutlet weak var equationLabel: UILabel!
     
 
 //MARK: - OBJECTS
-    let play = PlayMT()
+    var play = PlayMT()
     
     
 //MARK: - LOADINGS
@@ -28,6 +29,24 @@ class PlayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateUI()
+        //Присвоение стартового текста полю ответа
+        //answerLabel.text = play.startAswerText
+        //Случайное выражение
+        //equationLabel.text = play.randomEquation()
+        
+    }
+
+    
+//MARK: - UPDATE UI
+    func updateUI() {
+        //Присвоение стартового текста полю ответа
+        answerLabel.text = play.startAswerText
+        //Случайное выражение
+        equationLabel.text = play.randomEquation()
+    }
+    
+    func updateUIAnswer() {
         //Присвоение стартового текста полю ответа
         answerLabel.text = play.startAswerText
     }
@@ -45,6 +64,22 @@ class PlayViewController: UIViewController {
     }
     
 
+//MARK: - ACTIONS. CHECK ANSWER
+    
+    @IBAction func checkPressed(_ sender: UIButton) {
+        //Проверка нажатия кнопки OK при отсутствии ввода
+        guard answerLabel.text != play.startAswerText else {print("ENTER ANSWER"); return}
+        if play.checkAnswer(answer: answerLabel.text!) {
+            print("RIGHT")
+            updateUI()
+        } else {
+            print("WRONG. Right answer is \(play.rightAnswer!)")
+            updateUI()
+        }
+        
+    }
+    
+    
 //MARK: - BACK
     @IBAction func backPressed(_ sender: UIBarButtonItem) {
     }

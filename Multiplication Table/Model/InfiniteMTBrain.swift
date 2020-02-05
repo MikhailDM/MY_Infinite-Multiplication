@@ -10,8 +10,13 @@ import Foundation
 
 struct PlayMT {
 //MARK: - Переменные и константы
+    //Правильный ответ
+    var rightAnswer: Int?
+    
     //Максимальная длина поля ответа
     let maxAnswerLength = 6
+    //Максимальное число для умножения
+    let maxNum = 10
     
     let startAswerText = "ВВЕДИТЕ ОТВЕТ"
     
@@ -37,7 +42,27 @@ struct PlayMT {
             return (String(currentText.dropLast()))
         }
     }
+    
+    
+//MARK: - Функция генерации случайного уравнения
+    mutating func randomEquation() -> String {
+        let first = Int.random(in: 1...maxNum)
+        let second = Int.random(in: 1...maxNum)
+        rightAnswer = first * second
+        let equation = "\(first) x \(second) = ?"
+        return equation
+    }
+    
+
+    //MARK: - Функция проверки ответа
+
+    func checkAnswer(answer: String) -> Bool {
+        if answer == "\(rightAnswer!)" {
+            return true
+        } else {
+            return false
+        }
+    }
 }
 
 
-//MARK: - Функция генерации случайного уравнения

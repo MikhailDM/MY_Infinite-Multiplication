@@ -13,11 +13,16 @@ class PlayViewController: UIViewController {
     @IBOutlet var numsButtons: [UIButton]!
     @IBOutlet weak var answerLabel: UILabel!
     @IBOutlet weak var equationLabel: UILabel!
+    @IBOutlet weak var timerProgress: UIProgressView!
+    
     
 
 //MARK: - OBJECTS
     var play = PlayMT()
+    var timer = Timer()
     
+    var totalTime = 10
+    var secondsPast = 0
     
 //MARK: - LOADINGS
     
@@ -44,6 +49,8 @@ class PlayViewController: UIViewController {
         answerLabel.text = play.startAswerText
         //Случайное выражение
         equationLabel.text = play.randomEquation()
+        //Перезапуск таймера
+        countDown()
     }
     
     func updateUIAnswer() {
@@ -68,22 +75,38 @@ class PlayViewController: UIViewController {
     
     @IBAction func checkPressed(_ sender: UIButton) {
         //Проверка нажатия кнопки OK при отсутствии ввода
-        guard answerLabel.text != play.startAswerText else {print("ENTER ANSWER"); return}
-        if play.checkAnswer(answer: answerLabel.text!) {
+        //guard answerLabel.text != play.startAswerText else {print("ENTER ANSWER"); return}
+        if answerLabel.text == play.startAswerText {
+            print("ENTER ANSWER")
+        } else if play.checkAnswer(answer: answerLabel.text!) {
             print("RIGHT")
             updateUI()
         } else {
             print("WRONG. Right answer is \(play.rightAnswer!)")
-            updateUI()
+            self.performSegue(withIdentifier: "ResultsVC", sender: self)
+            //updateUI()
         }
         
     }
     
     
-//MARK: - BACK
-    @IBAction func backPressed(_ sender: UIBarButtonItem) {
+// MARK: - TIMER
+    func countDown() {
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+        }
+        
+        @objc func updateTimer() {
+            if secondsPast < totalTime {
+                secondsPast += 1
+                timerProgress.progress = Float(secondsPast) / Float(totalTime)
+            } else {
+                timer.invalidate()
+            }
     }
     
+    
+// MARK: - Navigation
+
     
 
     /*

@@ -18,9 +18,9 @@ class MainViewController: UIViewController {
     
     
 //MARK: - LOADINGS
-    //Скрытие бара навигации
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        //Скрытие бара навигации
         navigationController?.isNavigationBarHidden = true
         //Применение случайной цитаты
         quotesLabel.text = quote.randomQuote()

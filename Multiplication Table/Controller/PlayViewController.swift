@@ -86,23 +86,6 @@ class PlayViewController: UIViewController {
 //MARK: - ACTIONS. CHECK ANSWER
     
     @IBAction func checkPressed(_ sender: UIButton) {
-        /*//Проверка нажатия кнопки OK при закончившемся времени
-        if isOver {
-        print("TIME IS OVER")
-            //Проверка нажатия кнопки OK при отсутствии ввода
-        } else if answerLabel.text == play.startAswerText {
-            print("ENTER ANSWER")
-            //Действия при правильном ответе
-        } else if play.checkAnswer(answer: answerLabel.text!) {
-            print("RIGHT")
-            updateUI()
-        } else {
-            //Действия при неправильном ответе
-            print("WRONG. Right answer is \(play.rightAnswer!)")
-            self.performSegue(withIdentifier: "ResultsVC", sender: self)
-            //updateUI()
-        }*/
-        
         //Проверка нажатия кнопки OK при отсутствии ввода. Вводить ответ можно и когда время закончилось
         if answerLabel.text == play.startAswerText {
             print("ENTER ANSWER")
@@ -110,7 +93,8 @@ class PlayViewController: UIViewController {
         } else if isOver || !play.checkAnswer(answer: answerLabel.text!) {
             print("TIME IS OVER OR WRONG ANSWER")
             print("Right answer is \(play.rightAnswer!)")
-            //timer.invalidate()
+            timer.invalidate()
+            endGameAlert()
             //self.performSegue(withIdentifier: "ResultsVC", sender: self)
             //В остальных случаях это правильный ответ
         } else {
@@ -139,6 +123,28 @@ class PlayViewController: UIViewController {
             timer.invalidate()
             isOver = true
         }
+    }
+    
+    
+// MARK: - END GAME ALERT
+    func endGameAlert() {
+        let alert = UIAlertController(title: "ТВОЙ РЕЗУЛЬТАТ: \(currentScore)", message: "Ты молодец", preferredStyle: .alert)
+        
+        let actionM = UIAlertAction(title: "MAIN", style: .default) { (action) in
+            //what will happen once the user clicks the Add Item button on our UIAlert
+            self.navigationController?.popToRootViewController(animated: true)
+        }
+        let actionR = UIAlertAction(title: "RESTART", style: .default) { (action) in
+            //what will happen once the user clicks the Add Item button on our UIAlert
+            self.navigationController?.reloadInputViews()
+            self.currentScore = 0
+            self.updateUI()
+        }
+        
+        alert.addAction(actionM)
+        alert.addAction(actionR)
+        
+        present(alert, animated: true, completion: nil)
     }
     
     

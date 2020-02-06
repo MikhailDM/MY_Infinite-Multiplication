@@ -55,6 +55,13 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ЛУЧШИЙ РЕЗУЛЬТАТ:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56R-ms-trB">
+                                <rect key="frame" x="50" y="180" width="314" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
@@ -79,6 +86,7 @@
                     <navigationItem key="navigationItem" id="jlS-Zo-n31"/>
                     <connections>
                         <outlet property="quotesLabel" destination="I29-q6-iut" id="GY7-6H-v3I"/>
+                        <outlet property="scoreLabel" destination="56R-ms-trB" id="ZRp-VD-hx8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -310,6 +318,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="answerLabel" destination="W1c-NJ-PCh" id="gal-4k-eYt"/>
+                        <outlet property="bestScoreLabel" destination="VpD-re-5gR" id="eZP-Ki-8fM"/>
+                        <outlet property="currentScoreLabel" destination="Fqe-ax-biK" id="MbW-TK-BLF"/>
                         <outlet property="equationLabel" destination="Jv7-rU-fVW" id="75S-wA-pEk"/>
                         <outlet property="timerProgress" destination="X1l-wi-JhB" id="x9b-bd-yaL"/>
                         <outletCollection property="numsButtons" destination="K3S-M9-fCn" collectionClass="NSMutableArray" id="iHL-nv-osX"/>

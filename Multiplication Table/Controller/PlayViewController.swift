@@ -14,17 +14,26 @@ class PlayViewController: UIViewController {
     @IBOutlet weak var answerLabel: UILabel!
     @IBOutlet weak var equationLabel: UILabel!
     @IBOutlet weak var timerProgress: UIProgressView!
+    @IBOutlet weak var currentScoreLabel: UILabel!
+    @IBOutlet weak var bestScoreLabel: UILabel!
     
 
 //MARK: - OBJECTS
     var play = PlayMT()
     var timer = Timer()
+    let save = SaveData.singletonSaveData
  
     
 //MARK: - VARIABLES
+    //Переменные для таймера
     var timerTime = 0
     var secondsPast = 0
     
+    //Закончилась ли игра
+    var isOver = false
+    
+    //текущий счет
+    var currentScore = 0
 //MARK: - LOADINGS
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,11 +45,6 @@ class PlayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
-        
-        //Присвоение стартового текста полю ответа
-        //answerLabel.text = play.startAswerText
-        //Случайное выражение
-        //equationLabel.text = play.randomEquation()
         
     }
 
@@ -55,6 +59,10 @@ class PlayViewController: UIViewController {
         timer.invalidate()
         timerProgress.setProgress(1, animated: true)
         countDown()
+        //Значение лучшего результата
+        bestScoreLabel.text = String(save.getMaxScore())
+        //Значение текущего результата
+        currentScoreLabel.text = String(currentScore)
     }
     
     func updateUIAnswer() {
@@ -78,18 +86,39 @@ class PlayViewController: UIViewController {
 //MARK: - ACTIONS. CHECK ANSWER
     
     @IBAction func checkPressed(_ sender: UIButton) {
-        //Проверка нажатия кнопки OK при отсутствии ввода
-        if answerLabel.text == play.startAswerText {
+        /*//Проверка нажатия кнопки OK при закончившемся времени
+        if isOver {
+        print("TIME IS OVER")
+            //Проверка нажатия кнопки OK при отсутствии ввода
+        } else if answerLabel.text == play.startAswerText {
             print("ENTER ANSWER")
+            //Действия при правильном ответе
         } else if play.checkAnswer(answer: answerLabel.text!) {
             print("RIGHT")
             updateUI()
         } else {
+            //Действия при неправильном ответе
             print("WRONG. Right answer is \(play.rightAnswer!)")
             self.performSegue(withIdentifier: "ResultsVC", sender: self)
             //updateUI()
-        }
+        }*/
         
+        //Проверка нажатия кнопки OK при отсутствии ввода. Вводить ответ можно и когда время закончилось
+        if answerLabel.text == play.startAswerText {
+            print("ENTER ANSWER")
+            //Действия при неправильном ответе или истекшем времени
+        } else if isOver || !play.checkAnswer(answer: answerLabel.text!) {
+            print("TIME IS OVER OR WRONG ANSWER")
+            print("Right answer is \(play.rightAnswer!)")
+            //timer.invalidate()
+            //self.performSegue(withIdentifier: "ResultsVC", sender: self)
+            //В остальных случаях это правильный ответ
+        } else {
+            print("RIGHT")
+            currentScore += 1
+            play.checkScore(score: currentScore)
+            updateUI()
+        }
     }
     
     
@@ -108,6 +137,7 @@ class PlayViewController: UIViewController {
             timerProgress.setProgress(progress, animated: true)
         } else {
             timer.invalidate()
+            isOver = true
         }
     }
     

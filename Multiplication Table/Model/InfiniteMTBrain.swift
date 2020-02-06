@@ -24,6 +24,11 @@ struct PlayMT {
     //TIMER. Количество времени на ответ
     let totalTime = 10
     
+    
+//MARK: - OBJECTS
+    let save = SaveData.singletonSaveData
+    
+    
 //MARK: - Функция проверки ввода чисел в поле ответа
     func checkEnter(num: String, length: Int, currentText: String) -> String {
         if currentText == startAswerText {
@@ -69,8 +74,12 @@ struct PlayMT {
     }
     
     
-    // MARK: - ???
-    
+    // MARK: - Функция сравнения текущего счета с лучшим
+    func checkScore(score: Int) {
+        if score > save.getMaxScore() {
+            save.saveMaxScore(score: score)
+        }
+    }
 }
 
 

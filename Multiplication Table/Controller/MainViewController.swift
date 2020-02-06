@@ -11,10 +11,12 @@ import UIKit
 class MainViewController: UIViewController {
 //MARK: - LABELS
     @IBOutlet weak var quotesLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
     
     
 //MARK: - OBJECTS
     let quote = Quotes()
+    let save = SaveData.singletonSaveData
     
     
 //MARK: - LOADINGS
@@ -24,6 +26,8 @@ class MainViewController: UIViewController {
         navigationController?.isNavigationBarHidden = true
         //Применение случайной цитаты
         quotesLabel.text = quote.randomQuote()
+        
+        scoreLabel.text = String(save.getMaxScore())
     }   
     
     //Обновление цитат при переходе на другую сцену

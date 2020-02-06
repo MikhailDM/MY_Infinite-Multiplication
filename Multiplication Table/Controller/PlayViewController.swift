@@ -20,9 +20,9 @@ class PlayViewController: UIViewController {
 //MARK: - OBJECTS
     var play = PlayMT()
     var timer = Timer()
-    
+        
     var totalTime = 10
-    var secondsPast = 0
+    var secondsPast = 10
     
 //MARK: - LOADINGS
     
@@ -96,9 +96,11 @@ class PlayViewController: UIViewController {
         }
         
         @objc func updateTimer() {
-            if secondsPast < totalTime {
-                secondsPast += 1
-                timerProgress.progress = Float(secondsPast) / Float(totalTime)
+            if secondsPast > 0 {
+                secondsPast -= 1
+                //timerProgress.progress = Float(secondsPast) / Float(totalTime)
+                let progress = Float(secondsPast) / Float(totalTime)
+                timerProgress.setProgress(progress, animated: true)
             } else {
                 timer.invalidate()
             }

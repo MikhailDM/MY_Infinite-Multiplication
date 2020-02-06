@@ -18,7 +18,11 @@ struct PlayMT {
     //Максимальное число для умножения
     let maxNum = 10
     
+    //STARTING TEXT. Answer Text
     let startAswerText = "ВВЕДИТЕ ОТВЕТ"
+    
+    //TIMER. Количество времени на ответ
+    let totalTime = 10
     
 //MARK: - Функция проверки ввода чисел в поле ответа
     func checkEnter(num: String, length: Int, currentText: String) -> String {

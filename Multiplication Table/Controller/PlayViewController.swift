@@ -15,14 +15,15 @@ class PlayViewController: UIViewController {
     @IBOutlet weak var equationLabel: UILabel!
     @IBOutlet weak var timerProgress: UIProgressView!
     
-    
 
 //MARK: - OBJECTS
     var play = PlayMT()
     var timer = Timer()
-        
-    var totalTime = 10
-    var secondsPast = 10
+ 
+    
+//MARK: - VARIABLES
+    var timerTime = 0
+    var secondsPast = 0
     
 //MARK: - LOADINGS
     
@@ -35,6 +36,7 @@ class PlayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
+        
         //Присвоение стартового текста полю ответа
         //answerLabel.text = play.startAswerText
         //Случайное выражение
@@ -50,6 +52,8 @@ class PlayViewController: UIViewController {
         //Случайное выражение
         equationLabel.text = play.randomEquation()
         //Перезапуск таймера
+        timer.invalidate()
+        timerProgress.setProgress(1, animated: true)
         countDown()
     }
     
@@ -75,7 +79,6 @@ class PlayViewController: UIViewController {
     
     @IBAction func checkPressed(_ sender: UIButton) {
         //Проверка нажатия кнопки OK при отсутствии ввода
-        //guard answerLabel.text != play.startAswerText else {print("ENTER ANSWER"); return}
         if answerLabel.text == play.startAswerText {
             print("ENTER ANSWER")
         } else if play.checkAnswer(answer: answerLabel.text!) {
@@ -90,20 +93,22 @@ class PlayViewController: UIViewController {
     }
     
     
-// MARK: - TIMER
+// MARK: - TIMER 
+    //Таймер обратного отсчета
     func countDown() {
+        timerTime = play.totalTime
+        secondsPast = timerTime
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+    }
+    //Функция уменьшения времени
+    @objc func updateTimer() {
+        if secondsPast > 0 {
+            secondsPast -= 1
+            let progress = Float(secondsPast) / Float(timerTime)
+            timerProgress.setProgress(progress, animated: true)
+        } else {
+            timer.invalidate()
         }
-        
-        @objc func updateTimer() {
-            if secondsPast > 0 {
-                secondsPast -= 1
-                //timerProgress.progress = Float(secondsPast) / Float(totalTime)
-                let progress = Float(secondsPast) / Float(totalTime)
-                timerProgress.setProgress(progress, animated: true)
-            } else {
-                timer.invalidate()
-            }
     }
     
     

@@ -74,7 +74,7 @@
                                         <rect key="frame" x="0.0" y="346" width="414" height="173.33333333333337"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="HeN-WY-aBo" userLabel="Stack View Buttons">
-                                                <rect key="frame" x="20" y="29" width="374" height="115"/>
+                                                <rect key="frame" x="20" y="29.333333333333314" width="374" height="115"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjf-2Q-2pF">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
@@ -142,8 +142,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="jlS-Zo-n31"/>
                     <connections>
+                        <outlet property="levelLabel" destination="56R-ms-trB" id="ZRp-VD-hx8"/>
+                        <outlet property="progressBar" destination="2vk-nG-IUt" id="wYg-tf-OSO"/>
                         <outlet property="quotesLabel" destination="I29-q6-iut" id="GY7-6H-v3I"/>
-                        <outlet property="scoreLabel" destination="56R-ms-trB" id="ZRp-VD-hx8"/>
+                        <outlet property="scoreLabel" destination="azI-2r-7kH" id="oIx-t4-rhd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

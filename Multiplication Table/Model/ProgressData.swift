@@ -11,7 +11,7 @@ import Foundation
 struct ProgressData {
 //MARK: - VARIABLES
     //Максимальный прогресс в игре
-    let totalProgress = 100
+    let totalProgress = 10
     
     //Текст прогресса
     let progressText = "ВАШ ТЕКУЩИЙ УРОВЕНЬ: "
@@ -20,7 +20,7 @@ struct ProgressData {
     //Для Ученика
     let lvl0 = 2
     //Для Профессора
-    let lvl1 = 8
+    let lvl1 = 7
     
     
 //MARK: - OBJECTS
@@ -29,10 +29,28 @@ struct ProgressData {
     
 //MARK: - FUNCTIONS
     //Метод возвращающий прогресс игры
+    //При наборе очков больше чем максимально - возвращает прогресс 1.0
     func getProgress() -> Float {
-        let progress = Float(saved.getMaxScore())/Float(totalProgress)
-        return progress
+        if saved.getMaxScore() <= totalProgress {
+            let progress = Float(saved.getMaxScore())/Float(totalProgress)
+            return progress
+        } else {
+            return 1.0
+        }
     }
+    
+    //Метод возвращающий количество очков
+    //При наборе очков больше чем максимально - возвращает 10/10
+    func getProgressScore() -> String {
+        if saved.getMaxScore() <= totalProgress {
+            let score = "\(saved.getMaxScore())/\(totalProgress)"
+            return score
+        } else {
+            let score = "\(totalProgress)/\(totalProgress)"
+            return score
+        }
+    }
+    
     //Метод возвращающий достигнутый уровень
     func getProgressName() -> String {
         switch saved.getMaxScore() {
@@ -40,8 +58,10 @@ struct ProgressData {
             return (progressText + "НОВИЧОК")
         case lvl0..<lvl1:
             return (progressText + "УЧЕНИК")
-        case lvl1...:
+        case lvl1..<totalProgress:
             return (progressText + "ПРОФЕССОР")
+        case totalProgress...:
+            return (progressText + "МАТЕМАТИК")
         default:
             return ""
         }

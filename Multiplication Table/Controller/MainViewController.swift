@@ -11,7 +11,9 @@ import UIKit
 class MainViewController: UIViewController {
 //MARK: - LABELS
     @IBOutlet weak var quotesLabel: UILabel!
+    @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var progressBar: UIProgressView!
     
     
 //MARK: - OBJECTS
@@ -20,34 +22,27 @@ class MainViewController: UIViewController {
     let progress = ProgressData()
     
     
-//MARK: - LOADINGS
+//MARK: - LOADING
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        updateUI()
+    }   
+    
+    
+//MARK: - UPDATE UI
+    func updateUI() {
         //Скрытие бара навигации
         navigationController?.isNavigationBarHidden = true
+        
         //Применение случайной цитаты
         quotesLabel.text = quote.randomQuote()
         
-        scoreLabel.text = progress.getProgressName()
-    }   
-    
-    //Обновление цитат при переходе на другую сцену
-    override func viewDidDisappear(_ animated: Bool) {
-        quotesLabel.text = quote.randomQuote()
+        //Присвоение текущего уровня
+        levelLabel.text = progress.getProgressName()
+        //Присвоение значения прогресс бару
+        progressBar.setProgress(progress.getProgress(), animated: true)
+        
+        //Присвоение текущего результата
+        scoreLabel.text = progress.getProgressScore()
     }
-//MARK: - ACTIONS
-     
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-    
-
 }

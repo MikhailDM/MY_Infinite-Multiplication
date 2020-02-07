@@ -1,19 +1,19 @@
 //
-//  ResultsViewController.swift
+//  TheoryViewController.swift
 //  Multiplication Table
 //
-//  Created by Mike on 05.02.2020.
+//  Created by Mike on 07.02.2020.
 //  Copyright © 2020 Mike Team. All rights reserved.
 //
 
 import UIKit
 
-class ResultsViewController: UIViewController {
+class TheoryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //Скрытие бара навигации
-        navigationController?.isNavigationBarHidden = true
+        //Показываем Navigation Bar
+        navigationController?.isNavigationBarHidden = false
 
         // Do any additional setup after loading the view.
     }

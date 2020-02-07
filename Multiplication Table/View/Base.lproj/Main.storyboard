@@ -332,57 +332,16 @@
                         <outletCollection property="numsButtons" destination="yoL-ls-uFB" collectionClass="NSMutableArray" id="gx5-GP-SLq"/>
                         <outletCollection property="numsButtons" destination="mzj-eA-It7" collectionClass="NSMutableArray" id="bRY-2i-xZj"/>
                         <outletCollection property="numsButtons" destination="8Mw-OH-UAA" collectionClass="NSMutableArray" id="Ql6-ee-wZb"/>
-                        <segue destination="qtU-kV-XQQ" kind="show" identifier="ResultsVC" id="mzb-n8-2oS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Yu-hJ-8aI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1973.913043478261" y="-245.38043478260872"/>
         </scene>
-        <!--RESULTS-->
-        <scene sceneID="45Q-VU-Jed">
-            <objects>
-                <viewController id="qtU-kV-XQQ" customClass="ResultsViewController" customModule="Multiplication_Table" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="JPG-bo-QBW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDa-aG-Qpp">
-                                <rect key="frame" x="96" y="442" width="222" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="RESTART"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RESULTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R42-Ce-w3i">
-                                <rect key="frame" x="99" y="201" width="217" height="140"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaN-Yb-877">
-                                <rect key="frame" x="99" y="586" width="222" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="ПОДУЧИТЬ ТЕОРИЮ"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gc6-t4-vOu">
-                                <rect key="frame" x="94" y="504" width="222" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="MAIN MENU"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="x4D-WK-y8n"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="RESULTS" id="uO4-ld-v9D"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="f4p-l1-68j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2750.7246376811595" y="-245.38043478260872"/>
-        </scene>
         <!--LEARN-->
         <scene sceneID="uCg-Ls-4ef">
             <objects>
-                <viewController id="HNu-jF-Jk9" sceneMemberID="viewController">
+                <viewController id="HNu-jF-Jk9" customClass="TheoryViewController" customModule="Multiplication_Table" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sxa-Ca-Ru3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -17,6 +17,7 @@ class MainViewController: UIViewController {
 //MARK: - OBJECTS
     let quote = Quotes()
     let save = SaveData.singletonSaveData
+    let progress = ProgressData()
     
     
 //MARK: - LOADINGS
@@ -27,7 +28,7 @@ class MainViewController: UIViewController {
         //Применение случайной цитаты
         quotesLabel.text = quote.randomQuote()
         
-        scoreLabel.text = String(save.getMaxScore())
+        scoreLabel.text = progress.getProgressName()
     }   
     
     //Обновление цитат при переходе на другую сцену

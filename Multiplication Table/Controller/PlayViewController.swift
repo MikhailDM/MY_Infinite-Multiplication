@@ -95,6 +95,7 @@ class PlayViewController: UIViewController {
             print("Right answer is \(play.rightAnswer!)")
             timer.invalidate()
             endGameAlert()
+            isOver = false
             //self.performSegue(withIdentifier: "ResultsVC", sender: self)
             //В остальных случаях это правильный ответ
         } else {

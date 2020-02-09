@@ -20,7 +20,7 @@ struct ProgressData {
     let lvl1 = 70
     
     //Текст прогресса
-    let progressText = "ВАШ ТЕКУЩИЙ УРОВЕНЬ: "
+    let progressText = "ТЕКУЩИЙ УРОВЕНЬ: "
     
 //MARK: - OBJECTS
     let saved = SaveData.singletonSaveData

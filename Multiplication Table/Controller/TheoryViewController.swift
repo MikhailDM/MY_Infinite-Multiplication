@@ -53,9 +53,15 @@ class TheoryViewController: UIViewController {
         }
         
         //Изменение отображения колонки с ответом для текущего числа
-        for i in 1...currentNumAnswerColumn.count {
-            currentNumAnswerColumn[i-1].text = String(Int(stepper.value) * i)
-            //num.text = String(Int(stepper.value) * )
+        for num in currentNumAnswerColumn {
+            //num.accessibilityIdentifier
+            let id = Int(num.accessibilityIdentifier!) ?? 0
+            num.text! = String(Int(stepper.value) * id)
+               
+        /*for i in 1...currentNumAnswerColumn.count {
+            currentNumAnswerColumn[i-1].text = String(Int(stepper.value) * currentNumAnswerColumn.)
+            //currentNumAnswerColumn[i-1].text = String(Int(stepper.value) * i)
+            //num.text = String(Int(stepper.value) * )*/
         }
     }
 }

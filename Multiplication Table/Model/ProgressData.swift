@@ -11,17 +11,16 @@ import Foundation
 struct ProgressData {
 //MARK: - VARIABLES
     //Максимальный прогресс в игре
-    let totalProgress = 10
-    
-    //Текст прогресса
-    let progressText = "ВАШ ТЕКУЩИЙ УРОВЕНЬ: "
+    let totalProgress = 100
     
     //УРОВНИ
     //Для Ученика
-    let lvl0 = 2
+    let lvl0 = 20
     //Для Профессора
-    let lvl1 = 7
+    let lvl1 = 70
     
+    //Текст прогресса
+    let progressText = "ВАШ ТЕКУЩИЙ УРОВЕНЬ: "
     
 //MARK: - OBJECTS
     let saved = SaveData.singletonSaveData

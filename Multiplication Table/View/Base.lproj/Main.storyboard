@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="692"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bED-CG-YYx" userLabel="View NAME">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="173.33333333333334"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="173"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INFINITE MULTIPLICATION" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mfe-eX-FLW">
                                                 <rect key="frame" x="20" y="34.666666666666671" width="374" height="104.00000000000001"/>
@@ -36,19 +36,19 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ypq-6I-YdF" userLabel="View PROGRESS">
-                                        <rect key="frame" x="0.0" y="173.33333333333337" width="414" height="172.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="173" width="414" height="173"/>
                                         <subviews>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2vk-nG-IUt">
-                                                <rect key="frame" x="20" y="85.333333333333343" width="374" height="2"/>
+                                                <rect key="frame" x="20" y="85.666666666666686" width="374" height="2"/>
                                             </progressView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" ТЕКУЩИЙ УРОВЕНЬ ЗНАНИЙ: ПРОФЕССОР" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56R-ms-trB">
-                                                <rect key="frame" x="20" y="57.333333333333343" width="374" height="18"/>
+                                                <rect key="frame" x="20" y="57.666666666666686" width="374" height="18"/>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100/100" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azI-2r-7kH">
-                                                <rect key="frame" x="253" y="97.333333333333343" width="141" height="41"/>
+                                                <rect key="frame" x="253" y="97.666666666666686" width="141" height="41"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="141" id="4kY-HK-32h"/>
                                                     <constraint firstAttribute="height" constant="41" id="Wor-SK-iev"/>
@@ -68,34 +68,30 @@
                                             <constraint firstItem="2vk-nG-IUt" firstAttribute="centerX" secondItem="ypq-6I-YdF" secondAttribute="centerX" id="PGX-qp-pSE"/>
                                             <constraint firstItem="2vk-nG-IUt" firstAttribute="top" secondItem="56R-ms-trB" secondAttribute="bottom" constant="10" id="eGv-ZL-7fn"/>
                                             <constraint firstItem="2vk-nG-IUt" firstAttribute="centerY" secondItem="ypq-6I-YdF" secondAttribute="centerY" id="nGu-Ep-n6i"/>
+                                            <constraint firstItem="azI-2r-7kH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ypq-6I-YdF" secondAttribute="leading" constant="50" id="sfT-9b-Ndl"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="biF-b2-ONQ" userLabel="View BUTTONS">
-                                        <rect key="frame" x="0.0" y="346" width="414" height="173.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="346" width="414" height="173"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="HeN-WY-aBo" userLabel="Stack View Buttons">
-                                                <rect key="frame" x="20" y="29.333333333333314" width="374" height="115"/>
+                                                <rect key="frame" x="20" y="31" width="374" height="111"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjf-2Q-2pF">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="XcG-3P-Tax"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="48"/>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
                                                         <state key="normal" title="ИГРАТЬ">
-                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
                                                             <segue destination="D0W-ZK-u20" kind="show" id="xWp-uJ-IZn"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7zh-CC-iXY">
-                                                        <rect key="frame" x="0.0" y="65" width="374" height="50"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <rect key="frame" x="0.0" y="63" width="374" height="48"/>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
                                                         <state key="normal" title="ТЕОРИЯ">
-                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
                                                             <segue destination="HNu-jF-Jk9" kind="show" id="gM0-mn-YMx"/>
@@ -112,11 +108,11 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4pd-6p-jnU" userLabel="View QUOTES">
-                                        <rect key="frame" x="0.0" y="519.33333333333337" width="414" height="172.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="519" width="414" height="173"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Случайные цитаты" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I29-q6-iut">
-                                                <rect key="frame" x="100.33333333333333" y="71.333333333333258" width="213.33333333333337" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Случайные цитаты" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I29-q6-iut">
+                                                <rect key="frame" x="126.33333333333333" y="74.666666666666629" width="161.66666666666669" height="24"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -143,9 +139,11 @@
                     <navigationItem key="navigationItem" id="jlS-Zo-n31"/>
                     <connections>
                         <outlet property="levelLabel" destination="56R-ms-trB" id="ZRp-VD-hx8"/>
+                        <outlet property="playButton" destination="kjf-2Q-2pF" id="i0b-JV-523"/>
                         <outlet property="progressBar" destination="2vk-nG-IUt" id="wYg-tf-OSO"/>
                         <outlet property="quotesLabel" destination="I29-q6-iut" id="GY7-6H-v3I"/>
                         <outlet property="scoreLabel" destination="azI-2r-7kH" id="oIx-t4-rhd"/>
+                        <outlet property="theoryButton" destination="7zh-CC-iXY" id="dbb-d4-Jmo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

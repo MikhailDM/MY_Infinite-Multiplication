@@ -129,13 +129,13 @@ class PlayViewController: UIViewController {
     
 // MARK: - END GAME ALERT
     func endGameAlert() {
-        let alert = UIAlertController(title: "ТВОЙ РЕЗУЛЬТАТ: \(currentScore)", message: "Ты молодец", preferredStyle: .alert)
+        let alert = UIAlertController(title: "ТВОЙ РЕЗУЛЬТАТ: \(currentScore)", message: "ПРАВИЛЬНЫЙ ОТВЕТ: \(play.rightAnswer!)", preferredStyle: .alert)
         
-        let actionM = UIAlertAction(title: "MAIN", style: .default) { (action) in
+        let actionM = UIAlertAction(title: "МЕНЮ", style: .default) { (action) in
             //what will happen once the user clicks the Add Item button on our UIAlert
             self.navigationController?.popToRootViewController(animated: true)
         }
-        let actionR = UIAlertAction(title: "RESTART", style: .default) { (action) in
+        let actionR = UIAlertAction(title: "ПОВТОРИТЬ", style: .default) { (action) in
             //what will happen once the user clicks the Add Item button on our UIAlert
             self.navigationController?.reloadInputViews()
             self.currentScore = 0

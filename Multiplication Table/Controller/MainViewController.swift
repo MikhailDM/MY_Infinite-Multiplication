@@ -38,9 +38,6 @@ class MainViewController: UIViewController {
     
 //MARK: - UPDATE UI
     func updateUI() {
-        //Скрытие бара навигации
-        navigationController?.isNavigationBarHidden = true
-        
         //Применение случайной цитаты
         quotesLabel.text = quote.randomQuote()
         
@@ -52,13 +49,15 @@ class MainViewController: UIViewController {
         //Присвоение текущего результата
         scoreLabel.text = progress.getProgressScore()
     }
-
     
         
     //MARK: - UI SETTINGS
     
     func setupUI(){
-       //Настройки кнопок начального экрана
+        //Скрытие бара навигации
+        navigationController?.isNavigationBarHidden = true
+        
+        //Настройки кнопок начального экрана
         playButton.layer.borderWidth = 2
         playButton.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         playButton.layer.cornerRadius = playButton.frame.height / 2

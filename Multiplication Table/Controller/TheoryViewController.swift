@@ -9,24 +9,53 @@
 import UIKit
 
 class TheoryViewController: UIViewController {
-
+//MARK: - LABELS
+    
+    @IBOutlet weak var currentNumLabel: UILabel!
+    @IBOutlet weak var stepper: UIStepper!
+    
+    @IBOutlet var currentNumColumn: [UILabel]!
+    @IBOutlet var currentNumAnswerColumn: [UILabel]!
+    
+    
+//MARK: - LOADING
     override func viewDidLoad() {
         super.viewDidLoad()
-        //Показываем Navigation Bar
-        navigationController?.isNavigationBarHidden = false
-
-        // Do any additional setup after loading the view.
+        setupUI()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+//MARK: - UI SETTINGS
+    func setupUI(){
+        //Показываем Navigation Bar
+        navigationController?.isNavigationBarHidden = false
+        //Настройки степера при загрузке
+        stepper.value = 1
+        currentNumShow()
     }
-    */
-
+        
+    
+//MARK: - ACTIONS
+    
+    @IBAction func stepperPressed(_ sender: UIStepper) {
+        currentNumShow()
+    }
+    
+    
+//MARK: - SHOW MULTIPLICATION OF CURRENT NUM
+    
+    func currentNumShow() {
+        currentNumLabel.text = "x\(String(Int(stepper.value)))"
+        
+        //Изменение отображения колонки с текущим числом
+        for num in currentNumColumn {
+            num.text! = String(Int(stepper.value))
+        }
+        
+        //Изменение отображения колонки с ответом для текущего числа
+        for i in 1...currentNumAnswerColumn.count {
+            currentNumAnswerColumn[i-1].text = String(Int(stepper.value) * i)
+            //num.text = String(Int(stepper.value) * )
+        }
+    }
 }

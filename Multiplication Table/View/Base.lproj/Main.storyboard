@@ -129,9 +129,8 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qEI-ov-hql">
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qEI-ov-hql">
                                                         <rect key="frame" x="0.0" y="216.33333333333337" width="374" height="57.333333333333314"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XM4-hg-mCm">
                                                             <size key="itemSize" width="50" height="50"/>
                                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -139,22 +138,32 @@
                                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="9BR-z5-Poe">
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="numToMultiplication" id="9BR-z5-Poe" customClass="NumCollectionViewCell" customModule="Multiplication_Table" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="3.6666666666666665" width="50" height="50"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="MSL-uK-Roo">
                                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
-                                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fU7-RB-Lev">
-                                                                            <rect key="frame" x="8" y="0.0" width="46" height="30"/>
+                                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GpX-FE-2Hr">
+                                                                            <rect key="frame" x="2" y="9.6666666666666483" width="46" height="30"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                            <accessibility key="accessibilityConfiguration">
+                                                                                <accessibilityTraits key="traits" button="YES" updatesFrequently="YES"/>
+                                                                            </accessibility>
                                                                             <state key="normal" title="Button"/>
                                                                         </button>
                                                                     </subviews>
                                                                 </collectionViewCellContentView>
+                                                                <connections>
+                                                                    <outlet property="numButton" destination="GpX-FE-2Hr" id="yvT-1T-Aaw"/>
+                                                                </connections>
                                                             </collectionViewCell>
                                                         </cells>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="CJb-MS-jth"/>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="81Q-Ly-70P"/>
+                                                        </connections>
                                                     </collectionView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7zh-CC-iXY">
                                                         <rect key="frame" x="0.0" y="288.66666666666669" width="374" height="57.333333333333314"/>
@@ -213,6 +222,7 @@
                     <navigationItem key="navigationItem" id="jlS-Zo-n31"/>
                     <connections>
                         <outlet property="levelLabel" destination="56R-ms-trB" id="ZRp-VD-hx8"/>
+                        <outlet property="numbersToMult" destination="qEI-ov-hql" id="c8y-Bw-23l"/>
                         <outlet property="playButton" destination="kjf-2Q-2pF" id="i0b-JV-523"/>
                         <outlet property="progressBar" destination="2vk-nG-IUt" id="wYg-tf-OSO"/>
                         <outlet property="quotesLabel" destination="I29-q6-iut" id="GY7-6H-v3I"/>

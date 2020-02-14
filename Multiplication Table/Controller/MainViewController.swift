@@ -18,6 +18,9 @@ class MainViewController: UIViewController {
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var theoryButton: UIButton!
     
+    
+    @IBOutlet weak var numbersToMult: UICollectionView!
+    
 //MARK: - OBJECTS
     let quote = Quotes()
     let save = SaveData.singletonSaveData
@@ -65,5 +68,23 @@ class MainViewController: UIViewController {
         theoryButton.layer.borderWidth = 2
         theoryButton.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         theoryButton.layer.cornerRadius = theoryButton.frame.height / 2
+    }
+}
+
+
+    //MARK: - COLLECTION VIEW EXTENSION
+
+extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    //Количество кнопок с числами для умножения
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 20
+    }
+    //Настройки каждой ячейки
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = numbersToMult.dequeueReusableCell(withReuseIdentifier: "numToMultiplication", for: indexPath) as! NumCollectionViewCell
+        //cell.buttonTitle.numLabel.text = String(indexPath.row)
+        cell.numButton.setTitle("x\(String(indexPath.row + 1))", for: .normal)
+        return cell
     }
 }

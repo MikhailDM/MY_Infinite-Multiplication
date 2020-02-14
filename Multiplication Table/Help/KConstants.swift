@@ -7,6 +7,11 @@
 //
 
 struct K {
+    //Константы главного меню
+    struct MainMenu {
+        //Общее число кнопок для тренировки таблицы умножения
+        static let maxNumberToTrain = 20
+    }
     
     //Имена контроллеров
     struct SBID {

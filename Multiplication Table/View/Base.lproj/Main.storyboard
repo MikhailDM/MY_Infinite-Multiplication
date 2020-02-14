@@ -129,32 +129,44 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qEI-ov-hql">
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qEI-ov-hql">
                                                         <rect key="frame" x="0.0" y="216.33333333333337" width="374" height="57.333333333333314"/>
-                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XM4-hg-mCm">
-                                                            <size key="itemSize" width="50" height="50"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XM4-hg-mCm">
+                                                            <size key="itemSize" width="69" height="53"/>
                                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="numToMultiplication" id="9BR-z5-Poe" customClass="NumCollectionViewCell" customModule="Multiplication_Table" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="3.6666666666666665" width="50" height="50"/>
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="center" reuseIdentifier="numToMultiplication" id="9BR-z5-Poe" customClass="NumCollectionViewCell" customModule="Multiplication_Table" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="2" width="69" height="53"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="MSL-uK-Roo">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="69" height="53"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
-                                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GpX-FE-2Hr">
-                                                                            <rect key="frame" x="2" y="9.6666666666666483" width="46" height="30"/>
-                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GpX-FE-2Hr">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="69" height="53"/>
                                                                             <accessibility key="accessibilityConfiguration">
                                                                                 <accessibilityTraits key="traits" button="YES" updatesFrequently="YES"/>
                                                                             </accessibility>
-                                                                            <state key="normal" title="Button"/>
+                                                                            <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                                                            <state key="normal" title="x1"/>
+                                                                            <connections>
+                                                                                <action selector="numPressed:" destination="9BR-z5-Poe" eventType="touchUpInside" id="0o0-hC-OpX"/>
+                                                                            </connections>
                                                                         </button>
                                                                     </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="bottom" secondItem="GpX-FE-2Hr" secondAttribute="bottom" id="ABM-qu-tgd"/>
+                                                                        <constraint firstItem="GpX-FE-2Hr" firstAttribute="leading" secondItem="MSL-uK-Roo" secondAttribute="leading" id="Eng-zu-xU7"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="GpX-FE-2Hr" secondAttribute="trailing" id="ZHJ-eK-0ka"/>
+                                                                        <constraint firstItem="GpX-FE-2Hr" firstAttribute="top" secondItem="MSL-uK-Roo" secondAttribute="top" id="bEa-q3-0fl"/>
+                                                                    </constraints>
                                                                 </collectionViewCellContentView>
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <size key="customSize" width="69" height="53"/>
                                                                 <connections>
                                                                     <outlet property="numButton" destination="GpX-FE-2Hr" id="yvT-1T-Aaw"/>
                                                                 </connections>

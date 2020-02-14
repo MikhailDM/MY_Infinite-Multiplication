@@ -78,13 +78,36 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     //Количество кнопок с числами для умножения
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return K.MainMenu.maxNumberToTrain
     }
     //Настройки каждой ячейки
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = numbersToMult.dequeueReusableCell(withReuseIdentifier: "numToMultiplication", for: indexPath) as! NumCollectionViewCell
-        //cell.buttonTitle.numLabel.text = String(indexPath.row)
-        cell.numButton.setTitle("x\(String(indexPath.row + 1))", for: .normal)
+        let index = indexPath.row + 1
+        cell.numButton.setTitle("x\(String(index))", for: .normal)
+        cell.numButton.accessibilityIdentifier = String(index)
+
+       //height = myCollectionView.collectionViewLayout.collectionViewContentSize.height
+       //heightConstraint.constant = height
+        let height = numbersToMult.collectionViewLayout.collectionViewContentSize.height * 0.8
+        
+        cell.frame.size.height = height
+        cell.frame.size.width = height
+        cell.layer.borderWidth = 2
+        cell.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        cell.layer.cornerRadius = height / 2
+        
+        
+        //cell.numButton.layer.borderWidth = 2
+        //cell.numButton.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        //cell.numButton.layer.cornerRadius = playButton.frame.height / 2
+        
         return cell
     }
+    /*
+    //Настройки отображения ячейки
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 50, height: 50)
+    }
+     */
 }

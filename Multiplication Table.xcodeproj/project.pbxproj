@@ -10,7 +10,6 @@
 		CE128F5023ED286500AEF8F1 /* TheoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE128F4F23ED286500AEF8F1 /* TheoryViewController.swift */; };
 		CE128F5223ED3AE800AEF8F1 /* ProgressData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE128F5123ED3AE800AEF8F1 /* ProgressData.swift */; };
 		CE241FAF23EC32B20092C77C /* SaveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE241FAE23EC32B20092C77C /* SaveData.swift */; };
-		CEA2160C23F674360062034B /* ButtonsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA2160B23F674360062034B /* ButtonsData.swift */; };
 		CEA2160E23F675F00062034B /* NumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA2160D23F675F00062034B /* NumCollectionViewCell.swift */; };
 		CEB114BD23E97712008E05E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB114BC23E97712008E05E0 /* AppDelegate.swift */; };
 		CEB114BF23E97712008E05E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB114BE23E97712008E05E0 /* SceneDelegate.swift */; };
@@ -22,13 +21,13 @@
 		CEB114D923E98096008E05E0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB114D823E98096008E05E0 /* MainViewController.swift */; };
 		CEB114DB23E982CE008E05E0 /* QuotesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB114DA23E982CE008E05E0 /* QuotesData.swift */; };
 		CEB114DD23E9A465008E05E0 /* InfiniteMTBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB114DC23E9A465008E05E0 /* InfiniteMTBrain.swift */; };
+		CEBD0CF923F7EBCD0042F696 /* Exchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD0CF823F7EBCD0042F696 /* Exchange.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE128F4F23ED286500AEF8F1 /* TheoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheoryViewController.swift; sourceTree = "<group>"; };
 		CE128F5123ED3AE800AEF8F1 /* ProgressData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressData.swift; sourceTree = "<group>"; };
 		CE241FAE23EC32B20092C77C /* SaveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveData.swift; sourceTree = "<group>"; };
-		CEA2160B23F674360062034B /* ButtonsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsData.swift; sourceTree = "<group>"; };
 		CEA2160D23F675F00062034B /* NumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumCollectionViewCell.swift; sourceTree = "<group>"; };
 		CEB114B923E97712008E05E0 /* Multiplication Table.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Multiplication Table.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB114BC23E97712008E05E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +41,7 @@
 		CEB114D823E98096008E05E0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CEB114DA23E982CE008E05E0 /* QuotesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesData.swift; sourceTree = "<group>"; };
 		CEB114DC23E9A465008E05E0 /* InfiniteMTBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteMTBrain.swift; sourceTree = "<group>"; };
+		CEBD0CF823F7EBCD0042F696 /* Exchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exchange.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +103,6 @@
 				CEB114DA23E982CE008E05E0 /* QuotesData.swift */,
 				CE128F5123ED3AE800AEF8F1 /* ProgressData.swift */,
 				CEB114DC23E9A465008E05E0 /* InfiniteMTBrain.swift */,
-				CEA2160B23F674360062034B /* ButtonsData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -122,6 +121,7 @@
 			children = (
 				CEB114D423E978ED008E05E0 /* KConstants.swift */,
 				CE241FAE23EC32B20092C77C /* SaveData.swift */,
+				CEBD0CF823F7EBCD0042F696 /* Exchange.swift */,
 			);
 			path = Help;
 			sourceTree = "<group>";
@@ -205,8 +205,8 @@
 				CEA2160E23F675F00062034B /* NumCollectionViewCell.swift in Sources */,
 				CEB114BF23E97712008E05E0 /* SceneDelegate.swift in Sources */,
 				CE241FAF23EC32B20092C77C /* SaveData.swift in Sources */,
+				CEBD0CF923F7EBCD0042F696 /* Exchange.swift in Sources */,
 				CEB114D523E978ED008E05E0 /* KConstants.swift in Sources */,
-				CEA2160C23F674360062034B /* ButtonsData.swift in Sources */,
 				CEB114D923E98096008E05E0 /* MainViewController.swift in Sources */,
 				CE128F5023ED286500AEF8F1 /* TheoryViewController.swift in Sources */,
 			);

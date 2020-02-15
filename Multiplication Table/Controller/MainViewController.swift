@@ -76,12 +76,14 @@ class MainViewController: UIViewController {
     
     //Переход к бесконечному умножению
     @IBAction func infiniteButtonPressed(_ sender: UIButton) {
-        let id = Int(sender.accessibilityIdentifier!)
+        let id = Int(sender.accessibilityIdentifier!)!
         if id == 10 {
             print("Training 10")
+            
         } else {
             print("Training 20")
         }
+        Ex.numToTrain = id
         self.performSegue(withIdentifier: K.Segues.infinitePlaySegue, sender: sender)
     }
     

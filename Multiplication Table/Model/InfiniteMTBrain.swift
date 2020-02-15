@@ -10,13 +10,14 @@ import Foundation
 
 struct PlayMT {
 //MARK: - Переменные и константы
+    //Максимальное число для умножения. Назначается из главного меню
+    var maxNum = Ex.numToTrain
+    
     //Правильный ответ
     var rightAnswer: Int?
     
     //Максимальная длина поля ответа
     let maxAnswerLength = 6
-    //Максимальное число для умножения
-    let maxNum = 10
     
     //STARTING TEXT. Answer Text
     let startAswerText = "ВВЕДИТЕ ОТВЕТ"

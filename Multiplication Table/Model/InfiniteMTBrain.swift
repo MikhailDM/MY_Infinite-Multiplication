@@ -76,8 +76,8 @@ struct PlayMT {
     
     // MARK: - Функция сравнения текущего счета с лучшим
     func checkScore(score: Int) {
-        if score > save.getMaxScore() {
-            save.saveMaxScore(score: score)
+        if score > save.getMaxScoreX10() {
+            save.saveMaxScoreX10(score: score)
         }
     }
     

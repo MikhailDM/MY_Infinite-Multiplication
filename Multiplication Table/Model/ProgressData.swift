@@ -30,8 +30,8 @@ struct ProgressData {
     //Метод возвращающий прогресс игры
     //При наборе очков больше чем максимально - возвращает прогресс 1.0
     func getProgress() -> Float {
-        if saved.getMaxScore() <= totalProgress {
-            let progress = Float(saved.getMaxScore())/Float(totalProgress)
+        if saved.getMaxScoreX10() <= totalProgress {
+            let progress = Float(saved.getMaxScoreX10())/Float(totalProgress)
             return progress
         } else {
             return 1.0
@@ -41,8 +41,8 @@ struct ProgressData {
     //Метод возвращающий количество очков
     //При наборе очков больше чем максимально - возвращает 10/10
     func getProgressScore() -> String {
-        if saved.getMaxScore() <= totalProgress {
-            let score = "\(saved.getMaxScore())/\(totalProgress)"
+        if saved.getMaxScoreX10() <= totalProgress {
+            let score = "\(saved.getMaxScoreX10())/\(totalProgress)"
             return score
         } else {
             let score = "\(totalProgress)/\(totalProgress)"
@@ -52,7 +52,7 @@ struct ProgressData {
     
     //Метод возвращающий достигнутый уровень
     func getProgressName() -> String {
-        switch saved.getMaxScore() {
+        switch saved.getMaxScoreX10() {
         case ..<lvl0:
             return (progressText + "НОВИЧОК")
         case lvl0..<lvl1:

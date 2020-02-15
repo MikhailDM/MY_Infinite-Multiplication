@@ -60,7 +60,7 @@ class PlayViewController: UIViewController {
         timerProgress.setProgress(1, animated: true)
         countDown()
         //Значение лучшего результата
-        bestScoreLabel.text = String(save.getMaxScore())
+        bestScoreLabel.text = String(save.getMaxScoreX10())
         //Значение текущего результата
         currentScoreLabel.text = String(currentScore)
     }

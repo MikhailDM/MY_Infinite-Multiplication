@@ -90,8 +90,8 @@
 		CEB114D023E97797008E05E0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CEB114D623E97AE3008E05E0 /* PlayViewController.swift */,
 				CEB114D823E98096008E05E0 /* MainViewController.swift */,
+				CEB114D623E97AE3008E05E0 /* PlayViewController.swift */,
 				CE128F4F23ED286500AEF8F1 /* TheoryViewController.swift */,
 			);
 			path = Controller;

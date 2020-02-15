@@ -11,7 +11,7 @@ import UIKit
 class NumCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var numButton: UIButton!
     
-    @IBAction func numPressed(_ sender: UIButton) {
-        print("BUTTON PRESSED")
-    }    
+    @IBAction func numPressed(_ sender: UIButton) {        
+        print("Num to train: \(numButton.accessibilityIdentifier!)")
+    }
 }

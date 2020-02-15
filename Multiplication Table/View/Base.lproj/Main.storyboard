@@ -106,20 +106,25 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjf-2Q-2pF">
                                                                 <rect key="frame" x="0.0" y="0.0" width="179.66666666666666" height="50.333333333333336"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="10"/>
                                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
                                                                 <state key="normal" title="x10">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <segue destination="D0W-ZK-u20" kind="show" id="xWp-uJ-IZn"/>
+                                                                    <action selector="infiniteButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8wT-wQ-HPQ"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJN-hA-xLg">
                                                                 <rect key="frame" x="194.66666666666663" y="0.0" width="179.33333333333337" height="50.333333333333336"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="20"/>
                                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
                                                                 <state key="normal" title="x20">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="infiniteButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ysF-yQ-PkN"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -240,6 +245,7 @@
                         <outlet property="quotesLabel" destination="I29-q6-iut" id="GY7-6H-v3I"/>
                         <outlet property="scoreLabel" destination="azI-2r-7kH" id="oIx-t4-rhd"/>
                         <outlet property="theoryButton" destination="7zh-CC-iXY" id="dbb-d4-Jmo"/>
+                        <segue destination="D0W-ZK-u20" kind="show" identifier="InfinitePlaySegue" id="kn6-Cr-KVP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -13,9 +13,9 @@ struct K {
         static let maxNumberToTrain = 20
     }
     
-    //Имена контроллеров
-    struct SBID {
-        //Контроллер таблицы умножения
-        static let VCPlay = "PlayMultiplicationVC"
+    //Имена переходов
+    struct Segues {
+        //Segue к бесконечной таблице умножения
+        static let infinitePlaySegue = "InfinitePlaySegue"
     }    
 }

@@ -55,7 +55,7 @@ class MainViewController: UIViewController {
     }
     
         
-    //MARK: - UI SETTINGS
+//MARK: - UI SETTINGS
     
     func setupUI(){
         //Скрытие бара навигации
@@ -70,12 +70,30 @@ class MainViewController: UIViewController {
         theoryButton.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         theoryButton.layer.cornerRadius = theoryButton.frame.height / 2
     }
+
+
+//MARK: - NAVIGATION
+    
+    //Переход к бесконечному умножению
+    @IBAction func infiniteButtonPressed(_ sender: UIButton) {
+        let id = Int(sender.accessibilityIdentifier!)
+        if id == 10 {
+            print("Training 10")
+        } else {
+            print("Training 20")
+        }
+        self.performSegue(withIdentifier: K.Segues.infinitePlaySegue, sender: sender)
+    }
+    
+    
+    
+    
+    
 }
 
+//MARK: - COLLECTION VIEW EXTENSION
 
-    //MARK: - COLLECTION VIEW EXTENSION
-
-extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {    
+extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     //Количество кнопок с числами для умножения
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -97,14 +115,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         cell.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         cell.layer.cornerRadius = height / 2
         
-        //cell.numButton.tag = indexPath.row
-        //cell.numButton.addTarget(self, action: #selector(self.yourFunc(), for: .touchUpInside)
-        
         return cell
     }
-    /*
-    //Функция протокола
-    func collectionViewCellDelegte(didClickButtonAt index: Int) {
-        print("Index")
-    }*/
+    
 }

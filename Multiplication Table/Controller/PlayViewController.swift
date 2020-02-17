@@ -102,6 +102,7 @@ class PlayViewController: UIViewController {
             print("RIGHT")
             currentScore += 1
             play.checkScore(score: currentScore)
+            save.saveTotalSolved()
             updateUI()
         }
     }

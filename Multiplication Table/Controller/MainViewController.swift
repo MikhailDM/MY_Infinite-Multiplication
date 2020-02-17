@@ -48,8 +48,7 @@ class MainViewController: UIViewController {
         //Присвоение текущего уровня
         levelLabel.text = progress.getProgressName()
         //Присвоение значения прогресс бару
-        progressBar.setProgress(progress.getProgress(), animated: true)
-        
+        progressBar.setProgress(progress.getProgressFloat(), animated: true)
         //Присвоение текущего результата
         scoreLabel.text = progress.getProgressScore()
     }
@@ -86,12 +85,8 @@ class MainViewController: UIViewController {
         Ex.numToTrain = id
         self.performSegue(withIdentifier: K.Segues.infinitePlaySegue, sender: sender)
     }
-    
-    
-    
-    
-    
 }
+
 
 //MARK: - COLLECTION VIEW EXTENSION
 

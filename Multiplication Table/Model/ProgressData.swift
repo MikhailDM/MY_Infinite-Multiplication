@@ -11,61 +11,62 @@ import Foundation
 struct ProgressData {
 //MARK: - VARIABLES
     //Максимальный прогресс в игре
-    let totalProgress = 100
-    
-    //УРОВНИ
-    //Для Ученика
-    let lvl0 = 20
-    //Для Профессора
-    let lvl1 = 70
-    
+    let totalP = K.MainMenu.maxTotalSolvedEquations
     //Текст прогресса
-    let progressText = "ТЕКУЩИЙ УРОВЕНЬ: "
+    let progressT = K.MainMenu.progressText
+    //Словарь уровней
+    let levelsName = K.MainMenu.levels
+    let levelsNum = K.MainMenu.levelsCharge
     
 //MARK: - OBJECTS
     let saved = SaveData.singletonSaveData
     
     
-//MARK: - FUNCTIONS
-    //Метод возвращающий прогресс игры
+//MARK: - ВСЕ РЕШЕНЫЕ ПРИМЕРЫ. ВОЗВРАЩАЕТ FLOAT ОТНОСИТЕЛЬНО РЕШЕННЫХ ПРИМЕРОВ 0.0 - 1.0
+    
     //При наборе очков больше чем максимально - возвращает прогресс 1.0
-    func getProgress() -> Float {
-        if saved.getMaxScoreX10() <= totalProgress {
-            let progress = Float(saved.getMaxScoreX10())/Float(totalProgress)
+    func getProgressFloat() -> Float {
+        if saved.getTotalSolved() <= totalP {
+            let progress = Float(saved.getTotalSolved())/Float(totalP)
             return progress
         } else {
             return 1.0
         }
     }
     
-    //Метод возвращающий количество очков
+
+//MARK: - ВСЕ РЕШЕНЫЕ ПРИМЕРЫ. ВОЗВРАЩАЕТ ПРОГРЕСС В ФОРМАТЕ - 10/10
+  
     //При наборе очков больше чем максимально - возвращает 10/10
     func getProgressScore() -> String {
-        if saved.getMaxScoreX10() <= totalProgress {
-            let score = "\(saved.getMaxScoreX10())/\(totalProgress)"
+        if saved.getTotalSolved() <= totalP {
+            let score = "\(saved.getTotalSolved())/\(totalP)"
             return score
         } else {
-            let score = "\(totalProgress)/\(totalProgress)"
+            let score = "\(totalP)/\(totalP)"
             return score
         }
     }
+
+    
+//MARK: - ВСЕ РЕШЕНЫЕ ПРИМЕРЫ. ВОЗВРАЩАЕТ ИМЯ ТЕКУЩЕГО УРОВНЯ
     
     //Метод возвращающий достигнутый уровень
     func getProgressName() -> String {
-        switch saved.getMaxScoreX10() {
-        case ..<lvl0:
-            return (progressText + "НОВИЧОК")
-        case lvl0..<lvl1:
-            return (progressText + "УЧЕНИК")
-        case lvl1..<totalProgress:
-            return (progressText + "ПРОФЕССОР")
-        case totalProgress...:
-            return (progressText + "МАТЕМАТИК")
+        switch saved.getTotalSolved() {
+        case ..<levelsNum[0]:
+            return (progressT + levelsName[0])
+        case ..<levelsNum[1]:
+            return (progressT + levelsName[1])
+        case ..<levelsNum[2]:
+            return (progressT + levelsName[2])
+        case ..<levelsNum[3]:
+            return (progressT + levelsName[3])
+        case levelsNum[3]...:
+            return (progressT + levelsName[4])
         default:
-            return ""
+            return progressT + levelsName[0]
         }
     }
 }
-    
-//MARK: - DATA
    

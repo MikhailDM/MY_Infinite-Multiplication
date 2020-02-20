@@ -9,7 +9,7 @@
 import UIKit
 
 class MainViewController: UIViewController {
-//MARK: - LABELS
+//MARK: - OUTLETS
     @IBOutlet weak var quotesLabel: UILabel!
     @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -49,7 +49,7 @@ class MainViewController: UIViewController {
     }
     
         
-//MARK: - UI SETTINGS
+//MARK: - UI SETUP
     
     func setupUI(){
         //Скрытие бара навигации
@@ -80,43 +80,12 @@ class MainViewController: UIViewController {
         Ex.numToTrain = id
         self.performSegue(withIdentifier: K.Segues.infinitePlaySegue, sender: sender)
     }
-    
-    //Переход к умножению по числам
-}
-
-
-//MARK: - COLLECTION VIEW EXTENSION
-
-extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    
-    //Количество кнопок с числами для умножения
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return K.MainMenu.maxNumberToTrain
+     //Переход к умножению по числам
+    @IBAction func numChoosePressed(_ sender: UIButton) {
+        self.performSegue(withIdentifier: K.Segues.chooseNumSegue, sender: sender)
     }
     
-    //Настройки каждой ячейки
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = numbersToMult.dequeueReusableCell(withReuseIdentifier: "numToMultiplication", for: indexPath) as! NumCollectionViewCell
-        let index = indexPath.row + 1
-        cell.numButton.setTitle("x\(String(index))", for: .normal)
-        cell.numButton.accessibilityIdentifier = String(index)
-
-        //Настройки отображения ячейки
-        let height = numbersToMult.collectionViewLayout.collectionViewContentSize.height * 0.75
-        cell.frame.size.height = height
-        cell.frame.size.width = height
-        cell.layer.borderWidth = 2
-        cell.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        cell.layer.cornerRadius = height / 2
-        
-        return cell
-    }
     
-    //Переход по нажатию кнопки из коллекции
-     /*func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("cell clicked")
-        //self.performSegue(withIdentifier: K.Segues.infinitePlaySegue, sender: self)
-        print("SELECT")
-    }*/
-    
+   
 }
+

@@ -6,6 +6,8 @@
 //  Copyright © 2020 Mike Team. All rights reserved.
 //
 
+import UIKit
+
 struct K {
 //MARK: - КОНСТАНТЫ ГЛАВНОГО МЕНЮ
     
@@ -44,5 +46,16 @@ struct K {
     struct Segues {
         //Segue к бесконечной таблице умножения
         static let infinitePlaySegue = "InfinitePlaySegue"
-    }    
+        
+        //Segue к выбору цифры для умножения
+        static let chooseNumSegue = "ChooseNumSegue"
+    }
+//MARK: - КОНСТАНТЫ ШРИФТОВ
+    
+    //Имена переходов
+    struct Fonts {
+        static let maintF = "Futura-Bold"
+        
+    }
+    
 }

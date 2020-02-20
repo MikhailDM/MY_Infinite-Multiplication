@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -96,16 +95,16 @@
                                                 <rect key="frame" x="20" y="0.0" width="374" height="311.33333333333331"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="БЕСКОНЕЧНАЯ ТРЕНИРОВКА" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="As8-jc-NZZ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="39.333333333333336"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="66.333333333333329"/>
                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="15"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="1bF-sK-GfG">
-                                                        <rect key="frame" x="0.0" y="54.333333333333371" width="374" height="39.333333333333343"/>
+                                                        <rect key="frame" x="0.0" y="81.333333333333371" width="374" height="66.666666666666686"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjf-2Q-2pF">
-                                                                <rect key="frame" x="0.0" y="0.0" width="179.66666666666666" height="39.333333333333336"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="179.66666666666666" height="66.666666666666671"/>
                                                                 <accessibility key="accessibilityConfiguration" identifier="10"/>
                                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
                                                                 <state key="normal" title="x10">
@@ -116,7 +115,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJN-hA-xLg">
-                                                                <rect key="frame" x="194.66666666666663" y="0.0" width="179.33333333333337" height="39.333333333333336"/>
+                                                                <rect key="frame" x="194.66666666666663" y="0.0" width="179.33333333333337" height="66.666666666666671"/>
                                                                 <accessibility key="accessibilityConfiguration" identifier="20"/>
                                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
                                                                 <state key="normal" title="x20">
@@ -128,62 +127,8 @@
                                                             </button>
                                                         </subviews>
                                                     </stackView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="УМНОЖЕНИЕ ПО ЧИСЛАМ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLy-S7-STI">
-                                                        <rect key="frame" x="0.0" y="108.66666666666667" width="374" height="39.333333333333329"/>
-                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="15"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qEI-ov-hql">
-                                                        <rect key="frame" x="0.0" y="163" width="374" height="39.333333333333343"/>
-                                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XM4-hg-mCm">
-                                                            <size key="itemSize" width="69" height="53"/>
-                                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                        </collectionViewFlowLayout>
-                                                        <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="center" reuseIdentifier="numToMultiplication" id="9BR-z5-Poe" customClass="NumCollectionViewCell" customModule="Multiplication_Table" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="-6.666666666666667" width="69" height="53"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="MSL-uK-Roo">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="69" height="53"/>
-                                                                    <autoresizingMask key="autoresizingMask"/>
-                                                                    <subviews>
-                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GpX-FE-2Hr">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="69" height="53"/>
-                                                                            <accessibility key="accessibilityConfiguration">
-                                                                                <accessibilityTraits key="traits" button="YES" updatesFrequently="YES"/>
-                                                                            </accessibility>
-                                                                            <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
-                                                                            <state key="normal" title="x1"/>
-                                                                            <connections>
-                                                                                <action selector="numPressed:" destination="9BR-z5-Poe" eventType="touchUpInside" id="0o0-hC-OpX"/>
-                                                                            </connections>
-                                                                        </button>
-                                                                    </subviews>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="bottom" secondItem="GpX-FE-2Hr" secondAttribute="bottom" id="ABM-qu-tgd"/>
-                                                                        <constraint firstItem="GpX-FE-2Hr" firstAttribute="leading" secondItem="MSL-uK-Roo" secondAttribute="leading" id="Eng-zu-xU7"/>
-                                                                        <constraint firstAttribute="trailing" secondItem="GpX-FE-2Hr" secondAttribute="trailing" id="ZHJ-eK-0ka"/>
-                                                                        <constraint firstItem="GpX-FE-2Hr" firstAttribute="top" secondItem="MSL-uK-Roo" secondAttribute="top" id="bEa-q3-0fl"/>
-                                                                    </constraints>
-                                                                </collectionViewCellContentView>
-                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <size key="customSize" width="69" height="53"/>
-                                                                <connections>
-                                                                    <outlet property="numButton" destination="GpX-FE-2Hr" id="yvT-1T-Aaw"/>
-                                                                </connections>
-                                                            </collectionViewCell>
-                                                        </cells>
-                                                        <connections>
-                                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="CJb-MS-jth"/>
-                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="81Q-Ly-70P"/>
-                                                        </connections>
-                                                    </collectionView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7zh-CC-iXY">
-                                                        <rect key="frame" x="0.0" y="217.33333333333337" width="374" height="39.666666666666686"/>
+                                                        <rect key="frame" x="0.0" y="163" width="374" height="66.666666666666686"/>
                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
                                                         <state key="normal" title="ТЕОРИЯ">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -193,11 +138,14 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ee8-4O-hoY">
-                                                        <rect key="frame" x="0.0" y="272.00000000000006" width="374" height="39.333333333333314"/>
+                                                        <rect key="frame" x="0.0" y="244.66666666666666" width="374" height="66.666666666666657"/>
                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
                                                         <state key="normal" title="ЧИСЛА">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="numChoosePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="71b-Ua-1m1"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -246,35 +194,276 @@
                     <navigationItem key="navigationItem" id="jlS-Zo-n31"/>
                     <connections>
                         <outlet property="levelLabel" destination="56R-ms-trB" id="ZRp-VD-hx8"/>
-                        <outlet property="numbersToMult" destination="qEI-ov-hql" id="c8y-Bw-23l"/>
                         <outlet property="playButton" destination="kjf-2Q-2pF" id="i0b-JV-523"/>
                         <outlet property="progressBar" destination="2vk-nG-IUt" id="wYg-tf-OSO"/>
                         <outlet property="quotesLabel" destination="I29-q6-iut" id="GY7-6H-v3I"/>
                         <outlet property="scoreLabel" destination="azI-2r-7kH" id="oIx-t4-rhd"/>
                         <outlet property="theoryButton" destination="7zh-CC-iXY" id="dbb-d4-Jmo"/>
                         <segue destination="D0W-ZK-u20" kind="show" identifier="InfinitePlaySegue" id="kn6-Cr-KVP"/>
+                        <segue destination="2bJ-Z8-sGi" kind="show" identifier="ChooseNumSegue" id="RhU-Ix-ody"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1039.1304347826087" y="138.58695652173915"/>
         </scene>
-        <!--View Controller-->
+        <!--ВЫБОР ЧИСЛА-->
         <scene sceneID="P0v-Lh-ZDH">
             <objects>
-                <viewController id="2bJ-Z8-sGi" sceneMemberID="viewController">
+                <viewController id="2bJ-Z8-sGi" customClass="ChooseNumViewController" customModule="Multiplication_Table" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Enx-fa-Yah">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Xua-d9-tR0">
+                                <rect key="frame" x="20" y="44" width="374" height="692"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="XXT-EG-dw0">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="138.33333333333334"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEA-DY-NZV">
+                                                <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="138.33333333333334"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="1"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                <state key="normal" title="x1"/>
+                                                <connections>
+                                                    <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="AQU-UX-P2k"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01g-dY-ckn">
+                                                <rect key="frame" x="93.666666666666686" y="0.0" width="93.333333333333314" height="138.33333333333334"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="2"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                <state key="normal" title="x2"/>
+                                                <connections>
+                                                    <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="HC8-K1-zs1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4CL-7h-MbP">
+                                                <rect key="frame" x="187" y="0.0" width="93.666666666666686" height="138.33333333333334"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="3"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                <state key="normal" title="x3"/>
+                                                <connections>
+                                                    <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="Cvt-Ri-ZCk"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehk-h7-RDM">
+                                                <rect key="frame" x="280.66666666666669" y="0.0" width="93.333333333333314" height="138.33333333333334"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="4"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                <state key="normal" title="x4"/>
+                                                <connections>
+                                                    <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="fGg-d0-o6t"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="15O-Lc-6X0">
+                                        <rect key="frame" x="0.0" y="138.33333333333331" width="374" height="138.33333333333331"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zmx-6G-p8h">
+                                                <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="138.33333333333334"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="5"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                <state key="normal" title="x5"/>
+                                                <connections>
+                                                    <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="NiE-GJ-Vwt"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6i1-kl-i70">
+                                                <rect key="frame" x="93.666666666666686" y="0.0" width="93.333333333333314" height="138.33333333333334"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="6"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                <state key="normal" title="x6"/>
+                                                <connections>
+                                                    <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="iVQ-rf-kdu"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iad-MA-B5I">
+                                                <rect key="frame" x="187" y="0.0" width="93.666666666666686" height="138.33333333333334"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="7"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                <state key="normal" title="x7"/>
+                                                <connections>
+                                                    <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="wBN-Ha-yk9"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Otr-zl-rDz">
+                                                <rect key="frame" x="280.66666666666669" y="0.0" width="93.333333333333314" height="138.33333333333334"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="8"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                <state key="normal" title="x8"/>
+                                                <connections>
+                                                    <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="kvN-oS-Cbw"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7Zg-8q-3I3">
+                                        <rect key="frame" x="0.0" y="276.66666666666669" width="374" height="138.66666666666669"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Mw-Ip-kSf">
+                                                <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="138.66666666666666"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="9"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                <state key="normal" title="x9"/>
+                                                <connections>
+                                                    <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="IRD-7d-4lh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6R-6n-e4X">
+                                                <rect key="frame" x="93.666666666666686" y="0.0" width="93.333333333333314" height="138.66666666666666"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="10"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                <state key="normal" title="x10"/>
+                                                <connections>
+                                                    <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="e2E-lP-0zH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58n-RY-5PB">
+                                                <rect key="frame" x="187" y="0.0" width="93.666666666666686" height="138.66666666666666"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="11"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                <state key="normal" title="x11"/>
+                                                <connections>
+                                                    <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="W0H-56-nr4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0FI-C5-GwC">
+                                                <rect key="frame" x="280.66666666666669" y="0.0" width="93.333333333333314" height="138.66666666666666"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="12"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                <state key="normal" title="x12"/>
+                                                <connections>
+                                                    <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="WeB-2V-z9B"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="mG3-Dg-HVM">
+                                        <rect key="frame" x="0.0" y="415.33333333333331" width="374" height="138.33333333333331"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfU-Fo-B2z">
+                                                <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="138.33333333333334"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="13"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                <state key="normal" title="x13"/>
+                                                <connections>
+                                                    <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="2Zq-eV-bJ7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6C-Ln-328">
+                                                <rect key="frame" x="93.666666666666686" y="0.0" width="93.333333333333314" height="138.33333333333334"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="14"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                <state key="normal" title="x14"/>
+                                                <connections>
+                                                    <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="pr6-vp-lhE"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eg3-QU-T3r">
+                                                <rect key="frame" x="187" y="0.0" width="93.666666666666686" height="138.33333333333334"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="15"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                <state key="normal" title="x15"/>
+                                                <connections>
+                                                    <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="XxB-ke-oBj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBF-DV-eJx">
+                                                <rect key="frame" x="280.66666666666669" y="0.0" width="93.333333333333314" height="138.33333333333334"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="16"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                <state key="normal" title="x16"/>
+                                                <connections>
+                                                    <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="HlY-U0-aIw"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fNy-qk-Vsk">
+                                        <rect key="frame" x="0.0" y="553.66666666666663" width="374" height="138.33333333333337"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzl-OA-TI7">
+                                                <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="138.33333333333334"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="17"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                <state key="normal" title="x17"/>
+                                                <connections>
+                                                    <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="Tfn-cU-cds"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ar4-fq-hXk">
+                                                <rect key="frame" x="93.666666666666686" y="0.0" width="93.333333333333314" height="138.33333333333334"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="18"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                <state key="normal" title="x18"/>
+                                                <connections>
+                                                    <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="So8-ex-73O"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zeh-IJ-9RF">
+                                                <rect key="frame" x="187" y="0.0" width="93.666666666666686" height="138.33333333333334"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="19"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                <state key="normal" title="x19"/>
+                                                <connections>
+                                                    <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="t23-qk-Zb9"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0K-5h-fr1">
+                                                <rect key="frame" x="280.66666666666669" y="0.0" width="93.333333333333314" height="138.33333333333334"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="20"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                <state key="normal" title="x20"/>
+                                                <connections>
+                                                    <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="v1a-W7-pqZ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Xua-d9-tR0" firstAttribute="top" secondItem="Jhx-P8-rhj" secondAttribute="top" id="XjD-oq-ENQ"/>
+                            <constraint firstItem="Jhx-P8-rhj" firstAttribute="bottom" secondItem="Xua-d9-tR0" secondAttribute="bottom" id="oJW-kr-0mD"/>
+                            <constraint firstAttribute="trailing" secondItem="Xua-d9-tR0" secondAttribute="trailing" constant="20" id="rmw-4T-2Rq"/>
+                            <constraint firstItem="Xua-d9-tR0" firstAttribute="leading" secondItem="Jhx-P8-rhj" secondAttribute="leading" constant="20" id="yKz-am-DAs"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Jhx-P8-rhj"/>
                     </view>
+                    <navigationItem key="navigationItem" title="ВЫБОР ЧИСЛА" id="OTH-oW-VV2"/>
+                    <connections>
+                        <outletCollection property="numButtonsCollection" destination="BEA-DY-NZV" collectionClass="NSMutableArray" id="iMS-8D-YMh"/>
+                        <outletCollection property="numButtonsCollection" destination="01g-dY-ckn" collectionClass="NSMutableArray" id="PZx-K4-b7G"/>
+                        <outletCollection property="numButtonsCollection" destination="4CL-7h-MbP" collectionClass="NSMutableArray" id="eX9-US-cmf"/>
+                        <outletCollection property="numButtonsCollection" destination="ehk-h7-RDM" collectionClass="NSMutableArray" id="BkD-01-bF2"/>
+                        <outletCollection property="numButtonsCollection" destination="Zmx-6G-p8h" collectionClass="NSMutableArray" id="S7M-sL-2Im"/>
+                        <outletCollection property="numButtonsCollection" destination="6i1-kl-i70" collectionClass="NSMutableArray" id="U0s-3N-MGx"/>
+                        <outletCollection property="numButtonsCollection" destination="iad-MA-B5I" collectionClass="NSMutableArray" id="pMO-zK-AH5"/>
+                        <outletCollection property="numButtonsCollection" destination="Otr-zl-rDz" collectionClass="NSMutableArray" id="JeN-uO-23U"/>
+                        <outletCollection property="numButtonsCollection" destination="5Mw-Ip-kSf" collectionClass="NSMutableArray" id="lbc-Rs-EcD"/>
+                        <outletCollection property="numButtonsCollection" destination="b6R-6n-e4X" collectionClass="NSMutableArray" id="FnQ-fM-F6l"/>
+                        <outletCollection property="numButtonsCollection" destination="58n-RY-5PB" collectionClass="NSMutableArray" id="iNh-oH-PLj"/>
+                        <outletCollection property="numButtonsCollection" destination="0FI-C5-GwC" collectionClass="NSMutableArray" id="32e-hO-yUM"/>
+                        <outletCollection property="numButtonsCollection" destination="dfU-Fo-B2z" collectionClass="NSMutableArray" id="TLC-o1-10r"/>
+                        <outletCollection property="numButtonsCollection" destination="e6C-Ln-328" collectionClass="NSMutableArray" id="ret-Dq-YXR"/>
+                        <outletCollection property="numButtonsCollection" destination="Eg3-QU-T3r" collectionClass="NSMutableArray" id="rXL-as-5Dg"/>
+                        <outletCollection property="numButtonsCollection" destination="MBF-DV-eJx" collectionClass="NSMutableArray" id="K2g-Io-osP"/>
+                        <outletCollection property="numButtonsCollection" destination="dzl-OA-TI7" collectionClass="NSMutableArray" id="Wja-le-rQ8"/>
+                        <outletCollection property="numButtonsCollection" destination="Ar4-fq-hXk" collectionClass="NSMutableArray" id="OPM-mu-yoG"/>
+                        <outletCollection property="numButtonsCollection" destination="Zeh-IJ-9RF" collectionClass="NSMutableArray" id="DRD-V2-9G4"/>
+                        <outletCollection property="numButtonsCollection" destination="H0K-5h-fr1" collectionClass="NSMutableArray" id="wyM-nV-1Ns"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aWW-NR-f5b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2190" y="139"/>
+            <point key="canvasLocation" x="2189.8550724637685" y="138.58695652173915"/>
         </scene>
-        <!--ИГРАТЬ-->
+        <!--УМНОЖЕНИЕ-->
         <scene sceneID="ckK-tI-ouZ">
             <objects>
                 <viewController storyboardIdentifier="PlayMultiplicationVC" id="D0W-ZK-u20" customClass="PlayViewController" customModule="Multiplication_Table" customModuleProvider="target" sceneMemberID="viewController">
@@ -528,7 +717,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hlr-rg-VOV"/>
                     </view>
-                    <navigationItem key="navigationItem" title="ИГРАТЬ" id="Jx8-Oo-CLO">
+                    <navigationItem key="navigationItem" title="УМНОЖЕНИЕ" id="Jx8-Oo-CLO">
                         <barButtonItem key="backBarButtonItem" title="Back" id="pYN-Ph-DqT">
                             <connections>
                                 <action selector="backPressed:" destination="D0W-ZK-u20" id="U23-hp-Yqp"/>

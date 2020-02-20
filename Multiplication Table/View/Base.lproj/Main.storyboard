@@ -3,6 +3,7 @@
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -226,7 +227,7 @@
                                                 <accessibility key="accessibilityConfiguration" identifier="1"/>
                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
                                                 <state key="normal" title="x1">
-                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" name="MyGreen"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="AQU-UX-P2k"/>
@@ -237,7 +238,7 @@
                                                 <accessibility key="accessibilityConfiguration" identifier="2"/>
                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
                                                 <state key="normal" title="x2">
-                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" name="MyGreen"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="HC8-K1-zs1"/>
@@ -248,7 +249,7 @@
                                                 <accessibility key="accessibilityConfiguration" identifier="3"/>
                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
                                                 <state key="normal" title="x3">
-                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" name="MyGreen"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="Cvt-Ri-ZCk"/>
@@ -259,7 +260,7 @@
                                                 <accessibility key="accessibilityConfiguration" identifier="4"/>
                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
                                                 <state key="normal" title="x4">
-                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" name="MyGreen"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="fGg-d0-o6t"/>
@@ -275,7 +276,7 @@
                                                 <accessibility key="accessibilityConfiguration" identifier="5"/>
                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
                                                 <state key="normal" title="x5">
-                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" name="MyGreen"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="NiE-GJ-Vwt"/>
@@ -286,7 +287,7 @@
                                                 <accessibility key="accessibilityConfiguration" identifier="6"/>
                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
                                                 <state key="normal" title="x6">
-                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" name="MyGreen"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="iVQ-rf-kdu"/>
@@ -297,7 +298,7 @@
                                                 <accessibility key="accessibilityConfiguration" identifier="7"/>
                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
                                                 <state key="normal" title="x7">
-                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" name="MyGreen"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="wBN-Ha-yk9"/>
@@ -308,7 +309,7 @@
                                                 <accessibility key="accessibilityConfiguration" identifier="8"/>
                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
                                                 <state key="normal" title="x8">
-                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" name="MyGreen"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="kvN-oS-Cbw"/>
@@ -324,7 +325,7 @@
                                                 <accessibility key="accessibilityConfiguration" identifier="9"/>
                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
                                                 <state key="normal" title="x9">
-                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" name="MyGreen"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="IRD-7d-4lh"/>
@@ -335,7 +336,7 @@
                                                 <accessibility key="accessibilityConfiguration" identifier="10"/>
                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
                                                 <state key="normal" title="x10">
-                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" name="MyGreen"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="e2E-lP-0zH"/>
@@ -346,7 +347,7 @@
                                                 <accessibility key="accessibilityConfiguration" identifier="11"/>
                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
                                                 <state key="normal" title="x11">
-                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" name="MyGreen"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="W0H-56-nr4"/>
@@ -357,7 +358,7 @@
                                                 <accessibility key="accessibilityConfiguration" identifier="12"/>
                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
                                                 <state key="normal" title="x12">
-                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" name="MyGreen"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="WeB-2V-z9B"/>
@@ -373,7 +374,7 @@
                                                 <accessibility key="accessibilityConfiguration" identifier="13"/>
                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
                                                 <state key="normal" title="x13">
-                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" name="MyGreen"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="2Zq-eV-bJ7"/>
@@ -384,7 +385,7 @@
                                                 <accessibility key="accessibilityConfiguration" identifier="14"/>
                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
                                                 <state key="normal" title="x14">
-                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" name="MyGreen"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="pr6-vp-lhE"/>
@@ -395,7 +396,7 @@
                                                 <accessibility key="accessibilityConfiguration" identifier="15"/>
                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
                                                 <state key="normal" title="x15">
-                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" name="MyGreen"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="XxB-ke-oBj"/>
@@ -406,7 +407,7 @@
                                                 <accessibility key="accessibilityConfiguration" identifier="16"/>
                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
                                                 <state key="normal" title="x16">
-                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" name="MyGreen"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="HlY-U0-aIw"/>
@@ -422,7 +423,7 @@
                                                 <accessibility key="accessibilityConfiguration" identifier="17"/>
                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
                                                 <state key="normal" title="x17">
-                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" name="MyGreen"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="Tfn-cU-cds"/>
@@ -433,7 +434,7 @@
                                                 <accessibility key="accessibilityConfiguration" identifier="18"/>
                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
                                                 <state key="normal" title="x18">
-                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" name="MyGreen"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="So8-ex-73O"/>
@@ -444,7 +445,7 @@
                                                 <accessibility key="accessibilityConfiguration" identifier="19"/>
                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
                                                 <state key="normal" title="x19">
-                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" name="MyGreen"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="t23-qk-Zb9"/>
@@ -455,7 +456,7 @@
                                                 <accessibility key="accessibilityConfiguration" identifier="20"/>
                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
                                                 <state key="normal" title="x20">
-                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" name="MyGreen"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="v1a-W7-pqZ"/>
@@ -524,24 +525,24 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+20/-0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Qds-md-BQ9">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="92.333333333333329"/>
                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="40"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="textColor" name="MyWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="УРАВНЕНИЕ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="G7Q-eV-0Pz">
                                                         <rect key="frame" x="0.0" y="92.333333333333343" width="414" height="69"/>
                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="textColor" name="MyWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ВВЕДИТЕ ОТВЕТ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DBB-5a-K5c">
                                                         <rect key="frame" x="0.0" y="161.33333333333334" width="414" height="67.333333333333343"/>
                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="textColor" name="MyWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mp5-Jf-22B" userLabel="Раздедитель">
                                                         <rect key="frame" x="0.0" y="228.66666666666669" width="414" height="2"/>
-                                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" name="MyGreen"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="2" id="1r4-gj-7vh"/>
                                                         </constraints>
@@ -576,7 +577,7 @@
                                                                 <accessibility key="accessibilityConfiguration" identifier="1"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                 <state key="normal" title="1">
-                                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="titleColor" name="MyGreen"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="numButtonPressed:" destination="0Dh-hI-YLG" eventType="touchUpInside" id="9gw-sD-wLp"/>
@@ -588,7 +589,7 @@
                                                                 <accessibility key="accessibilityConfiguration" identifier="2"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                 <state key="normal" title="2">
-                                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="titleColor" name="MyGreen"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="numButtonPressed:" destination="0Dh-hI-YLG" eventType="touchUpInside" id="QWs-He-TMa"/>
@@ -600,7 +601,7 @@
                                                                 <accessibility key="accessibilityConfiguration" identifier="3"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                 <state key="normal" title="3">
-                                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="titleColor" name="MyGreen"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="numButtonPressed:" destination="D0W-ZK-u20" eventType="touchUpInside" id="G3g-yp-v1P"/>
@@ -617,7 +618,7 @@
                                                                 <accessibility key="accessibilityConfiguration" identifier="4"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                 <state key="normal" title="4">
-                                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="titleColor" name="MyGreen"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="numButtonPressed:" destination="D0W-ZK-u20" eventType="touchUpInside" id="Sdq-ui-VS4"/>
@@ -629,7 +630,7 @@
                                                                 <accessibility key="accessibilityConfiguration" identifier="5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                 <state key="normal" title="5">
-                                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="titleColor" name="MyGreen"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="numButtonPressed:" destination="D0W-ZK-u20" eventType="touchUpInside" id="6Qy-cI-9RD"/>
@@ -641,7 +642,7 @@
                                                                 <accessibility key="accessibilityConfiguration" identifier="6"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                 <state key="normal" title="6">
-                                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="titleColor" name="MyGreen"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="numButtonPressed:" destination="0Dh-hI-YLG" eventType="touchUpInside" id="0wt-W3-8Oq"/>
@@ -658,7 +659,7 @@
                                                                 <accessibility key="accessibilityConfiguration" identifier="7"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                 <state key="normal" title="7">
-                                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="titleColor" name="MyGreen"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="numButtonPressed:" destination="D0W-ZK-u20" eventType="touchUpInside" id="O8l-37-jkD"/>
@@ -670,7 +671,7 @@
                                                                 <accessibility key="accessibilityConfiguration" identifier="8"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                 <state key="normal" title="8">
-                                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="titleColor" name="MyGreen"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="numButtonPressed:" destination="0Dh-hI-YLG" eventType="touchUpInside" id="ks6-xV-vyy"/>
@@ -682,7 +683,7 @@
                                                                 <accessibility key="accessibilityConfiguration" identifier="9"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                 <state key="normal" title="9">
-                                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="titleColor" name="MyGreen"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="numButtonPressed:" destination="0Dh-hI-YLG" eventType="touchUpInside" id="Ea1-Nf-UAi"/>
@@ -698,7 +699,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="111.33333333333333" height="90.333333333333329"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                 <state key="normal" title="C">
-                                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="titleColor" name="MyGreen"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="clearButtonPressed:" destination="0Dh-hI-YLG" eventType="touchUpInside" id="zaO-JD-1Z3"/>
@@ -710,7 +711,7 @@
                                                                 <accessibility key="accessibilityConfiguration" identifier="0"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                 <state key="normal" title="0">
-                                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="titleColor" name="MyGreen"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="numButtonPressed:" destination="D0W-ZK-u20" eventType="touchUpInside" id="2Yp-2s-Tmv"/>
@@ -721,7 +722,7 @@
                                                                 <rect key="frame" x="262.66666666666669" y="0.0" width="111.33333333333331" height="90.333333333333329"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                 <state key="normal" title="OK">
-                                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="titleColor" name="MyGreen"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="checkButtonPressed:" destination="0Dh-hI-YLG" eventType="touchUpInside" id="9U3-j1-IYK"/>
@@ -1496,4 +1497,12 @@
             <point key="canvasLocation" x="131.8840579710145" y="138.58695652173915"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="MyGreen">
+            <color red="0.20399999618530273" green="0.77999997138977051" blue="0.34900000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MyWhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

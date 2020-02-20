@@ -10,8 +10,13 @@ import UIKit
 
 class PlayOneNumViewController: UIViewController {
 //MARK: - VARIABLES
-    //Начальный тект поля ответа
+    //Начальный текст поля ответа
     let startAnswerT = K.InputSettings.startAnswerText
+    
+    //Фон UIAlertController
+    let alertBackC = K.MyColors.white
+    //Цвет текста кнопок UIAlertController
+    let alertFontC = K.MyColors.green
     
     
 //MARK: - LABELS
@@ -71,8 +76,10 @@ class PlayOneNumViewController: UIViewController {
             print("Game is Over")
             if playOne.countWrongAnswers <= -K.PlayOne.maxWrongAnswers {
                 print("СЛИШКОМ МНОГО ОШИБОК")
+                endGameAlert(isPassTrain: false)
             } else {
                 print("ВЫ ПРОШЛИ ТРЕНИРОВКУ")
+                endGameAlert(isPassTrain: true)
             }
         }
         
@@ -80,8 +87,40 @@ class PlayOneNumViewController: UIViewController {
     
     
 // MARK: - END GAME ALERT
-    
-    
-    
+    func endGameAlert(isPassTrain: Bool) {
+        let alert = UIAlertController(title: "ВЫ УСПЕШНО ЗАКОНЧИЛИ ТРЕНИРОВКУ", message: "ВЫ МОЛОДЕЦ", preferredStyle: .alert)
+        
+        let actionM = UIAlertAction(title: "МЕНЮ", style: .default) { (action) in
+            //what will happen once the user clicks the Add Item button on our UIAlert
+            self.navigationController?.popToRootViewController(animated: true)
+        }
+        let actionR = UIAlertAction(title: "ПОВТОРИТЬ", style: .default) { (action) in
+            //what will happen once the user clicks the Add Item button on our UIAlert
+            self.navigationController?.reloadInputViews()
+            //self.currentScore = 0
+            self.playOne.countRightAnswers = K.PlayOne.maxRightAnswers
+            self.playOne.countWrongAnswers = 0
+            self.updateUI()
+        }
+        
+        //Цвет фона
+        alert.view.subviews.first?.subviews.first?.subviews.first?.backgroundColor = alertBackC
+        //Цвет текста кнопок
+        alert.view.tintColor = alertFontC
+        //alert.setValue(NSAttributedString(string: alert.title!, attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.medium), NSAttributedString.Key.foregroundColor : UIColor.white]), forKey: "attributedTitle")
+        //alert.view.col
+        //alert.view.subviews.first?.subviews.first?.subviews.first?.tintColor = alertFontC
+        
+
+        //alert.view.tintColor = UIColor.white
+        //alert.view.backgroundColor = .black
+        //alert.view.alpha = 0.1
+        
+        alert.addAction(actionM)
+        alert.addAction(actionR)
+        
+        present(alert, animated: true, completion: nil)
+    }
     
 }
+

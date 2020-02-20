@@ -77,4 +77,14 @@ struct K {
         
     }
     
+    
+//MARK: - КОНСТАНТЫ ЦВЕТОВ
+    
+    //Имена шрифтов
+    struct MyColors {
+        static let backGround = UIColor.init(named: "MyBackground")
+        static let green = UIColor.init(named: "MyGreen")
+        static let white = UIColor.init(named: "MyWhite")
+        
+    }
 }

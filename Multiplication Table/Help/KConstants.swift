@@ -13,10 +13,10 @@ struct K {
     
     struct MainMenu {
         //Общее число кнопок для тренировки таблицы умножения
-        static let maxNumberToTrain = 20
+        //static let maxNumberToTrain = 20
         
-        //Максимальное значение для решенных примеров
-        static let maxTotalSolvedEquations = 10
+        //Максимальное значение для решенных примеров, которое нужно достичь
+        static let maxTotalSolvedEquations = 100
         //Текст прогресса
         static let progressText = "ТЕКУЩИЙ УРОВЕНЬ: "
         
@@ -41,7 +41,21 @@ struct K {
         static let startAnswerText = "ВВЕДИТЕ ОТВЕТ"
     }
     
+//MARK: - КОНСТАНТЫ БЕСКОНЕЧНОГО УМНОЖЕНИЯ
+    struct PlayInf {
+        
+    }
     
+    
+//MARK: - КОНСТАНТЫ УМНОЖЕНИЯ НА 1 ЧИСЛО
+    struct PlayOne {
+        //Необходимое число правильных ответов для прохождения цифры
+        static let maxRightAnswers = 2
+        //Число неправильных ответов для прохождения тренировки
+        static let maxWrongAnswers = 1
+    }
+    
+        
 //MARK: - КОНСТАНТЫ NAVIGATION
     
     //Имена переходов
@@ -57,7 +71,7 @@ struct K {
     }
 //MARK: - КОНСТАНТЫ ШРИФТОВ
     
-    //Имена переходов
+    //Имена шрифтов
     struct Fonts {
         static let maintF = "Futura-Bold"
         

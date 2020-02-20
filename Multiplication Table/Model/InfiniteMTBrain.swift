@@ -9,7 +9,7 @@
 import Foundation
 
 struct PlayMT {
-    //MARK: - Переменные и константы
+    //MARK: - VARIABLES
     //Максимальное число для умножения. Назначается из главного меню
     var maxNum = Ex.numToTrain
     

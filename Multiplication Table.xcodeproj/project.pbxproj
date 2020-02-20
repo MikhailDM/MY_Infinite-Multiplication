@@ -24,6 +24,7 @@
 		CEB114DD23E9A465008E05E0 /* InfiniteMTBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB114DC23E9A465008E05E0 /* InfiniteMTBrain.swift */; };
 		CEBD0CF923F7EBCD0042F696 /* Exchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD0CF823F7EBCD0042F696 /* Exchange.swift */; };
 		CED302F123FE8AE20081C30B /* InputBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED302F023FE8AE20081C30B /* InputBrain.swift */; };
+		CED302F323FE91640081C30B /* OneNumMTBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED302F223FE91630081C30B /* OneNumMTBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		CEB114DC23E9A465008E05E0 /* InfiniteMTBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteMTBrain.swift; sourceTree = "<group>"; };
 		CEBD0CF823F7EBCD0042F696 /* Exchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exchange.swift; sourceTree = "<group>"; };
 		CED302F023FE8AE20081C30B /* InputBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputBrain.swift; sourceTree = "<group>"; };
+		CED302F223FE91630081C30B /* OneNumMTBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneNumMTBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				CE128F5123ED3AE800AEF8F1 /* ProgressData.swift */,
 				CED302F023FE8AE20081C30B /* InputBrain.swift */,
 				CEB114DC23E9A465008E05E0 /* InfiniteMTBrain.swift */,
+				CED302F223FE91630081C30B /* OneNumMTBrain.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				CE241FAF23EC32B20092C77C /* SaveData.swift in Sources */,
 				CEBD0CF923F7EBCD0042F696 /* Exchange.swift in Sources */,
 				CE452A7323FE6980000D746B /* ChooseNumViewController.swift in Sources */,
+				CED302F323FE91640081C30B /* OneNumMTBrain.swift in Sources */,
 				CEB114D523E978ED008E05E0 /* KConstants.swift in Sources */,
 				CED302F123FE8AE20081C30B /* InputBrain.swift in Sources */,
 				CEB114D923E98096008E05E0 /* MainViewController.swift in Sources */,

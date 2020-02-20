@@ -10,6 +10,7 @@
 		CE128F5023ED286500AEF8F1 /* TheoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE128F4F23ED286500AEF8F1 /* TheoryViewController.swift */; };
 		CE128F5223ED3AE800AEF8F1 /* ProgressData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE128F5123ED3AE800AEF8F1 /* ProgressData.swift */; };
 		CE241FAF23EC32B20092C77C /* SaveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE241FAE23EC32B20092C77C /* SaveData.swift */; };
+		CE390C9723FE7F01003A9AD6 /* PlayOneNumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE390C9623FE7F01003A9AD6 /* PlayOneNumViewController.swift */; };
 		CE452A7323FE6980000D746B /* ChooseNumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE452A7223FE6980000D746B /* ChooseNumViewController.swift */; };
 		CEB114BD23E97712008E05E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB114BC23E97712008E05E0 /* AppDelegate.swift */; };
 		CEB114BF23E97712008E05E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB114BE23E97712008E05E0 /* SceneDelegate.swift */; };
@@ -22,12 +23,14 @@
 		CEB114DB23E982CE008E05E0 /* QuotesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB114DA23E982CE008E05E0 /* QuotesData.swift */; };
 		CEB114DD23E9A465008E05E0 /* InfiniteMTBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB114DC23E9A465008E05E0 /* InfiniteMTBrain.swift */; };
 		CEBD0CF923F7EBCD0042F696 /* Exchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD0CF823F7EBCD0042F696 /* Exchange.swift */; };
+		CED302F123FE8AE20081C30B /* InputBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED302F023FE8AE20081C30B /* InputBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE128F4F23ED286500AEF8F1 /* TheoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheoryViewController.swift; sourceTree = "<group>"; };
 		CE128F5123ED3AE800AEF8F1 /* ProgressData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressData.swift; sourceTree = "<group>"; };
 		CE241FAE23EC32B20092C77C /* SaveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveData.swift; sourceTree = "<group>"; };
+		CE390C9623FE7F01003A9AD6 /* PlayOneNumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayOneNumViewController.swift; sourceTree = "<group>"; };
 		CE452A7223FE6980000D746B /* ChooseNumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseNumViewController.swift; sourceTree = "<group>"; };
 		CEB114B923E97712008E05E0 /* Multiplication Table.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Multiplication Table.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB114BC23E97712008E05E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +45,7 @@
 		CEB114DA23E982CE008E05E0 /* QuotesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesData.swift; sourceTree = "<group>"; };
 		CEB114DC23E9A465008E05E0 /* InfiniteMTBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteMTBrain.swift; sourceTree = "<group>"; };
 		CEBD0CF823F7EBCD0042F696 /* Exchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exchange.swift; sourceTree = "<group>"; };
+		CED302F023FE8AE20081C30B /* InputBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 				CEB114D823E98096008E05E0 /* MainViewController.swift */,
 				CEB114D623E97AE3008E05E0 /* PlayViewController.swift */,
 				CE452A7223FE6980000D746B /* ChooseNumViewController.swift */,
+				CE390C9623FE7F01003A9AD6 /* PlayOneNumViewController.swift */,
 				CE128F4F23ED286500AEF8F1 /* TheoryViewController.swift */,
 			);
 			path = Controller;
@@ -103,6 +108,7 @@
 			children = (
 				CEB114DA23E982CE008E05E0 /* QuotesData.swift */,
 				CE128F5123ED3AE800AEF8F1 /* ProgressData.swift */,
+				CED302F023FE8AE20081C30B /* InputBrain.swift */,
 				CEB114DC23E9A465008E05E0 /* InfiniteMTBrain.swift */,
 			);
 			path = Model;
@@ -198,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEB114D723E97AE3008E05E0 /* PlayViewController.swift in Sources */,
+				CE390C9723FE7F01003A9AD6 /* PlayOneNumViewController.swift in Sources */,
 				CEB114BD23E97712008E05E0 /* AppDelegate.swift in Sources */,
 				CEB114DD23E9A465008E05E0 /* InfiniteMTBrain.swift in Sources */,
 				CEB114DB23E982CE008E05E0 /* QuotesData.swift in Sources */,
@@ -207,6 +214,7 @@
 				CEBD0CF923F7EBCD0042F696 /* Exchange.swift in Sources */,
 				CE452A7323FE6980000D746B /* ChooseNumViewController.swift in Sources */,
 				CEB114D523E978ED008E05E0 /* KConstants.swift in Sources */,
+				CED302F123FE8AE20081C30B /* InputBrain.swift in Sources */,
 				CEB114D923E98096008E05E0 /* MainViewController.swift in Sources */,
 				CE128F5023ED286500AEF8F1 /* TheoryViewController.swift in Sources */,
 			);

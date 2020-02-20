@@ -33,10 +33,12 @@ struct K {
     }
        
 
-//MARK: - КОНСТАНТЫ БЕСКОНЕЧНОГО УМНОЖЕНИЯ
+//MARK: - КОНСТАНТЫ ВВОДА
     
-    struct InfinM {
-        
+    struct InputSettings {
+        //Максимальная длина ввода символов
+        static let maxAnswerLength = 3
+        static let startAnswerText = "ВВЕДИТЕ ОТВЕТ"
     }
     
     
@@ -49,6 +51,9 @@ struct K {
         
         //Segue к выбору цифры для умножения
         static let chooseNumSegue = "ChooseNumSegue"
+        //Дальнейший Segue к тренировке с 1 цифрой
+        static let playOneNumSegue = "PlayOneNumSegue"
+        
     }
 //MARK: - КОНСТАНТЫ ШРИФТОВ
     

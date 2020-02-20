@@ -47,6 +47,7 @@ class ChooseNumViewController: UIViewController {
         let id = Int(sender.accessibilityIdentifier!)!
         Ex.numToTrain = id
         print("Num to train: \(id)")
+        self.performSegue(withIdentifier: K.Segues.playOneNumSegue, sender: sender)
         
     }  
 

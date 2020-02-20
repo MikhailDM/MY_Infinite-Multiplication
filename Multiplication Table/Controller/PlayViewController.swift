@@ -14,8 +14,12 @@ class PlayViewController: UIViewController {
     @IBOutlet weak var answerLabel: UILabel!
     @IBOutlet weak var equationLabel: UILabel!
     @IBOutlet weak var timerProgress: UIProgressView!
+    
     @IBOutlet weak var currentScoreLabel: UILabel!
     @IBOutlet weak var bestScoreLabel: UILabel!
+    
+    @IBOutlet weak var bestScoreText: UILabel!
+    @IBOutlet weak var currentScoreText: UILabel!
     
 
 //MARK: - OBJECTS
@@ -60,9 +64,18 @@ class PlayViewController: UIViewController {
         timerProgress.setProgress(1, animated: true)
         countDown()
         //Значение лучшего результата
-        bestScoreLabel.text = String(save.getMaxScoreX10())
+        //bestScoreLabel.text = String(save.getMaxScoreX10())
         //Значение текущего результата
         currentScoreLabel.text = String(currentScore)
+        if Ex.numToTrain == 10 {
+            //Значение лучшего результата
+            bestScoreLabel.text = String(save.getMaxScoreX10())
+            bestScoreText.text = "ЛУЧШИЙ X10"
+        } else {
+            //Значение лучшего результата
+            bestScoreLabel.text = String(save.getMaxScoreX20())
+            bestScoreText.text = "ЛУЧШИЙ X20"
+        }
     }
     
     func updateUIAnswer() {

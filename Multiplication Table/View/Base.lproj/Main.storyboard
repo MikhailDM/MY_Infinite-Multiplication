@@ -96,16 +96,16 @@
                                                 <rect key="frame" x="20" y="0.0" width="374" height="311.33333333333331"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="БЕСКОНЕЧНАЯ ТРЕНИРОВКА" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="As8-jc-NZZ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="39.333333333333336"/>
                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="15"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="1bF-sK-GfG">
-                                                        <rect key="frame" x="0.0" y="65" width="374" height="50.333333333333343"/>
+                                                        <rect key="frame" x="0.0" y="54.333333333333371" width="374" height="39.333333333333343"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjf-2Q-2pF">
-                                                                <rect key="frame" x="0.0" y="0.0" width="179.66666666666666" height="50.333333333333336"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="179.66666666666666" height="39.333333333333336"/>
                                                                 <accessibility key="accessibilityConfiguration" identifier="10"/>
                                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
                                                                 <state key="normal" title="x10">
@@ -116,7 +116,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJN-hA-xLg">
-                                                                <rect key="frame" x="194.66666666666663" y="0.0" width="179.33333333333337" height="50.333333333333336"/>
+                                                                <rect key="frame" x="194.66666666666663" y="0.0" width="179.33333333333337" height="39.333333333333336"/>
                                                                 <accessibility key="accessibilityConfiguration" identifier="20"/>
                                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
                                                                 <state key="normal" title="x20">
@@ -129,13 +129,13 @@
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="УМНОЖЕНИЕ ПО ЧИСЛАМ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLy-S7-STI">
-                                                        <rect key="frame" x="0.0" y="130.33333333333337" width="374" height="50.333333333333343"/>
+                                                        <rect key="frame" x="0.0" y="108.66666666666667" width="374" height="39.333333333333329"/>
                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="15"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qEI-ov-hql">
-                                                        <rect key="frame" x="0.0" y="195.66666666666669" width="374" height="50.333333333333343"/>
+                                                        <rect key="frame" x="0.0" y="163" width="374" height="39.333333333333343"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XM4-hg-mCm">
                                                             <size key="itemSize" width="69" height="53"/>
@@ -145,7 +145,7 @@
                                                         </collectionViewFlowLayout>
                                                         <cells>
                                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="center" reuseIdentifier="numToMultiplication" id="9BR-z5-Poe" customClass="NumCollectionViewCell" customModule="Multiplication_Table" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="-1.3333333333333333" width="69" height="53"/>
+                                                                <rect key="frame" x="0.0" y="-6.666666666666667" width="69" height="53"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="MSL-uK-Roo">
                                                                     <rect key="frame" x="0.0" y="0.0" width="69" height="53"/>
@@ -183,7 +183,7 @@
                                                         </connections>
                                                     </collectionView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7zh-CC-iXY">
-                                                        <rect key="frame" x="0.0" y="261.00000000000006" width="374" height="50.333333333333314"/>
+                                                        <rect key="frame" x="0.0" y="217.33333333333337" width="374" height="39.666666666666686"/>
                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
                                                         <state key="normal" title="ТЕОРИЯ">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -191,6 +191,13 @@
                                                         <connections>
                                                             <segue destination="HNu-jF-Jk9" kind="show" id="gM0-mn-YMx"/>
                                                         </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ee8-4O-hoY">
+                                                        <rect key="frame" x="0.0" y="272.00000000000006" width="374" height="39.333333333333314"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
+                                                        <state key="normal" title="ЧИСЛА">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -252,7 +259,22 @@
             </objects>
             <point key="canvasLocation" x="1039.1304347826087" y="138.58695652173915"/>
         </scene>
-        <!--PLAY-->
+        <!--View Controller-->
+        <scene sceneID="P0v-Lh-ZDH">
+            <objects>
+                <viewController id="2bJ-Z8-sGi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Enx-fa-Yah">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Jhx-P8-rhj"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aWW-NR-f5b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2190" y="139"/>
+        </scene>
+        <!--ИГРАТЬ-->
         <scene sceneID="ckK-tI-ouZ">
             <objects>
                 <viewController storyboardIdentifier="PlayMultiplicationVC" id="D0W-ZK-u20" customClass="PlayViewController" customModule="Multiplication_Table" customModuleProvider="target" sceneMemberID="viewController">
@@ -506,7 +528,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hlr-rg-VOV"/>
                     </view>
-                    <navigationItem key="navigationItem" title="PLAY" id="Jx8-Oo-CLO">
+                    <navigationItem key="navigationItem" title="ИГРАТЬ" id="Jx8-Oo-CLO">
                         <barButtonItem key="backBarButtonItem" title="Back" id="pYN-Ph-DqT">
                             <connections>
                                 <action selector="backPressed:" destination="D0W-ZK-u20" id="U23-hp-Yqp"/>
@@ -516,7 +538,9 @@
                     <connections>
                         <outlet property="answerLabel" destination="W1c-NJ-PCh" id="gal-4k-eYt"/>
                         <outlet property="bestScoreLabel" destination="VpD-re-5gR" id="eZP-Ki-8fM"/>
+                        <outlet property="bestScoreText" destination="o5i-gX-ooF" id="0ow-3q-tn5"/>
                         <outlet property="currentScoreLabel" destination="Fqe-ax-biK" id="MbW-TK-BLF"/>
+                        <outlet property="currentScoreText" destination="Sbh-MO-uPt" id="2dS-88-cF3"/>
                         <outlet property="equationLabel" destination="Jv7-rU-fVW" id="75S-wA-pEk"/>
                         <outlet property="timerProgress" destination="X1l-wi-JhB" id="x9b-bd-yaL"/>
                         <outletCollection property="numsButtons" destination="K3S-M9-fCn" collectionClass="NSMutableArray" id="iHL-nv-osX"/>
@@ -533,7 +557,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Yu-hJ-8aI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1973.913043478261" y="-245.38043478260872"/>
+            <point key="canvasLocation" x="2190" y="-581"/>
         </scene>
         <!--LEARN-->
         <scene sceneID="uCg-Ls-4ef">
@@ -956,7 +980,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CkK-ps-O9X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1973.913043478261" y="475.27173913043481"/>
+            <point key="canvasLocation" x="2190" y="896"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9Qe-vp-luQ">

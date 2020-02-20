@@ -9,7 +9,7 @@
 import Foundation
 
 struct PlayMT {
-//MARK: - Переменные и константы
+    //MARK: - Переменные и константы
     //Максимальное число для умножения. Назначается из главного меню
     var maxNum = Ex.numToTrain
     
@@ -77,9 +77,15 @@ struct PlayMT {
     
     // MARK: - Функция сравнения текущего счета с лучшим
     func checkScore(score: Int) {
-        if score > save.getMaxScoreX10() {
-            save.saveMaxScoreX10(score: score)
-        }
+        if Ex.numToTrain == 10 {
+            if score > save.getMaxScoreX10() {
+                save.saveMaxScoreX10(score: score)
+            }
+        } else {
+            if score > save.getMaxScoreX20() {
+                save.saveMaxScoreX20(score: score)
+            }
+        }        
     }
     
     

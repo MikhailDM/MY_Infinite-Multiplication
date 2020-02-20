@@ -27,11 +27,6 @@ class MainViewController: UIViewController {
     let progress = ProgressData()
     
     
-    
-//MARK: - VARIABLES
-    //BUTTONS
-    
-    
 //MARK: - LOADING
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -85,6 +80,8 @@ class MainViewController: UIViewController {
         Ex.numToTrain = id
         self.performSegue(withIdentifier: K.Segues.infinitePlaySegue, sender: sender)
     }
+    
+    //Переход к умножению по числам
 }
 
 
@@ -114,5 +111,12 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         return cell
     }
+    
+    //Переход по нажатию кнопки из коллекции
+     /*func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("cell clicked")
+        //self.performSegue(withIdentifier: K.Segues.infinitePlaySegue, sender: self)
+        print("SELECT")
+    }*/
     
 }

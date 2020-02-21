@@ -25,6 +25,9 @@
 		CEBD0CF923F7EBCD0042F696 /* Exchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD0CF823F7EBCD0042F696 /* Exchange.swift */; };
 		CED302F123FE8AE20081C30B /* InputBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED302F023FE8AE20081C30B /* InputBrain.swift */; };
 		CED302F323FE91640081C30B /* OneNumMTBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED302F223FE91630081C30B /* OneNumMTBrain.swift */; };
+		CEE94F3B23FFB0ED00A643D2 /* AchieveTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE94F3A23FFB0ED00A643D2 /* AchieveTableViewController.swift */; };
+		CEE94F3E23FFB6EB00A643D2 /* AchieveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE94F3C23FFB6EB00A643D2 /* AchieveTableViewCell.swift */; };
+		CEE94F3F23FFB6EB00A643D2 /* AchieveTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEE94F3D23FFB6EB00A643D2 /* AchieveTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +51,9 @@
 		CEBD0CF823F7EBCD0042F696 /* Exchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exchange.swift; sourceTree = "<group>"; };
 		CED302F023FE8AE20081C30B /* InputBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputBrain.swift; sourceTree = "<group>"; };
 		CED302F223FE91630081C30B /* OneNumMTBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneNumMTBrain.swift; sourceTree = "<group>"; };
+		CEE94F3A23FFB0ED00A643D2 /* AchieveTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchieveTableViewController.swift; sourceTree = "<group>"; };
+		CEE94F3C23FFB6EB00A643D2 /* AchieveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchieveTableViewCell.swift; sourceTree = "<group>"; };
+		CEE94F3D23FFB6EB00A643D2 /* AchieveTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AchieveTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 				CE452A7223FE6980000D746B /* ChooseNumViewController.swift */,
 				CE390C9623FE7F01003A9AD6 /* PlayOneNumViewController.swift */,
 				CE128F4F23ED286500AEF8F1 /* TheoryViewController.swift */,
+				CEE94F3A23FFB0ED00A643D2 /* AchieveTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -121,6 +128,8 @@
 			isa = PBXGroup;
 			children = (
 				CEB114C223E97712008E05E0 /* Main.storyboard */,
+				CEE94F3C23FFB6EB00A643D2 /* AchieveTableViewCell.swift */,
+				CEE94F3D23FFB6EB00A643D2 /* AchieveTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -194,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEB114C923E97714008E05E0 /* LaunchScreen.storyboard in Resources */,
+				CEE94F3F23FFB6EB00A643D2 /* AchieveTableViewCell.xib in Resources */,
 				CEB114C623E97714008E05E0 /* Assets.xcassets in Resources */,
 				CEB114C423E97712008E05E0 /* Main.storyboard in Resources */,
 			);
@@ -211,6 +221,7 @@
 				CEB114BD23E97712008E05E0 /* AppDelegate.swift in Sources */,
 				CEB114DD23E9A465008E05E0 /* InfiniteMTBrain.swift in Sources */,
 				CEB114DB23E982CE008E05E0 /* QuotesData.swift in Sources */,
+				CEE94F3E23FFB6EB00A643D2 /* AchieveTableViewCell.swift in Sources */,
 				CE128F5223ED3AE800AEF8F1 /* ProgressData.swift in Sources */,
 				CEB114BF23E97712008E05E0 /* SceneDelegate.swift in Sources */,
 				CE241FAF23EC32B20092C77C /* SaveData.swift in Sources */,
@@ -220,6 +231,7 @@
 				CEB114D523E978ED008E05E0 /* KConstants.swift in Sources */,
 				CED302F123FE8AE20081C30B /* InputBrain.swift in Sources */,
 				CEB114D923E98096008E05E0 /* MainViewController.swift in Sources */,
+				CEE94F3B23FFB0ED00A643D2 /* AchieveTableViewController.swift in Sources */,
 				CE128F5023ED286500AEF8F1 /* TheoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

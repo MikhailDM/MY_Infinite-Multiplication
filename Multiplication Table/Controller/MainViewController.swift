@@ -17,9 +17,8 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var theoryButton: UIButton!
+    @IBOutlet weak var achieveButton: UIButton!
     
-    
-    @IBOutlet weak var numbersToMult: UICollectionView!
     
 //MARK: - OBJECTS
     let quote = Quotes()
@@ -84,6 +83,12 @@ class MainViewController: UIViewController {
     @IBAction func numChoosePressed(_ sender: UIButton) {
         self.performSegue(withIdentifier: K.Segues.chooseNumSegue, sender: sender)
     }
+    
+    //Переход к достижения
+    @IBAction func achieveButtonPressed(_ sender: UIButton) {
+        self.performSegue(withIdentifier: K.Segues.achieveSegue, sender: sender)
+    }
+    
     
     
    

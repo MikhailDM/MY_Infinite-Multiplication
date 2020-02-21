@@ -68,7 +68,22 @@ struct K {
         //Дальнейший Segue к тренировке с 1 цифрой
         static let playOneNumSegue = "PlayOneNumSegue"
         
+        //Segue к достижениям
+        static let achieveSegue = "AchieveSegue"
+        
     }
+    
+    
+//MARK: - КОНСТАНТЫ ДОСТИЖЕНИЙ
+    
+    //Имена шрифтов
+    struct Achieve {
+        static let cellID = "achieveCell"
+        static let cellName = "AchieveTableViewCell"
+        
+    }
+    
+    
 //MARK: - КОНСТАНТЫ ШРИФТОВ
     
     //Имена шрифтов

@@ -88,7 +88,16 @@ class PlayOneNumViewController: UIViewController {
     
 // MARK: - END GAME ALERT
     func endGameAlert(isPassTrain: Bool) {
-        let alert = UIAlertController(title: "ВЫ УСПЕШНО ЗАКОНЧИЛИ ТРЕНИРОВКУ", message: "ВЫ МОЛОДЕЦ", preferredStyle: .alert)
+        //Исходный текст правильного ответа
+        var titleText = "ВЫ УСПЕШНО ЗАКОНЧИЛИ ТРЕНИРОВКУ"
+        var message = "ВЫ МОЛОДЕЦ"
+        
+        if !isPassTrain {
+            titleText = "ПОПРОБУЙТЕ ЕЩЕ РАЗ"
+            message = "ОТРАБОТКА ОШИБОК ДЕЛАЕТ ВАС СИЛЬНЕЕ"
+        }
+        
+        let alert = UIAlertController(title: titleText, message: message, preferredStyle: .alert)
         
         let actionM = UIAlertAction(title: "МЕНЮ", style: .default) { (action) in
             //what will happen once the user clicks the Add Item button on our UIAlert

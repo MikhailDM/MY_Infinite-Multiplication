@@ -11,14 +11,19 @@ import UIKit
 class ChooseNumViewController: UIViewController {
 //MARK: - VARIABLES
     //Размер шрифта
-    let fontSize: CGFloat = 30
+    let fontSize: CGFloat = K.Fonts.size30
+    //Текущий шрифт
+    let fontCurrent = K.Fonts.maintF
     //Фактор масштабирования текста
-    let minScaleF: CGFloat = 0.5
+    let minScaleF: CGFloat = K.Fonts.scaleFactor
     
     //Цвет прорешенных цифр
     let solvedNumButton = K.MyColors.green
     //Цвет непрорешенных цифр
     let unSolvedNumButton = K.MyColors.white
+    
+    //Имя перехода к тренировке 1 цифры
+    let segueToPlay = K.Segues.playOneNumSegue
     
     
 //MARK: - OUTLETS
@@ -40,9 +45,12 @@ class ChooseNumViewController: UIViewController {
     func setupUI(){
         //Показываем Navigation Bar
         navigationController?.isNavigationBarHidden = false
+        
         //Настройки для каждой кнопки
         for button in numButtonsCollection {
+            //ID Кнопки в формате Int
             let id = Int(button.accessibilityIdentifier!)!
+            
             //Размер текста кнопок
             button.titleLabel!.font = UIFont(name: K.Fonts.maintF, size: fontSize)
             button.titleLabel!.minimumScaleFactor = minScaleF;
@@ -61,10 +69,10 @@ class ChooseNumViewController: UIViewController {
     
     @IBAction func chargeNumPressed(_ sender: UIButton) {
         let id = Int(sender.accessibilityIdentifier!)!
+        //Назначение цифры для тренировки через обменный класс
         Ex.numToTrain = id
-        print("Num to train: \(id)")
-        self.performSegue(withIdentifier: K.Segues.playOneNumSegue, sender: sender)
-        
-    }  
-
+        print("NUM TO TRAIN: \(id)")
+        //Переход к экрану игры
+        self.performSegue(withIdentifier: segueToPlay, sender: sender)
+    }
 }

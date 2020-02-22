@@ -88,8 +88,14 @@ struct K {
     
     //Имена шрифтов
     struct Fonts {
+        //Уровень масштабируемости текста
+        static let scaleFactor: CGFloat = 0.5
+        
+        //Основные шрифты
         static let maintF = "Futura-Bold"
         
+        //Основные размеры шрифтов
+        static var size30: CGFloat = 30
     }
     
     

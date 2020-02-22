@@ -28,7 +28,7 @@ class PlayOneNumViewController: UIViewController {
 //MARK: - OBJECTS
     let input = InputBrain()
     var playOne = PlayOneNumMT()
-    
+    let save = SaveData.singletonSaveData
     
 //MARK: - LOADINGS
     override func viewDidLoad() {
@@ -80,6 +80,8 @@ class PlayOneNumViewController: UIViewController {
             } else {
                 print("ВЫ ПРОШЛИ ТРЕНИРОВКУ")
                 endGameAlert(isPassTrain: true)
+                //Сохраняем число как пройденное
+                save.saveSolvedNumsMap(numToSave: playOne.firstNum)                
             }
         }
         

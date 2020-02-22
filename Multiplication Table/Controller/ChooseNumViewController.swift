@@ -15,10 +15,18 @@ class ChooseNumViewController: UIViewController {
     //Фактор масштабирования текста
     let minScaleF: CGFloat = 0.5
     
+    //Цвет прорешенных цифр
+    let solvedNumButton = K.MyColors.green
+    //Цвет непрорешенных цифр
+    let unSolvedNumButton = K.MyColors.white
+    
     
 //MARK: - OUTLETS
     @IBOutlet var numButtonsCollection: [UIButton]!
     
+    
+//MARK: - OBJECTS
+    let save = SaveData.singletonSaveData
     
     
 //MARK: - LOADINGS
@@ -34,10 +42,18 @@ class ChooseNumViewController: UIViewController {
         navigationController?.isNavigationBarHidden = false
         //Настройки для каждой кнопки
         for button in numButtonsCollection {
+            let id = Int(button.accessibilityIdentifier!)!
             //Размер текста кнопок
             button.titleLabel!.font = UIFont(name: K.Fonts.maintF, size: fontSize)
             button.titleLabel!.minimumScaleFactor = minScaleF;
             button.titleLabel!.adjustsFontSizeToFitWidth = true;
+            
+            //Настройка цвета кнопок. Зависит от прохождения
+            button.setTitleColor(unSolvedNumButton, for: .normal)
+            //Проверка на пройденный числа
+            if save.getSolvedNumsState(numToCheck: id) {
+                button.setTitleColor(solvedNumButton, for: .normal)
+            }
         }
     }
 

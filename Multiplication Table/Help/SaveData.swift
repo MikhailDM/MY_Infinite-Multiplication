@@ -69,36 +69,45 @@ class SaveData {
     }
     
     
-//MARK: - СЛОВАРЬ ПРОРЕШЕННЫХ ОТДЕЛЬНЫХ ЧИСЕЛ
+//MARK: - СМАССИВ ПРОРЕШЕННЫХ ОТДЕЛЬНЫХ ЧИСЕЛ
     
-    private let allSolvedNumsMap = "AllSolvedNumsMap"
+    //Имя для сохранения массива
+    private let allSolvedNumsArrName = "AllSolvedNumsArr"
     
-    //Метод сохранения числа в словарь типа [String: Bool]
-    func saveSolvedNumsMap(numToSave: String) {
-        //Проверка - Существует ли словарь типа [String: Bool]
-        if var currentMap = defaults.dictionary(forKey: allSolvedNumsMap) as? [String: Bool] {
-            //Проверка - Содержит ли словарь заданное число через другой метод
-            if !getSolvedNumsState(numToCheck: numToSave) {
-                currentMap[numToSave] = true
-                //Сохраняем обновленный словарь
-                defaults.set(currentMap, forKey: allSolvedNumsMap)
+    //Метод сохранения числа в словарь типа [Int]
+    func saveSolvedNumsMap(numToSave: Int) {
+        //Проверка есть ли заданное число в массиве
+        if !getSolvedNumsState(numToCheck: numToSave) {
+            //Добавление нового числа в массив и сохранение
+            if let currentArr = defaults.array(forKey: allSolvedNumsArrName) {
+                var array = currentArr as! [Int]
+                array.append(numToSave)
+                defaults.set(array, forKey: allSolvedNumsArrName)
+                print("SAVE: \(numToSave)")
+            //Добавление при первой записи в пустой массив
+            } else {
+                let array = [numToSave]
+                defaults.set(array, forKey: allSolvedNumsArrName)
+                print("SAVE IN EMPTY: \(numToSave)")
             }
+        } else {
+            print("ALREADY SOLVED NUM")
         }
     }
         
-    //Метод который проверяет есть ли уже такая цифра в словаре
-    func getSolvedNumsState(numToCheck: String) -> Bool {
+    //Метод который проверяет есть ли уже такая цифра в массиве. False - цифра отсутствует.
+    func getSolvedNumsState(numToCheck: Int) -> Bool {
         //Проверка - Существует ли словарь типа [String: Bool]
-        if let currentMap = defaults.dictionary(forKey: allSolvedNumsMap) as? [String: Bool] {
-            //Проверка - Содержит ли словарь заданное число
-            if currentMap.keys.contains(numToCheck) {
-                //Содержит
+        if let currentArr = defaults.array(forKey: allSolvedNumsArrName) {
+            let array = currentArr as! [Int]
+            //Цифра есть
+            if array.contains(numToCheck) {
                 return true
+            //Цифры нет
             } else {
-                //НЕ содержит
                 return false
             }
-        //Если словаря еще нет
+        //Если словаря еще нет - то и никаких записей нет
         } else {
             return false
         }
@@ -107,8 +116,5 @@ class SaveData {
     
     
     
-    
 }
-
-
 

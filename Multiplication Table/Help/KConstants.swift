@@ -17,6 +17,7 @@ struct K {
         
         //Максимальное значение для решенных примеров, которое нужно достичь
         static let maxTotalSolvedEquations = 100
+        
         //Текст прогресса
         static let progressText = "ТЕКУЩИЙ УРОВЕНЬ: "
         

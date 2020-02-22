@@ -1488,7 +1488,7 @@
             </objects>
             <point key="canvasLocation" x="2190" y="889"/>
         </scene>
-        <!--Achieve Table View Controller-->
+        <!--ДОСТИЖЕНИЯ-->
         <scene sceneID="PEd-MV-DrX">
             <objects>
                 <tableViewController id="bEX-KX-eOC" customClass="AchieveTableViewController" customModule="Multiplication_Table" customModuleProvider="target" sceneMemberID="viewController">
@@ -1503,7 +1503,7 @@
                             <outlet property="delegate" destination="bEX-KX-eOC" id="fTS-KG-qlD"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="gtn-0I-DKg"/>
+                    <navigationItem key="navigationItem" title="ДОСТИЖЕНИЯ" id="gtn-0I-DKg"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1tB-HO-i9o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

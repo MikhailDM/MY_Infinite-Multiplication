@@ -11,7 +11,12 @@ import UIKit
 class AchieveTableViewController: UITableViewController {
 //MARK: - VARIABLES
     
-    let array = ["1", "2", "3"]
+    //let array = ["РЕШИТЬ ВСЕ ПРИМЕРЫ", "5 ТРЕНИРОВОК ПО ЧИСЛАМ", "1000 РЕШЕННЫЙ ПРИМЕРОВ"]
+    
+
+//MARK: - OBJECTS
+    let achieves = AchievementsData()
+    
     
 //MARK: - LOADINGS
     override func viewDidLoad() {
@@ -40,7 +45,7 @@ class AchieveTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return array.count
+        return achieves.arrayAch.count
     }
 
     
@@ -49,7 +54,7 @@ class AchieveTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "achieveCell", for: indexPath) as! AchieveTableViewCell
         
-        cell.descriptionLabel.text = array[indexPath.row]
+        cell.descriptionLabel.text = achieves.arrayAch[indexPath.row].titleAch
 
         return cell
     }

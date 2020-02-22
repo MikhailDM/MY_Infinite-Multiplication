@@ -9,6 +9,8 @@
 import Foundation
 
 class SaveData {
+//MARK: - OBJECTS
+    
     let defaults = UserDefaults.standard
     static let singletonSaveData = SaveData()
     
@@ -16,14 +18,15 @@ class SaveData {
     
     private let proVersion = "ProVersion"
     //Метод сохранения
-    func savePRO(total: Bool) {
-        defaults.set(total, forKey: proVersion)
+    func savePRO(isPRO: Bool) {
+        defaults.set(isPRO, forKey: proVersion)
     }
     //Метод получения
     func getPRO() -> Bool {
         let isPRO = defaults.bool(forKey: proVersion)
         return isPRO
     }
+    
 
 //MARK: - ОБЩЕЕ ЧИСЛО ПРАВИЛЬНО РЕШЕННЫХ ПРИМЕРОВ
     
@@ -38,6 +41,7 @@ class SaveData {
         let total = defaults.integer(forKey: totalSolved)
         return total
     }
+    
 
 //MARK: - БЕСКОНЕЧНАЯ ТАБЛИЦА УМНОЖЕНИЯ x10. ЛУЧШИЙ РЕЗУЛЬТАТ
     
@@ -49,7 +53,8 @@ class SaveData {
     func getMaxScoreX10() -> Int {
         let maxScore = defaults.integer(forKey: maxScoreNameX10)
         return maxScore
-    }     
+    }
+    
 
 //MARK: - БЕСКОНЕЧНАЯ ТАБЛИЦА УМНОЖЕНИЯ x20. ЛУЧШИЙ РЕЗУЛЬТАТ
 
@@ -62,4 +67,48 @@ class SaveData {
         let maxScore = defaults.integer(forKey: maxScoreNameX20)
         return maxScore
     }
+    
+    
+//MARK: - СЛОВАРЬ ПРОРЕШЕННЫХ ОТДЕЛЬНЫХ ЧИСЕЛ
+    
+    private let allSolvedNumsMap = "AllSolvedNumsMap"
+    
+    //Метод сохранения числа в словарь типа [String: Bool]
+    func saveSolvedNumsMap(numToSave: String) {
+        //Проверка - Существует ли словарь типа [String: Bool]
+        if var currentMap = defaults.dictionary(forKey: allSolvedNumsMap) as? [String: Bool] {
+            //Проверка - Содержит ли словарь заданное число через другой метод
+            if !getSolvedNumsState(numToCheck: numToSave) {
+                currentMap[numToSave] = true
+                //Сохраняем обновленный словарь
+                defaults.set(currentMap, forKey: allSolvedNumsMap)
+            }
+        }
+    }
+        
+    //Метод который проверяет есть ли уже такая цифра в словаре
+    func getSolvedNumsState(numToCheck: String) -> Bool {
+        //Проверка - Существует ли словарь типа [String: Bool]
+        if let currentMap = defaults.dictionary(forKey: allSolvedNumsMap) as? [String: Bool] {
+            //Проверка - Содержит ли словарь заданное число
+            if currentMap.keys.contains(numToCheck) {
+                //Содержит
+                return true
+            } else {
+                //НЕ содержит
+                return false
+            }
+        //Если словаря еще нет
+        } else {
+            return false
+        }
+    }
+    
+    
+    
+    
+    
 }
+
+
+

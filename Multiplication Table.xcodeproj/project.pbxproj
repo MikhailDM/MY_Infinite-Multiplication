@@ -12,6 +12,8 @@
 		CE241FAF23EC32B20092C77C /* SaveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE241FAE23EC32B20092C77C /* SaveData.swift */; };
 		CE390C9723FE7F01003A9AD6 /* PlayOneNumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE390C9623FE7F01003A9AD6 /* PlayOneNumViewController.swift */; };
 		CE452A7323FE6980000D746B /* ChooseNumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE452A7223FE6980000D746B /* ChooseNumViewController.swift */; };
+		CE532A4D24010DBF0069BA8F /* AchievementsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE532A4C24010DBF0069BA8F /* AchievementsModel.swift */; };
+		CE532A4F24010E0F0069BA8F /* AchievementsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE532A4E24010E0F0069BA8F /* AchievementsData.swift */; };
 		CEB114BD23E97712008E05E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB114BC23E97712008E05E0 /* AppDelegate.swift */; };
 		CEB114BF23E97712008E05E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB114BE23E97712008E05E0 /* SceneDelegate.swift */; };
 		CEB114C423E97712008E05E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB114C223E97712008E05E0 /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 		CE241FAE23EC32B20092C77C /* SaveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveData.swift; sourceTree = "<group>"; };
 		CE390C9623FE7F01003A9AD6 /* PlayOneNumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayOneNumViewController.swift; sourceTree = "<group>"; };
 		CE452A7223FE6980000D746B /* ChooseNumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseNumViewController.swift; sourceTree = "<group>"; };
+		CE532A4C24010DBF0069BA8F /* AchievementsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsModel.swift; sourceTree = "<group>"; };
+		CE532A4E24010E0F0069BA8F /* AchievementsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsData.swift; sourceTree = "<group>"; };
 		CEB114B923E97712008E05E0 /* Multiplication Table.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Multiplication Table.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB114BC23E97712008E05E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEB114BE23E97712008E05E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 				CED302F023FE8AE20081C30B /* InputBrain.swift */,
 				CEB114DC23E9A465008E05E0 /* InfiniteMTBrain.swift */,
 				CED302F223FE91630081C30B /* OneNumMTBrain.swift */,
+				CE532A4C24010DBF0069BA8F /* AchievementsModel.swift */,
+				CE532A4E24010E0F0069BA8F /* AchievementsData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -225,7 +231,9 @@
 				CE128F5223ED3AE800AEF8F1 /* ProgressData.swift in Sources */,
 				CEB114BF23E97712008E05E0 /* SceneDelegate.swift in Sources */,
 				CE241FAF23EC32B20092C77C /* SaveData.swift in Sources */,
+				CE532A4D24010DBF0069BA8F /* AchievementsModel.swift in Sources */,
 				CEBD0CF923F7EBCD0042F696 /* Exchange.swift in Sources */,
+				CE532A4F24010E0F0069BA8F /* AchievementsData.swift in Sources */,
 				CE452A7323FE6980000D746B /* ChooseNumViewController.swift in Sources */,
 				CED302F323FE91640081C30B /* OneNumMTBrain.swift in Sources */,
 				CEB114D523E978ED008E05E0 /* KConstants.swift in Sources */,

@@ -9,6 +9,40 @@
 import UIKit
 
 struct K {
+//MARK: - МАССИВ УРОВНЕЙ
+    static let levelsArray = [
+        LevelModel(levelName: "НОВИЧОК", levelRequirement: 0),
+        LevelModel(levelName: "УЧЕНИК", levelRequirement: 2),
+        LevelModel(levelName: "СТУДЕНТ", levelRequirement: 5),
+        LevelModel(levelName: "МАТЕМАТИК", levelRequirement: 7),
+        LevelModel(levelName: "ПРОФЕССОР", levelRequirement: 10)
+    ]
+ 
+    
+//MARK: - МАССИВ ДОСТИЖЕНИЙ
+    static let achievementsArray = [
+        AchievementModel(id: "LevelsAch0",
+                         titleAch: levelsArray[0].levelName,
+                         descriptionAch: "РЕШИТЬ СВОЙ ПЕРВЫЙ ПРИМЕР"),
+        
+        AchievementModel(id: "LevelsAch1",
+                          titleAch: levelsArray[1].levelName,
+                          descriptionAch: "РЕШИТЬ ПРИМЕРОВ: \(levelsArray[1].levelRequirement)"),
+        
+        AchievementModel(id: "LevelsAch2",
+                          titleAch: levelsArray[2].levelName,
+                          descriptionAch: "РЕШИТЬ ПРИМЕРОВ: \(levelsArray[2].levelRequirement)"),
+        
+        AchievementModel(id: "LevelsAch3",
+                          titleAch: levelsArray[3].levelName,
+                          descriptionAch: "РЕШИТЬ ПРИМЕРОВ: \(levelsArray[3].levelRequirement) "),
+        
+        AchievementModel(id: "LevelsAch4",
+                          titleAch: levelsArray[4].levelName,
+                          descriptionAch: "РЕШИТЬ ПРИМЕРОВ: \(levelsArray[4].levelRequirement)"),
+    ]
+
+    
 //MARK: - КОНСТАНТЫ ГЛАВНОГО МЕНЮ
     
     struct MainMenu {
@@ -32,7 +66,9 @@ struct K {
             "ПРОФЕССОР",//4
         ]
     }
-       
+    
+    
+
 
 //MARK: - КОНСТАНТЫ ВВОДА
     

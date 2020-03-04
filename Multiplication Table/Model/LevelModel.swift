@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Level {
+struct LevelModel {
     
     let levelName: String
     let levelRequirement: Int

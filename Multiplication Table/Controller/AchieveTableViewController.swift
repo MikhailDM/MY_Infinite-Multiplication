@@ -15,7 +15,7 @@ class AchieveTableViewController: UITableViewController {
     
 
 //MARK: - OBJECTS
-    let achieves = AchievementsData()
+    let achieves = AchievementsManager()
     
     
 //MARK: - LOADINGS
@@ -45,7 +45,7 @@ class AchieveTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return achieves.arrayAch.count
+        return K.achievementsArray.count
     }
 
     
@@ -54,7 +54,8 @@ class AchieveTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "achieveCell", for: indexPath) as! AchieveTableViewCell
         
-        cell.descriptionLabel.text = achieves.arrayAch[indexPath.row].titleAch
+        cell.titleLabel.text = K.achievementsArray[indexPath.row].titleAch
+        cell.descriptionLabel.text = K.achievementsArray[indexPath.row].descriptionAch
 
         return cell
     }

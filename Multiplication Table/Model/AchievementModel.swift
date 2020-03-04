@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct AchievementsModel {
+struct AchievementModel {
     let id: String
     let titleAch: String
     let descriptionAch: String    

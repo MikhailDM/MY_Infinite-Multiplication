@@ -7,16 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE02564F240162F600E42BFF /* LevelsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02564E240162F600E42BFF /* LevelsModel.swift */; };
-		CE0256512401634C00E42BFF /* LevelsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0256502401634C00E42BFF /* LevelsData.swift */; };
+		CE02564F240162F600E42BFF /* LevelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02564E240162F600E42BFF /* LevelModel.swift */; };
 		CE025653240170ED00E42BFF /* LevelsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE025652240170ED00E42BFF /* LevelsManager.swift */; };
 		CE128F5023ED286500AEF8F1 /* TheoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE128F4F23ED286500AEF8F1 /* TheoryViewController.swift */; };
 		CE128F5223ED3AE800AEF8F1 /* ProgressData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE128F5123ED3AE800AEF8F1 /* ProgressData.swift */; };
 		CE241FAF23EC32B20092C77C /* SaveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE241FAE23EC32B20092C77C /* SaveData.swift */; };
 		CE390C9723FE7F01003A9AD6 /* PlayOneNumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE390C9623FE7F01003A9AD6 /* PlayOneNumViewController.swift */; };
 		CE452A7323FE6980000D746B /* ChooseNumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE452A7223FE6980000D746B /* ChooseNumViewController.swift */; };
-		CE532A4D24010DBF0069BA8F /* AchievementsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE532A4C24010DBF0069BA8F /* AchievementsModel.swift */; };
-		CE532A4F24010E0F0069BA8F /* AchievementsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE532A4E24010E0F0069BA8F /* AchievementsData.swift */; };
+		CE532A4D24010DBF0069BA8F /* AchievementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE532A4C24010DBF0069BA8F /* AchievementModel.swift */; };
+		CE532A4F24010E0F0069BA8F /* AchievementsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE532A4E24010E0F0069BA8F /* AchievementsManager.swift */; };
 		CEB114BD23E97712008E05E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB114BC23E97712008E05E0 /* AppDelegate.swift */; };
 		CEB114BF23E97712008E05E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB114BE23E97712008E05E0 /* SceneDelegate.swift */; };
 		CEB114C423E97712008E05E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB114C223E97712008E05E0 /* Main.storyboard */; };
@@ -36,16 +35,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CE02564E240162F600E42BFF /* LevelsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsModel.swift; sourceTree = "<group>"; };
-		CE0256502401634C00E42BFF /* LevelsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsData.swift; sourceTree = "<group>"; };
+		CE02564E240162F600E42BFF /* LevelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelModel.swift; sourceTree = "<group>"; };
 		CE025652240170ED00E42BFF /* LevelsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsManager.swift; sourceTree = "<group>"; };
 		CE128F4F23ED286500AEF8F1 /* TheoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheoryViewController.swift; sourceTree = "<group>"; };
 		CE128F5123ED3AE800AEF8F1 /* ProgressData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressData.swift; sourceTree = "<group>"; };
 		CE241FAE23EC32B20092C77C /* SaveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveData.swift; sourceTree = "<group>"; };
 		CE390C9623FE7F01003A9AD6 /* PlayOneNumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayOneNumViewController.swift; sourceTree = "<group>"; };
 		CE452A7223FE6980000D746B /* ChooseNumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseNumViewController.swift; sourceTree = "<group>"; };
-		CE532A4C24010DBF0069BA8F /* AchievementsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsModel.swift; sourceTree = "<group>"; };
-		CE532A4E24010E0F0069BA8F /* AchievementsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsData.swift; sourceTree = "<group>"; };
+		CE532A4C24010DBF0069BA8F /* AchievementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementModel.swift; sourceTree = "<group>"; };
+		CE532A4E24010E0F0069BA8F /* AchievementsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsManager.swift; sourceTree = "<group>"; };
 		CEB114B923E97712008E05E0 /* Multiplication Table.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Multiplication Table.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB114BC23E97712008E05E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEB114BE23E97712008E05E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,16 +123,15 @@
 		CEB114D123E977AB008E05E0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CEB114DA23E982CE008E05E0 /* QuotesData.swift */,
-				CE02564E240162F600E42BFF /* LevelsModel.swift */,
-				CE0256502401634C00E42BFF /* LevelsData.swift */,
+				CE02564E240162F600E42BFF /* LevelModel.swift */,
+				CE532A4C24010DBF0069BA8F /* AchievementModel.swift */,
 				CE025652240170ED00E42BFF /* LevelsManager.swift */,
+				CE532A4E24010E0F0069BA8F /* AchievementsManager.swift */,
+				CEB114DA23E982CE008E05E0 /* QuotesData.swift */,
 				CE128F5123ED3AE800AEF8F1 /* ProgressData.swift */,
 				CED302F023FE8AE20081C30B /* InputBrain.swift */,
 				CEB114DC23E9A465008E05E0 /* InfiniteMTBrain.swift */,
 				CED302F223FE91630081C30B /* OneNumMTBrain.swift */,
-				CE532A4C24010DBF0069BA8F /* AchievementsModel.swift */,
-				CE532A4E24010E0F0069BA8F /* AchievementsData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -239,12 +236,11 @@
 				CEE94F3E23FFB6EB00A643D2 /* AchieveTableViewCell.swift in Sources */,
 				CE128F5223ED3AE800AEF8F1 /* ProgressData.swift in Sources */,
 				CEB114BF23E97712008E05E0 /* SceneDelegate.swift in Sources */,
-				CE02564F240162F600E42BFF /* LevelsModel.swift in Sources */,
+				CE02564F240162F600E42BFF /* LevelModel.swift in Sources */,
 				CE241FAF23EC32B20092C77C /* SaveData.swift in Sources */,
-				CE0256512401634C00E42BFF /* LevelsData.swift in Sources */,
-				CE532A4D24010DBF0069BA8F /* AchievementsModel.swift in Sources */,
+				CE532A4D24010DBF0069BA8F /* AchievementModel.swift in Sources */,
 				CEBD0CF923F7EBCD0042F696 /* Exchange.swift in Sources */,
-				CE532A4F24010E0F0069BA8F /* AchievementsData.swift in Sources */,
+				CE532A4F24010E0F0069BA8F /* AchievementsManager.swift in Sources */,
 				CE025653240170ED00E42BFF /* LevelsManager.swift in Sources */,
 				CE452A7323FE6980000D746B /* ChooseNumViewController.swift in Sources */,
 				CED302F323FE91640081C30B /* OneNumMTBrain.swift in Sources */,

@@ -21,25 +21,41 @@ struct K {
     
 //MARK: - МАССИВ ДОСТИЖЕНИЙ
     static let achievementsArray = [
-        AchievementModel(id: "LevelsAch0",
+        AchievementModel(id: "LevelsAch00",
                          titleAch: levelsArray[0].levelName,
                          descriptionAch: "РЕШИТЬ СВОЙ ПЕРВЫЙ ПРИМЕР"),
         
-        AchievementModel(id: "LevelsAch1",
+        AchievementModel(id: "LevelsAch01",
                           titleAch: levelsArray[1].levelName,
                           descriptionAch: "РЕШИТЬ ПРИМЕРОВ: \(levelsArray[1].levelRequirement)"),
         
-        AchievementModel(id: "LevelsAch2",
+        AchievementModel(id: "LevelsAch02",
                           titleAch: levelsArray[2].levelName,
                           descriptionAch: "РЕШИТЬ ПРИМЕРОВ: \(levelsArray[2].levelRequirement)"),
         
-        AchievementModel(id: "LevelsAch3",
+        AchievementModel(id: "LevelsAch03",
                           titleAch: levelsArray[3].levelName,
                           descriptionAch: "РЕШИТЬ ПРИМЕРОВ: \(levelsArray[3].levelRequirement) "),
         
-        AchievementModel(id: "LevelsAch4",
+        AchievementModel(id: "LevelsAch04",
                           titleAch: levelsArray[4].levelName,
                           descriptionAch: "РЕШИТЬ ПРИМЕРОВ: \(levelsArray[4].levelRequirement)"),
+        
+        AchievementModel(id: "LevelsAch05",
+                         titleAch: "УЧИМСЯ УМНОЖАТЬ",
+                         descriptionAch: "ПРОРЕШАТЬ ВСЕ ЧИСЛА ОТ 1 ДО 5"),
+        
+        AchievementModel(id: "LevelsAch06",
+                         titleAch: "МАСТЕР УМНОЖЕНИЯ",
+                         descriptionAch: "ПРОРЕШАТЬ ВСЕ ЧИСЛА ОТ 1 ДО 10"),
+        
+        AchievementModel(id: "LevelsAch07",
+                         titleAch: "МАГИСТР УМНОЖЕНИЯ",
+                         descriptionAch: "ПРОРЕШАТЬ ВСЕ ЧИСЛА ОТ 1 ДО 15"),
+        
+        AchievementModel(id: "LevelsAch08",
+                         titleAch: "ПОВЕЛИТЕЛЬ УМНОЖЕНИЯ",
+                         descriptionAch: "ПРОРЕШАТЬ ВСЕ ЧИСЛА ОТ 1 ДО 20"),
     ]
 
     

@@ -15,7 +15,7 @@ class AchieveTableViewController: UITableViewController {
     
 
 //MARK: - OBJECTS
-    let achieves = AchievementsManager()
+    let achievementsManager = AchievementsManager()
     
     
 //MARK: - LOADINGS
@@ -56,6 +56,11 @@ class AchieveTableViewController: UITableViewController {
         
         cell.titleLabel.text = K.achievementsArray[indexPath.row].titleAch
         cell.descriptionLabel.text = K.achievementsArray[indexPath.row].descriptionAch
+        
+        //Проверка на достижение
+        if achievementsManager.checkAchievement(id: K.achievementsArray[indexPath.row].id) {
+            cell.titleLabel.textColor = K.MyColors.green
+        }
 
         return cell
     }

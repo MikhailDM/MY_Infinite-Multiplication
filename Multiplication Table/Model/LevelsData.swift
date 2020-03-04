@@ -12,6 +12,7 @@ import Foundation
 
 struct LevelsData {
 //MARK: - LEVELS ARRAY
+    
     let levelsArray = [
         Level(levelName: "НОВИЧОК", levelRequirement: 0),
         Level(levelName: "УЧЕНИК", levelRequirement: 2),

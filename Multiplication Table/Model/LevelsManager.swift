@@ -18,9 +18,6 @@ struct LevelsManager {
     //Текущий уровень
     private var currentLevel: Level
     
-    //Максимальное число для тренировок
-    //let maxTotalSolvedEquations: Int
-    
     
 //MARK: - RETURN CURRENT LEVEL
     
@@ -41,6 +38,7 @@ struct LevelsManager {
     
        
 //MARK: - RETURN MAX LEVEL SCORE REQUIREMENT
+    
     //Возвращает Int максимального возможного прогресса
     func getMaxLevelRequirement() -> Int {
         let max = levels.levelsArray.last!.levelRequirement

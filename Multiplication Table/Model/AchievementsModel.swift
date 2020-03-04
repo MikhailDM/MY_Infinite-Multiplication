@@ -9,12 +9,7 @@
 import Foundation
 
 struct AchievementsModel {
+    let id: String
     let titleAch: String
-    let descriptionAch: String
-    let state: Bool
-    
-    private func checkAchieve() -> Bool {
-        
-        return true
-    }
+    let descriptionAch: String    
 }

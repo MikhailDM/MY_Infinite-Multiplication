@@ -11,9 +11,9 @@ import Foundation
 struct AchievementsData {
     
     let arrayAch = [
-        AchievementsModel(titleAch: "НЕУДЕРЖИМЫЙ БОЕЦ", descriptionAch: "РЕШИТЬ 5 ПРИМЕРОВ", state: true),
-        AchievementsModel(titleAch: "НЕУДЕРЖИМЫЙ МАСТЕР", descriptionAch: "РЕШИТЬ 10 ПРИМЕРОВ", state: true),
-        AchievementsModel(titleAch: "НЕУДЕРЖИМЫЙ СЕНСЕЙ", descriptionAch: "РЕШИТЬ 20 ПРИМЕРОВ", state: false)
+        AchievementsModel(id: "LevelsAch0", titleAch: "НЕУДЕРЖИМЫЙ БОЕЦ", descriptionAch: "РЕШИТЬ 5 ПРИМЕРОВ"),
+        AchievementsModel(id: "LevelsAch1", titleAch: "НЕУДЕРЖИМЫЙ МАСТЕР", descriptionAch: "РЕШИТЬ 10 ПРИМЕРОВ"),
+        AchievementsModel(id: "LevelsAch2", titleAch: "НЕУДЕРЖИМЫЙ СЕНСЕЙ", descriptionAch: "РЕШИТЬ 20 ПРИМЕРОВ")
     ]
     
     

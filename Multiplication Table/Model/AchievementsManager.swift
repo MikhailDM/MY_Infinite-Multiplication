@@ -63,7 +63,7 @@ struct AchievementsManager {
         }
             
         //Прорешать все числа от 1 до 5
-        case "LevelsAch05":
+        case "LevelsAch20":
             let checkArray = [1, 2, 3, 4, 5]
             var isAllSolved = true
             for num in checkArray {
@@ -75,7 +75,7 @@ struct AchievementsManager {
             return isAllSolved
             
         //Прорешать все числа от 1 до 10
-        case "LevelsAch06":
+        case "LevelsAch21":
             let checkArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
             var isAllSolved = true
             for num in checkArray {
@@ -87,7 +87,7 @@ struct AchievementsManager {
             return isAllSolved
         
         //Прорешать все числа от 1 до 15
-        case "LevelsAch07":
+        case "LevelsAch22":
             let checkArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
             var isAllSolved = true
             for num in checkArray {
@@ -99,7 +99,7 @@ struct AchievementsManager {
             return isAllSolved
             
         //Прорешать все числа от 1 до 20
-        case "LevelsAch08":
+        case "LevelsAch23":
             let checkArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
             var isAllSolved = true
             for num in checkArray {

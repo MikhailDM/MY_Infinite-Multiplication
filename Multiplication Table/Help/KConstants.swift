@@ -41,19 +41,19 @@ struct K {
                           titleAch: levelsArray[4].levelName,
                           descriptionAch: "РЕШИТЬ ПРИМЕРОВ: \(levelsArray[4].levelRequirement)"),
         
-        AchievementModel(id: "LevelsAch05",
+        AchievementModel(id: "LevelsAch20",
                          titleAch: "УЧИМСЯ УМНОЖАТЬ",
                          descriptionAch: "ПРОРЕШАТЬ ВСЕ ЧИСЛА ОТ 1 ДО 5"),
         
-        AchievementModel(id: "LevelsAch06",
+        AchievementModel(id: "LevelsAch21",
                          titleAch: "МАСТЕР УМНОЖЕНИЯ",
                          descriptionAch: "ПРОРЕШАТЬ ВСЕ ЧИСЛА ОТ 1 ДО 10"),
         
-        AchievementModel(id: "LevelsAch07",
+        AchievementModel(id: "LevelsAch22",
                          titleAch: "МАГИСТР УМНОЖЕНИЯ",
                          descriptionAch: "ПРОРЕШАТЬ ВСЕ ЧИСЛА ОТ 1 ДО 15"),
         
-        AchievementModel(id: "LevelsAch08",
+        AchievementModel(id: "LevelsAch23",
                          titleAch: "ПОВЕЛИТЕЛЬ УМНОЖЕНИЯ",
                          descriptionAch: "ПРОРЕШАТЬ ВСЕ ЧИСЛА ОТ 1 ДО 20"),
     ]
@@ -155,10 +155,13 @@ struct K {
 //MARK: - КОНСТАНТЫ ЦВЕТОВ
     
     //Имена шрифтов
-    struct MyColors {
+    struct MyColorsUI {
         static let backGround = UIColor.init(named: "MyBackground")
         static let green = UIColor.init(named: "MyGreen")
+        static let blue = UIColor.init(named: "MyBlue")
         static let white = UIColor.init(named: "MyWhite")
         
     }
+    
+    
 }

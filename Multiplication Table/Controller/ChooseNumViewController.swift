@@ -18,9 +18,9 @@ class ChooseNumViewController: UIViewController {
     let minScaleF: CGFloat = K.Fonts.scaleFactor
     
     //Цвет прорешенных цифр
-    let solvedNumButton = K.MyColors.green
+    let solvedNumButton = K.MyColorsUI.green
     //Цвет непрорешенных цифр
-    let unSolvedNumButton = K.MyColors.white
+    let unSolvedNumButton = K.MyColorsUI.white
     
     //Имя перехода к тренировке 1 цифры
     let segueToPlay = K.Segues.playOneNumSegue

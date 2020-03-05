@@ -59,7 +59,7 @@ class AchieveTableViewController: UITableViewController {
         
         //Проверка на достижение
         if achievementsManager.checkAchievement(id: K.achievementsArray[indexPath.row].id) {
-            cell.titleLabel.textColor = K.MyColors.green
+            cell.titleLabel.textColor = K.MyColorsUI.green
         }
 
         return cell

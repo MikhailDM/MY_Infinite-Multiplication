@@ -96,16 +96,16 @@
                                                 <rect key="frame" x="20" y="0.0" width="374" height="311.33333333333331"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="БЕСКОНЕЧНАЯ ТРЕНИРОВКА" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="As8-jc-NZZ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="39.333333333333336"/>
                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="15"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="1bF-sK-GfG">
-                                                        <rect key="frame" x="0.0" y="65" width="374" height="50.333333333333343"/>
+                                                        <rect key="frame" x="0.0" y="54.333333333333371" width="374" height="39.333333333333343"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjf-2Q-2pF">
-                                                                <rect key="frame" x="0.0" y="0.0" width="179.66666666666666" height="50.333333333333336"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="179.66666666666666" height="39.333333333333336"/>
                                                                 <accessibility key="accessibilityConfiguration" identifier="10"/>
                                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
                                                                 <state key="normal" title="x10">
@@ -116,7 +116,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJN-hA-xLg">
-                                                                <rect key="frame" x="194.66666666666663" y="0.0" width="179.33333333333337" height="50.333333333333336"/>
+                                                                <rect key="frame" x="194.66666666666663" y="0.0" width="179.33333333333337" height="39.333333333333336"/>
                                                                 <accessibility key="accessibilityConfiguration" identifier="20"/>
                                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
                                                                 <state key="normal" title="x20">
@@ -129,7 +129,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7zh-CC-iXY">
-                                                        <rect key="frame" x="0.0" y="130.33333333333337" width="374" height="50.333333333333343"/>
+                                                        <rect key="frame" x="0.0" y="108.66666666666667" width="374" height="39.333333333333329"/>
                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
                                                         <state key="normal" title="ТЕОРИЯ">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -139,7 +139,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ee8-4O-hoY">
-                                                        <rect key="frame" x="0.0" y="195.66666666666669" width="374" height="50.333333333333343"/>
+                                                        <rect key="frame" x="0.0" y="163" width="374" height="39.333333333333343"/>
                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
                                                         <state key="normal" title="ЧИСЛА">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -149,7 +149,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUb-tY-yUe">
-                                                        <rect key="frame" x="0.0" y="261.00000000000006" width="374" height="50.333333333333314"/>
+                                                        <rect key="frame" x="0.0" y="217.33333333333337" width="374" height="39.666666666666686"/>
                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
                                                         <state key="normal" title="ДОСТИЖЕНИЯ">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -157,6 +157,13 @@
                                                         <connections>
                                                             <action selector="achieveButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cxJ-Ya-7J5"/>
                                                         </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lSq-U2-Mdz">
+                                                        <rect key="frame" x="0.0" y="272.00000000000006" width="374" height="39.333333333333314"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
+                                                        <state key="normal" title="PREMIUM">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -204,13 +211,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="jlS-Zo-n31"/>
                     <connections>
-                        <outlet property="achieveButton" destination="CUb-tY-yUe" id="rBA-Q3-p76"/>
                         <outlet property="levelLabel" destination="56R-ms-trB" id="ZRp-VD-hx8"/>
-                        <outlet property="playButton" destination="kjf-2Q-2pF" id="i0b-JV-523"/>
                         <outlet property="progressBar" destination="2vk-nG-IUt" id="wYg-tf-OSO"/>
                         <outlet property="quotesLabel" destination="I29-q6-iut" id="GY7-6H-v3I"/>
                         <outlet property="scoreLabel" destination="azI-2r-7kH" id="oIx-t4-rhd"/>
-                        <outlet property="theoryButton" destination="7zh-CC-iXY" id="dbb-d4-Jmo"/>
+                        <outletCollection property="buttonsCollection" destination="kjf-2Q-2pF" collectionClass="NSMutableArray" id="kpJ-Lg-Z1I"/>
+                        <outletCollection property="buttonsCollection" destination="SJN-hA-xLg" collectionClass="NSMutableArray" id="KnH-g6-FlS"/>
+                        <outletCollection property="buttonsCollection" destination="7zh-CC-iXY" collectionClass="NSMutableArray" id="7OE-K5-E9L"/>
+                        <outletCollection property="buttonsCollection" destination="ee8-4O-hoY" collectionClass="NSMutableArray" id="xkc-DB-q9h"/>
+                        <outletCollection property="buttonsCollection" destination="CUb-tY-yUe" collectionClass="NSMutableArray" id="0HJ-Io-3YH"/>
+                        <outletCollection property="buttonsCollection" destination="lSq-U2-Mdz" collectionClass="NSMutableArray" id="V0v-4b-dFe"/>
                         <segue destination="D0W-ZK-u20" kind="show" identifier="InfinitePlaySegue" id="kn6-Cr-KVP"/>
                         <segue destination="2bJ-Z8-sGi" kind="show" identifier="ChooseNumSegue" id="RhU-Ix-ody"/>
                         <segue destination="bEX-KX-eOC" kind="show" identifier="AchieveSegue" id="vkg-Ur-nOB"/>

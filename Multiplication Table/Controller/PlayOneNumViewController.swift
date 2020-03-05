@@ -14,9 +14,9 @@ class PlayOneNumViewController: UIViewController {
     let startAnswerT = K.InputSettings.startAnswerText
     
     //Фон UIAlertController
-    let alertBackC = K.MyColors.white
+    let alertBackC = K.MyColorsUI.white
     //Цвет текста кнопок UIAlertController
-    let alertFontC = K.MyColors.green
+    let alertFontC = K.MyColorsUI.green
     
     
 //MARK: - LABELS

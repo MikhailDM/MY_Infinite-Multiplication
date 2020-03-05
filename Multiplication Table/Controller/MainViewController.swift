@@ -9,21 +9,27 @@
 import UIKit
 
 class MainViewController: UIViewController {
+//MARK: - VARIABLES
+    //Толщина границ кнопок
+    private let buttonsBorderWidth: CGFloat = 2
+    //Цвет границ кнопок
+    private let buttonsBorderColor = K.MyColorsUI.blue?.cgColor
+  
+    
 //MARK: - OUTLETS
     @IBOutlet weak var quotesLabel: UILabel!
     @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
     
-    @IBOutlet weak var playButton: UIButton!
-    @IBOutlet weak var theoryButton: UIButton!
-    @IBOutlet weak var achieveButton: UIButton!
-    
+    //Все кнопки
+    @IBOutlet var buttonsCollection: [UIButton]!
+   
     
 //MARK: - OBJECTS
-    let quote = Quotes()
-    let save = SaveData.singletonSaveData
-    let progress = ProgressData()
+    private let quote = Quotes()
+    private let save = SaveData.singletonSaveData
+    private let progress = ProgressData()
     
     
 //MARK: - LOADING
@@ -38,7 +44,6 @@ class MainViewController: UIViewController {
     func updateUI() {
         //Применение случайной цитаты
         quotesLabel.text = quote.randomQuote()
-        
         //Присвоение текущего уровня
         levelLabel.text = progress.getProgressName()
         //Присвоение значения прогресс бару
@@ -55,13 +60,18 @@ class MainViewController: UIViewController {
         navigationController?.isNavigationBarHidden = true
         
         //Настройки кнопок начального экрана
-        playButton.layer.borderWidth = 2
-        playButton.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        playButton.layer.cornerRadius = playButton.frame.height / 2
+        for button in buttonsCollection {
+            button.layer.borderWidth = buttonsBorderWidth
+            button.layer.borderColor = buttonsBorderColor
+            button.layer.cornerRadius = button.frame.height / 2
+        }
+        //playButton.layer.borderWidth = 2
+        //playButton.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        //playButton.layer.cornerRadius = playButton.frame.height / 2
         
-        theoryButton.layer.borderWidth = 2
-        theoryButton.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        theoryButton.layer.cornerRadius = theoryButton.frame.height / 2
+        //theoryButton.layer.borderWidth = 2
+        //theoryButton.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        //theoryButton.layer.cornerRadius = theoryButton.frame.height / 2
     }
 
 
@@ -72,7 +82,6 @@ class MainViewController: UIViewController {
         let id = Int(sender.accessibilityIdentifier!)!
         if id == 10 {
             print("Training 10")
-            
         } else {
             print("Training 20")
         }
@@ -84,7 +93,7 @@ class MainViewController: UIViewController {
         self.performSegue(withIdentifier: K.Segues.chooseNumSegue, sender: sender)
     }
     
-    //Переход к достижения
+    //Переход к достижениям
     @IBAction func achieveButtonPressed(_ sender: UIButton) {
         self.performSegue(withIdentifier: K.Segues.achieveSegue, sender: sender)
     }

@@ -9,6 +9,15 @@
 import UIKit
 
 class MainViewController: UIViewController {
+//MARK: - OBJECTS
+    private let quote = Quotes()
+    private let save = SaveData.singletonSaveData
+    private let levelsManager = LevelsManager()
+    
+    //УДАЛИТЬ
+    private let progress = ProgressData()
+    
+    
 //MARK: - VARIABLES
     //Толщина границ кнопок
     private let buttonsBorderWidth: CGFloat = 2
@@ -24,12 +33,6 @@ class MainViewController: UIViewController {
     
     //Все кнопки
     @IBOutlet var buttonsCollection: [UIButton]!
-   
-    
-//MARK: - OBJECTS
-    private let quote = Quotes()
-    private let save = SaveData.singletonSaveData
-    private let progress = ProgressData()
     
     
 //MARK: - LOADING
@@ -45,11 +48,12 @@ class MainViewController: UIViewController {
         //Применение случайной цитаты
         quotesLabel.text = quote.randomQuote()
         //Присвоение текущего уровня
-        levelLabel.text = progress.getProgressName()
+        //levelLabel.text = progress.getProgressName()
+        levelLabel.text = levelsManager.getCurrentLevelText()
         //Присвоение значения прогресс бару
-        progressBar.setProgress(progress.getProgressFloat(), animated: true)
-        //Присвоение текущего результата
-        scoreLabel.text = progress.getProgressScore()
+        progressBar.setProgress(levelsManager.getCurrentScoreFloat(), animated: true)
+        //Присвоение текущего прогресса в виде 100/100        
+        scoreLabel.text = levelsManager.getCurrentScoreText()
     }
     
         

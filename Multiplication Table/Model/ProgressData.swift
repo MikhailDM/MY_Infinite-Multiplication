@@ -9,17 +9,20 @@
 import Foundation
 
 struct ProgressData {
+//MARK: - OBJECTS
+    private let saved = SaveData.singletonSaveData
+    private let levelsManager = LevelsManager()
+    
+    
 //MARK: - VARIABLES
     //Максимальный прогресс в игре
-    let totalP = K.MainMenu.maxTotalSolvedEquations
+    private let totalP = K.MainMenu.maxTotalSolvedEquations
+    //private let totalP = levelsManager.getMaxLevelRequirement()
     //Текст прогресса
     let progressT = K.MainMenu.progressText
     //Словарь уровней
     let levelsName = K.MainMenu.levels
     let levelsNum = K.MainMenu.levelsCharge
-    
-//MARK: - OBJECTS
-    let saved = SaveData.singletonSaveData
     
     
 //MARK: - ВСЕ РЕШЕНЫЕ ПРИМЕРЫ. ВОЗВРАЩАЕТ FLOAT ОТНОСИТЕЛЬНО РЕШЕННЫХ ПРИМЕРОВ 0.0 - 1.0

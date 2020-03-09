@@ -9,35 +9,27 @@
 import Foundation
 
 struct LevelsManager {
-//MARK: - LEVELS ARRAY
-    /*
-    static let levelsArray = [
-        Level(levelName: "НОВИЧОК", levelRequirement: 0),
-        Level(levelName: "УЧЕНИК", levelRequirement: 2),
-        Level(levelName: "СТУДЕНТ", levelRequirement: 5),
-        Level(levelName: "МАТЕМАТИК", levelRequirement: 7),
-        Level(levelName: "ПРОФЕССОР", levelRequirement: 10)
-    ]
-     */
-    
-    
 //MARK: - OBJECTS
     private let save = SaveData.singletonSaveData
     
     
-    
 //MARK: - VARIABLES
-    //Текущий уровень
-    //private var currentLevel = levelsArray[0]
     //Массив уровней
     private let levels = K.levelsArray
+    //Текст текущего уровня
+    private let currentLevelText = " ТЕКУЩИЙ УРОВЕНЬ: "
     
+
+//MARK: - PRIVATE. RETURN MAX LEVEL SCORE REQUIREMENT
+    //Возвращает Int максимального возможного прогресса
+    private func getMaxLevelRequirement() -> Int {
+        let max = levels.last!.levelRequirement
+        return max
+    }
     
-    
-//MARK: - RETURN CURRENT LEVEL
-    
+//MARK: - PRIVATE. RETURN CURRENT LEVEL
     //Метод возвращающий текущий уровень в зависимости от прогресса
-    mutating func getCurrentLevel() -> LevelModel {
+    private func getCurrentLevel() -> LevelModel {
         //Текущий уровень
         var currentLevel = levels[0]
         //Общее число решенных примеров
@@ -53,12 +45,55 @@ struct LevelsManager {
         return currentLevel
     }
     
-       
-//MARK: - RETURN MAX LEVEL SCORE REQUIREMENT
     
-    //Возвращает Int максимального возможного прогресса
-    func getMaxLevelRequirement() -> Int {
-        let max = levels.last!.levelRequirement
-        return max
+
+//MARK: - МЕТОДЫ ОТОБРАЖЕНИЯ ПРОГРЕССА И УРОВНЯ
+//MARK: - PRO. ВСЕ РЕШЕНЫЕ ПРИМЕРЫ. ВОЗВРАЩАЕТ ПРОГРЕСС В ФОРМАТЕ - 100/100
+    
+    //При наборе очков больше чем максимально - возвращает в виде 100/100
+    func getCurrentScoreText() -> String {
+        //Текущее число решенных примеров
+        let currentScore = save.getTotalSolved()
+        //Необходимое/Максимальное число решенных примеров
+        let maxScore = getMaxLevelRequirement()
+        
+        if currentScore <= maxScore {
+            let score = "\(currentScore)/\(maxScore)"
+            return score
+        } else {
+            let score = "\(maxScore)/\(maxScore)"
+            return score
+        }
     }
+    
+    
+//MARK: - PRO. ВСЕ РЕШЕНЫЕ ПРИМЕРЫ. ВОЗВРАЩАЕТ FLOAT ОТНОСИТЕЛЬНО РЕШЕННЫХ ПРИМЕРОВ 0.0 - 1.0
+    
+    //При наборе очков больше чем максимально - возвращает прогресс 1.0
+    func getCurrentScoreFloat() -> Float {
+        //Текущее число решенных примеров
+        let currentScore = save.getTotalSolved()
+        //Необходимое/Максимальное число решенных примеров
+        let maxScore = getMaxLevelRequirement()
+        
+        if currentScore <= maxScore {
+            let progress = Float(currentScore)/Float(maxScore)
+            return progress
+        } else {
+            return 1.0
+        }
+    }
+    
+    
+//MARK: - PRO. ВСЕ РЕШЕНЫЕ ПРИМЕРЫ. ВОЗВРАЩАЕТ ИМЯ ТЕКУЩЕГО УРОВНЯ
+    
+    //Метод возвращающий достигнутый уровень со стартовым текстом
+    func getCurrentLevelText() -> String {
+        let currentLevel = getCurrentLevel()
+        return currentLevelText + currentLevel.levelName + " "
+    }
+    
+    
+    
+    
 }

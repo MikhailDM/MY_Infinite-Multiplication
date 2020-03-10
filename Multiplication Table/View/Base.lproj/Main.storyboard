@@ -1500,29 +1500,46 @@
         <!--PREMIUM-->
         <scene sceneID="hJK-tT-ggU">
             <objects>
-                <viewController id="kaM-20-RoH" sceneMemberID="viewController">
+                <viewController id="kaM-20-RoH" customClass="PremiumViewController" customModule="Multiplication_Table" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QIO-YH-zrA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPU-TM-isZ">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2Kb-2m-gyO">
                                 <rect key="frame" x="0.0" y="44" width="414" height="692"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="КУПИТЬ PRO">
-                                    <color key="titleColor" name="MyWhite"/>
-                                </state>
-                            </button>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPU-TM-isZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="346"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="КУПИТЬ PRO">
+                                            <color key="titleColor" name="MyWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="premiumButtonPressed:" destination="kaM-20-RoH" eventType="touchUpInside" id="iEg-il-uEi"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="СОСТОЯНИЕ ПОКУПКИ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17y-sg-t8H">
+                                        <rect key="frame" x="0.0" y="346" width="414" height="346"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="MyWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" name="MyBackground"/>
                         <constraints>
-                            <constraint firstItem="bPU-TM-isZ" firstAttribute="leading" secondItem="CLj-6q-eWg" secondAttribute="leading" id="Dfk-Qa-L9w"/>
-                            <constraint firstItem="bPU-TM-isZ" firstAttribute="top" secondItem="CLj-6q-eWg" secondAttribute="top" id="JHW-TB-JBA"/>
-                            <constraint firstItem="CLj-6q-eWg" firstAttribute="trailing" secondItem="bPU-TM-isZ" secondAttribute="trailing" id="RYS-s8-7nO"/>
-                            <constraint firstItem="CLj-6q-eWg" firstAttribute="bottom" secondItem="bPU-TM-isZ" secondAttribute="bottom" id="eB1-eC-adA"/>
+                            <constraint firstItem="2Kb-2m-gyO" firstAttribute="leading" secondItem="CLj-6q-eWg" secondAttribute="leading" id="93s-Rl-WT8"/>
+                            <constraint firstItem="CLj-6q-eWg" firstAttribute="trailing" secondItem="2Kb-2m-gyO" secondAttribute="trailing" id="VBC-Q3-5Wd"/>
+                            <constraint firstItem="CLj-6q-eWg" firstAttribute="bottom" secondItem="2Kb-2m-gyO" secondAttribute="bottom" id="WWH-Us-Rbw"/>
+                            <constraint firstItem="2Kb-2m-gyO" firstAttribute="top" secondItem="CLj-6q-eWg" secondAttribute="top" id="XH5-Hp-aV7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CLj-6q-eWg"/>
                     </view>
                     <navigationItem key="navigationItem" title="PREMIUM" id="GVo-wG-gjl"/>
+                    <connections>
+                        <outlet property="premiumStateLabel" destination="17y-sg-t8H" id="egl-7I-vFO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J5x-eT-Fh0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

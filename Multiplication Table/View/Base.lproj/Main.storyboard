@@ -144,6 +144,7 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUb-tY-yUe">
                                                         <rect key="frame" x="0.0" y="195.66666666666669" width="374" height="50.333333333333343"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="PremiumAccess"/>
                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
                                                         <state key="normal" title="ДОСТИЖЕНИЯ">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -208,6 +209,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="jlS-Zo-n31"/>
                     <connections>
+                        <outlet property="achievementsButton" destination="CUb-tY-yUe" id="G4S-nv-Xj3"/>
                         <outlet property="levelLabel" destination="56R-ms-trB" id="ZRp-VD-hx8"/>
                         <outlet property="progressBar" destination="2vk-nG-IUt" id="wYg-tf-OSO"/>
                         <outlet property="quotesLabel" destination="I29-q6-iut" id="GY7-6H-v3I"/>

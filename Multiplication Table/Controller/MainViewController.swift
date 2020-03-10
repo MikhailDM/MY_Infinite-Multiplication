@@ -20,6 +20,9 @@ class MainViewController: UIViewController {
     private let buttonsBorderWidth: CGFloat = 2
     //Цвет границ кнопок
     private let buttonsBorderColor = K.MyColorsUI.blue?.cgColor
+    
+    //Alpha для Free кнопок
+    private let alphaFree = K.Premium.alphaFree
   
     
 //MARK: - OUTLETS
@@ -31,12 +34,17 @@ class MainViewController: UIViewController {
     //Все кнопки
     @IBOutlet var buttonsCollection: [UIButton]!
     
+    //Premium кнопки
+    @IBOutlet weak var achievementsButton: UIButton!
+    
+    
     
 //MARK: - LOADING
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupUI()
         updateUI()
+        premiumUI()
     }   
     
     
@@ -54,9 +62,9 @@ class MainViewController: UIViewController {
     }
     
         
-//MARK: - SETUP UI 
+//MARK: - SETUP UI
     
-    func setupUI(){
+    func setupUI() {
         //Скрытие бара навигации
         navigationController?.isNavigationBarHidden = true
         
@@ -66,8 +74,31 @@ class MainViewController: UIViewController {
             button.layer.borderColor = buttonsBorderColor
             button.layer.cornerRadius = button.frame.height / 2
         }
+        /*
+        //Кнопка достижений - НЕДОСТУПНА в Free версии
+        if !save.getPRO() {
+            achievementsButton.isEnabled = false
+            achievementsButton.titleLabel?.alpha = 0.1
+        } else {
+            achievementsButton.isEnabled = true
+            achievementsButton.titleLabel?.alpha = 1.0
+        }*/
     }
-
+    
+    
+//MARK: - PREMIUM UI
+    
+    func premiumUI() {
+        //Кнопка достижений - НЕДОСТУПНА в Free версии
+        if !save.getPRO() {
+            achievementsButton.isEnabled = false
+            achievementsButton.alpha = alphaFree
+        } else {
+            achievementsButton.isEnabled = true
+            achievementsButton.alpha = 1.0
+        }
+    }
+    
 
 //MARK: - NAVIGATION
     

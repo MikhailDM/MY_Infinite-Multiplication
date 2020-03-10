@@ -64,8 +64,11 @@ struct K {
     struct Premium {
         //Отображаемый текст для Free версии
         static let freeVersionText = "XXX"
-    } 
-    
+        //ID для кнопок с Premium доступом
+        static let premiumAccessID = "PremiumAccess"
+        //Alpha для Free кнопок
+        static var alphaFree: CGFloat = 0.3
+    }
 
 
 //MARK: - КОНСТАНТЫ ВВОДА
@@ -75,6 +78,7 @@ struct K {
         static let maxAnswerLength = 3
         static let startAnswerText = "ВВЕДИТЕ ОТВЕТ"
     }
+    
     
 //MARK: - КОНСТАНТЫ БЕСКОНЕЧНОГО УМНОЖЕНИЯ
     struct PlayInf {

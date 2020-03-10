@@ -54,7 +54,7 @@ class MainViewController: UIViewController {
     }
     
         
-//MARK: - UI SETUP
+//MARK: - SETUP UI 
     
     func setupUI(){
         //Скрытие бара навигации
@@ -65,7 +65,7 @@ class MainViewController: UIViewController {
             button.layer.borderWidth = buttonsBorderWidth
             button.layer.borderColor = buttonsBorderColor
             button.layer.cornerRadius = button.frame.height / 2
-        }        
+        }
     }
 
 

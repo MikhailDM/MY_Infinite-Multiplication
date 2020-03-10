@@ -59,30 +59,12 @@ struct K {
     ]
 
     
-//MARK: - КОНСТАНТЫ ГЛАВНОГО МЕНЮ
+//MARK: - КОНСТАНТЫ PREMIUM
     
-    struct MainMenu {
-        //Общее число кнопок для тренировки таблицы умножения
-        //static let maxNumberToTrain = 20
-        
-        //Максимальное значение для решенных примеров, которое нужно достичь
-        static let maxTotalSolvedEquations = 100
-        
-        //Текст прогресса
-        static let progressText = "ТЕКУЩИЙ УРОВЕНЬ: "
-        
-        //Необходимое число решенных примеров для получения уровня
-        static let levelsCharge = [2, 5, 7, maxTotalSolvedEquations]
-        //Уровни
-        static let levels = [
-            "НОВИЧОК",//0
-            "УЧЕНИК",//1
-            "СТУДЕНТ",//2
-            "МАТЕМАТИК",//3
-            "ПРОФЕССОР",//4
-        ]
-    }
-    
+    struct Premium {
+        //Отображаемый текст для Free версии
+        static let freeVersionText = "XXX"
+    } 
     
 
 

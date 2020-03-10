@@ -19,6 +19,9 @@ struct LevelsManager {
     //Текст текущего уровня
     private let currentLevelText = " ТЕКУЩИЙ УРОВЕНЬ: "
     
+    //Текст для Free версии. Возвращается вместо значений
+    private let freeVersionText = K.Premium.freeVersionText
+    
 
 //MARK: - PRIVATE. RETURN MAX LEVEL SCORE REQUIREMENT
     //Возвращает Int максимального возможного прогресса
@@ -56,12 +59,21 @@ struct LevelsManager {
         let currentScore = save.getTotalSolved()
         //Необходимое/Максимальное число решенных примеров
         let maxScore = getMaxLevelRequirement()
+        //Состояние Premium
+        let isPro = save.getPRO()
         
-        if currentScore <= maxScore {
-            let score = "\(currentScore)/\(maxScore)"
-            return score
+        //Возвращает значения при Premium
+        if isPro {
+            if currentScore <= maxScore {
+                let score = "\(currentScore)/\(maxScore)"
+                return score
+            } else {
+                let score = "\(maxScore)/\(maxScore)"
+                return score
+            }
+        //Возвращает значения при Free
         } else {
-            let score = "\(maxScore)/\(maxScore)"
+            let score = "\(freeVersionText)/\(maxScore)"
             return score
         }
     }
@@ -75,12 +87,20 @@ struct LevelsManager {
         let currentScore = save.getTotalSolved()
         //Необходимое/Максимальное число решенных примеров
         let maxScore = getMaxLevelRequirement()
+        //Состояние Premium
+        let isPro = save.getPRO()
         
-        if currentScore <= maxScore {
-            let progress = Float(currentScore)/Float(maxScore)
-            return progress
+        //Возвращает значения при Premium
+        if isPro {
+            if currentScore <= maxScore {
+                let progress = Float(currentScore)/Float(maxScore)
+                return progress
+            } else {
+                return 1.0
+            }
+        //Возвращает значения при Free
         } else {
-            return 1.0
+            return 0.0
         }
     }
     
@@ -89,8 +109,18 @@ struct LevelsManager {
     
     //Метод возвращающий достигнутый уровень со стартовым текстом
     func getCurrentLevelText() -> String {
+        //Получение текущего уровня
         let currentLevel = getCurrentLevel()
-        return currentLevelText + currentLevel.levelName + " "
+        //Состояние Premium
+        let isPro = save.getPRO()
+        
+        //Возвращает значения при Premium
+        if isPro {
+            return currentLevelText + currentLevel.levelName + " "
+        //Возвращает значения при Free
+        } else {
+            return currentLevelText + freeVersionText + " "
+        }
     }
     
     

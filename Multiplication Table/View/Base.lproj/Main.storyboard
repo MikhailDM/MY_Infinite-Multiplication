@@ -122,24 +122,24 @@
                                                             </button>
                                                         </subviews>
                                                     </stackView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7zh-CC-iXY">
-                                                        <rect key="frame" x="0.0" y="65" width="374" height="50.333333333333343"/>
-                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
-                                                        <state key="normal" title="ТЕОРИЯ">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                        <connections>
-                                                            <segue destination="HNu-jF-Jk9" kind="show" id="gM0-mn-YMx"/>
-                                                        </connections>
-                                                    </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ee8-4O-hoY">
-                                                        <rect key="frame" x="0.0" y="130.33333333333337" width="374" height="50.333333333333343"/>
+                                                        <rect key="frame" x="0.0" y="65" width="374" height="50.333333333333343"/>
                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
                                                         <state key="normal" title="ЧИСЛА">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="numChoosePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="71b-Ua-1m1"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7zh-CC-iXY">
+                                                        <rect key="frame" x="0.0" y="130.33333333333337" width="374" height="50.333333333333343"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
+                                                        <state key="normal" title="ТЕОРИЯ">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="theoryButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yf0-7I-usV"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUb-tY-yUe">
@@ -158,6 +158,9 @@
                                                         <state key="normal" title="PREMIUM">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="premiumButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M25-nc-eGk"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -218,6 +221,8 @@
                         <segue destination="D0W-ZK-u20" kind="show" identifier="InfinitePlaySegue" id="kn6-Cr-KVP"/>
                         <segue destination="2bJ-Z8-sGi" kind="show" identifier="ChooseNumSegue" id="RhU-Ix-ody"/>
                         <segue destination="bEX-KX-eOC" kind="show" identifier="AchieveSegue" id="vkg-Ur-nOB"/>
+                        <segue destination="kaM-20-RoH" kind="show" identifier="PremiumSegue" id="Fim-56-C2j"/>
+                        <segue destination="HNu-jF-Jk9" kind="show" identifier="TheorySegue" id="KP3-xz-swF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -1490,7 +1495,38 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CkK-ps-O9X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2190" y="889"/>
+            <point key="canvasLocation" x="1039" y="1085"/>
+        </scene>
+        <!--PREMIUM-->
+        <scene sceneID="hJK-tT-ggU">
+            <objects>
+                <viewController id="kaM-20-RoH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QIO-YH-zrA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPU-TM-isZ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="692"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="КУПИТЬ PRO">
+                                    <color key="titleColor" name="MyWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="MyBackground"/>
+                        <constraints>
+                            <constraint firstItem="bPU-TM-isZ" firstAttribute="leading" secondItem="CLj-6q-eWg" secondAttribute="leading" id="Dfk-Qa-L9w"/>
+                            <constraint firstItem="bPU-TM-isZ" firstAttribute="top" secondItem="CLj-6q-eWg" secondAttribute="top" id="JHW-TB-JBA"/>
+                            <constraint firstItem="CLj-6q-eWg" firstAttribute="trailing" secondItem="bPU-TM-isZ" secondAttribute="trailing" id="RYS-s8-7nO"/>
+                            <constraint firstItem="CLj-6q-eWg" firstAttribute="bottom" secondItem="bPU-TM-isZ" secondAttribute="bottom" id="eB1-eC-adA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CLj-6q-eWg"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="PREMIUM" id="GVo-wG-gjl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J5x-eT-Fh0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-300" y="1082.608695652174"/>
         </scene>
         <!--ДОСТИЖЕНИЯ-->
         <scene sceneID="PEd-MV-DrX">
@@ -1511,7 +1547,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1tB-HO-i9o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1039" y="889"/>
+            <point key="canvasLocation" x="375" y="1084"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9Qe-vp-luQ">

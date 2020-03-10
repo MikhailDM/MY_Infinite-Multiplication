@@ -13,10 +13,7 @@ class MainViewController: UIViewController {
     private let quote = Quotes()
     private let save = SaveData.singletonSaveData
     private let levelsManager = LevelsManager()
-    
-    //УДАЛИТЬ
-    private let progress = ProgressData()
-    
+        
     
 //MARK: - VARIABLES
     //Толщина границ кнопок
@@ -68,14 +65,7 @@ class MainViewController: UIViewController {
             button.layer.borderWidth = buttonsBorderWidth
             button.layer.borderColor = buttonsBorderColor
             button.layer.cornerRadius = button.frame.height / 2
-        }
-        //playButton.layer.borderWidth = 2
-        //playButton.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        //playButton.layer.cornerRadius = playButton.frame.height / 2
-        
-        //theoryButton.layer.borderWidth = 2
-        //theoryButton.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        //theoryButton.layer.cornerRadius = theoryButton.frame.height / 2
+        }        
     }
 
 
@@ -84,11 +74,7 @@ class MainViewController: UIViewController {
     //Переход к бесконечному умножению
     @IBAction func infiniteButtonPressed(_ sender: UIButton) {
         let id = Int(sender.accessibilityIdentifier!)!
-        if id == 10 {
-            print("Training 10")
-        } else {
-            print("Training 20")
-        }
+        print("Training \(id)")
         Ex.numToTrain = id
         self.performSegue(withIdentifier: K.Segues.infinitePlaySegue, sender: sender)
     }
@@ -97,13 +83,20 @@ class MainViewController: UIViewController {
         self.performSegue(withIdentifier: K.Segues.chooseNumSegue, sender: sender)
     }
     
+    //Переход к теории
+    @IBAction func theoryButtonPressed(_ sender: UIButton) {
+        self.performSegue(withIdentifier: K.Segues.theorySegue, sender: sender)
+    }
+    
     //Переход к достижениям
     @IBAction func achieveButtonPressed(_ sender: UIButton) {
         self.performSegue(withIdentifier: K.Segues.achieveSegue, sender: sender)
     }
     
+    //Переход к Premium
+    @IBAction func premiumButtonPressed(_ sender: UIButton) {
+        self.performSegue(withIdentifier: K.Segues.premiumSegue, sender: sender)
+    }
     
-    
-   
 }
 

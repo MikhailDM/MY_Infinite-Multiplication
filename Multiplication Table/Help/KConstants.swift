@@ -121,8 +121,14 @@ struct K {
         //Дальнейший Segue к тренировке с 1 цифрой
         static let playOneNumSegue = "PlayOneNumSegue"
         
+        //Segue к теории
+        static let theorySegue = "TheorySegue"
+        
         //Segue к достижениям
         static let achieveSegue = "AchieveSegue"
+        
+        //Segue к Premium
+        static let premiumSegue = "PremiumSegue"
         
     }
     

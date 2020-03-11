@@ -107,7 +107,7 @@ class SaveData {
     }
         
     //Метод который проверяет есть ли уже такая цифра в массиве. False - цифра отсутствует.
-    func getSolvedNumsState(numToCheck: Int) -> Bool {
+    func getSolvedNumsState(numToCheck: Int) -> Bool {        
         //Проверка - Существует ли словарь типа [String: Bool]
         if let currentArr = defaults.array(forKey: allSolvedNumsArrName) {
             let array = currentArr as! [Int]

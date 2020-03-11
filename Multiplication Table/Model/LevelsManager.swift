@@ -73,7 +73,7 @@ struct LevelsManager {
             }
         //Возвращает значения при Free
         } else {
-            let score = "\(freeVersionText)/\(maxScore)"
+            let score = "\(freeVersionText)/\(freeVersionText)"
             return score
         }
     }

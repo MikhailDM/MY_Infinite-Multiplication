@@ -64,8 +64,6 @@ struct K {
     struct Premium {
         //Отображаемый текст для Free версии
         static let freeVersionText = "XXX"
-        //ID для кнопок с Premium доступом
-        static let premiumAccessID = "PremiumAccess"
         //Alpha для Free кнопок
         static var alphaFree: CGFloat = 0.3
     }
@@ -137,7 +135,7 @@ struct K {
         static let scaleFactor: CGFloat = 0.5
         
         //Основные шрифты
-        static let maintF = "Futura-Bold"
+        static let mainF = "Futura-Bold"
         
         //Основные размеры шрифтов
         static var size30: CGFloat = 30

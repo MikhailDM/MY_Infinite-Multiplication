@@ -242,251 +242,331 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Xua-d9-tR0">
                                 <rect key="frame" x="20" y="44" width="374" height="692"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="XXT-EG-dw0">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b6J-TU-P68">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="138.33333333333334"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEA-DY-NZV">
-                                                <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="138.33333333333334"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="1"/>
-                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
-                                                <state key="normal" title="x1">
-                                                    <color key="titleColor" name="MyGreen"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="AQU-UX-P2k"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01g-dY-ckn">
-                                                <rect key="frame" x="93.666666666666686" y="0.0" width="93.333333333333314" height="138.33333333333334"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="2"/>
-                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
-                                                <state key="normal" title="x2">
-                                                    <color key="titleColor" name="MyGreen"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="HC8-K1-zs1"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4CL-7h-MbP">
-                                                <rect key="frame" x="187" y="0.0" width="93.666666666666686" height="138.33333333333334"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="3"/>
-                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
-                                                <state key="normal" title="x3">
-                                                    <color key="titleColor" name="MyGreen"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="Cvt-Ri-ZCk"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehk-h7-RDM">
-                                                <rect key="frame" x="280.66666666666669" y="0.0" width="93.333333333333314" height="138.33333333333334"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="4"/>
-                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
-                                                <state key="normal" title="x4">
-                                                    <color key="titleColor" name="MyGreen"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="fGg-d0-o6t"/>
-                                                </connections>
-                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XXT-EG-dw0">
+                                                <rect key="frame" x="0.0" y="26.333333333333329" width="374" height="86"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEA-DY-NZV">
+                                                        <rect key="frame" x="0.0" y="0.0" width="86" height="86"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="1"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="BEA-DY-NZV" secondAttribute="height" multiplier="1:1" id="m77-do-1wN"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                        <state key="normal" title="x1">
+                                                            <color key="titleColor" name="MyGreen"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="AQU-UX-P2k"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01g-dY-ckn">
+                                                        <rect key="frame" x="96" y="0.0" width="86" height="86"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="2"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                        <state key="normal" title="x2">
+                                                            <color key="titleColor" name="MyGreen"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="HC8-K1-zs1"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4CL-7h-MbP">
+                                                        <rect key="frame" x="192" y="0.0" width="86" height="86"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="3"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                        <state key="normal" title="x3">
+                                                            <color key="titleColor" name="MyGreen"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="Cvt-Ri-ZCk"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehk-h7-RDM">
+                                                        <rect key="frame" x="288" y="0.0" width="86" height="86"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="4"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                        <state key="normal" title="x4">
+                                                            <color key="titleColor" name="MyGreen"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="fGg-d0-o6t"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="15O-Lc-6X0">
+                                        <constraints>
+                                            <constraint firstItem="XXT-EG-dw0" firstAttribute="top" relation="greaterThanOrEqual" secondItem="b6J-TU-P68" secondAttribute="top" id="Jhk-Tu-tgk"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="XXT-EG-dw0" secondAttribute="bottom" id="Roa-xC-Dgy"/>
+                                            <constraint firstItem="XXT-EG-dw0" firstAttribute="leading" secondItem="b6J-TU-P68" secondAttribute="leading" id="YWL-6J-B5l"/>
+                                            <constraint firstAttribute="trailing" secondItem="XXT-EG-dw0" secondAttribute="trailing" id="brP-go-eOc"/>
+                                            <constraint firstItem="XXT-EG-dw0" firstAttribute="centerX" secondItem="b6J-TU-P68" secondAttribute="centerX" id="pai-vR-gCf"/>
+                                            <constraint firstItem="XXT-EG-dw0" firstAttribute="centerY" secondItem="b6J-TU-P68" secondAttribute="centerY" id="zAb-TQ-CYj"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gUo-VS-XFV">
                                         <rect key="frame" x="0.0" y="138.33333333333331" width="374" height="138.33333333333331"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zmx-6G-p8h">
-                                                <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="138.33333333333334"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="5"/>
-                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
-                                                <state key="normal" title="x5">
-                                                    <color key="titleColor" name="MyGreen"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="NiE-GJ-Vwt"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6i1-kl-i70">
-                                                <rect key="frame" x="93.666666666666686" y="0.0" width="93.333333333333314" height="138.33333333333334"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="6"/>
-                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
-                                                <state key="normal" title="x6">
-                                                    <color key="titleColor" name="MyGreen"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="iVQ-rf-kdu"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iad-MA-B5I">
-                                                <rect key="frame" x="187" y="0.0" width="93.666666666666686" height="138.33333333333334"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="7"/>
-                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
-                                                <state key="normal" title="x7">
-                                                    <color key="titleColor" name="MyGreen"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="wBN-Ha-yk9"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Otr-zl-rDz">
-                                                <rect key="frame" x="280.66666666666669" y="0.0" width="93.333333333333314" height="138.33333333333334"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="8"/>
-                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
-                                                <state key="normal" title="x8">
-                                                    <color key="titleColor" name="MyGreen"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="kvN-oS-Cbw"/>
-                                                </connections>
-                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="15O-Lc-6X0">
+                                                <rect key="frame" x="0.0" y="26.333333333333314" width="374" height="86"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zmx-6G-p8h">
+                                                        <rect key="frame" x="0.0" y="0.0" width="86" height="86"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="Zmx-6G-p8h" secondAttribute="height" multiplier="1:1" id="7Y8-f7-9Ps"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                        <state key="normal" title="x5">
+                                                            <color key="titleColor" name="MyGreen"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="NiE-GJ-Vwt"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6i1-kl-i70">
+                                                        <rect key="frame" x="96" y="0.0" width="86" height="86"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="6"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                        <state key="normal" title="x6">
+                                                            <color key="titleColor" name="MyGreen"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="iVQ-rf-kdu"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iad-MA-B5I">
+                                                        <rect key="frame" x="192" y="0.0" width="86" height="86"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="7"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                        <state key="normal" title="x7">
+                                                            <color key="titleColor" name="MyGreen"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="wBN-Ha-yk9"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Otr-zl-rDz">
+                                                        <rect key="frame" x="288" y="0.0" width="86" height="86"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="8"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                        <state key="normal" title="x8">
+                                                            <color key="titleColor" name="MyGreen"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="kvN-oS-Cbw"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7Zg-8q-3I3">
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="15O-Lc-6X0" secondAttribute="trailing" id="7mC-at-ZUg"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="15O-Lc-6X0" secondAttribute="bottom" id="Awr-Eq-fTV"/>
+                                            <constraint firstItem="15O-Lc-6X0" firstAttribute="centerX" secondItem="gUo-VS-XFV" secondAttribute="centerX" id="T98-pY-t7n"/>
+                                            <constraint firstItem="15O-Lc-6X0" firstAttribute="leading" secondItem="gUo-VS-XFV" secondAttribute="leading" id="VVe-df-eLS"/>
+                                            <constraint firstItem="15O-Lc-6X0" firstAttribute="centerY" secondItem="gUo-VS-XFV" secondAttribute="centerY" id="dEp-dT-pUr"/>
+                                            <constraint firstItem="15O-Lc-6X0" firstAttribute="top" relation="greaterThanOrEqual" secondItem="gUo-VS-XFV" secondAttribute="top" id="yUP-lY-Df8"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Wd-j9-7nJ">
                                         <rect key="frame" x="0.0" y="276.66666666666669" width="374" height="138.66666666666669"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Mw-Ip-kSf">
-                                                <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="138.66666666666666"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="9"/>
-                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
-                                                <state key="normal" title="x9">
-                                                    <color key="titleColor" name="MyGreen"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="IRD-7d-4lh"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6R-6n-e4X">
-                                                <rect key="frame" x="93.666666666666686" y="0.0" width="93.333333333333314" height="138.66666666666666"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="10"/>
-                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
-                                                <state key="normal" title="x10">
-                                                    <color key="titleColor" name="MyGreen"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="e2E-lP-0zH"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58n-RY-5PB">
-                                                <rect key="frame" x="187" y="0.0" width="93.666666666666686" height="138.66666666666666"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="11"/>
-                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
-                                                <state key="normal" title="x11">
-                                                    <color key="titleColor" name="MyGreen"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="W0H-56-nr4"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0FI-C5-GwC">
-                                                <rect key="frame" x="280.66666666666669" y="0.0" width="93.333333333333314" height="138.66666666666666"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="12"/>
-                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
-                                                <state key="normal" title="x12">
-                                                    <color key="titleColor" name="MyGreen"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="WeB-2V-z9B"/>
-                                                </connections>
-                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7Zg-8q-3I3">
+                                                <rect key="frame" x="0.0" y="26.333333333333314" width="374" height="86"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Mw-Ip-kSf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="86" height="86"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="9"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="5Mw-Ip-kSf" secondAttribute="height" multiplier="1:1" id="Osv-16-Ba0"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                        <state key="normal" title="x9">
+                                                            <color key="titleColor" name="MyGreen"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="IRD-7d-4lh"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6R-6n-e4X">
+                                                        <rect key="frame" x="96" y="0.0" width="86" height="86"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="10"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                        <state key="normal" title="x10">
+                                                            <color key="titleColor" name="MyGreen"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="e2E-lP-0zH"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58n-RY-5PB">
+                                                        <rect key="frame" x="192" y="0.0" width="86" height="86"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="11"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                        <state key="normal" title="x11">
+                                                            <color key="titleColor" name="MyGreen"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="W0H-56-nr4"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0FI-C5-GwC">
+                                                        <rect key="frame" x="288" y="0.0" width="86" height="86"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="12"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                        <state key="normal" title="x12">
+                                                            <color key="titleColor" name="MyGreen"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="WeB-2V-z9B"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="mG3-Dg-HVM">
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="7Zg-8q-3I3" secondAttribute="bottom" id="9AX-Bn-98v"/>
+                                            <constraint firstItem="7Zg-8q-3I3" firstAttribute="leading" secondItem="6Wd-j9-7nJ" secondAttribute="leading" id="Ewd-bs-wPf"/>
+                                            <constraint firstAttribute="trailing" secondItem="7Zg-8q-3I3" secondAttribute="trailing" id="Tyz-3z-l2b"/>
+                                            <constraint firstItem="7Zg-8q-3I3" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Wd-j9-7nJ" secondAttribute="top" id="VKd-5o-Ypq"/>
+                                            <constraint firstItem="7Zg-8q-3I3" firstAttribute="centerX" secondItem="6Wd-j9-7nJ" secondAttribute="centerX" id="ZHj-H9-UxU"/>
+                                            <constraint firstItem="7Zg-8q-3I3" firstAttribute="centerY" secondItem="6Wd-j9-7nJ" secondAttribute="centerY" id="xGr-bp-yEU"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dpp-br-O9t">
                                         <rect key="frame" x="0.0" y="415.33333333333331" width="374" height="138.33333333333331"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfU-Fo-B2z">
-                                                <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="138.33333333333334"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="13"/>
-                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
-                                                <state key="normal" title="x13">
-                                                    <color key="titleColor" name="MyGreen"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="2Zq-eV-bJ7"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6C-Ln-328">
-                                                <rect key="frame" x="93.666666666666686" y="0.0" width="93.333333333333314" height="138.33333333333334"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="14"/>
-                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
-                                                <state key="normal" title="x14">
-                                                    <color key="titleColor" name="MyGreen"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="pr6-vp-lhE"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eg3-QU-T3r">
-                                                <rect key="frame" x="187" y="0.0" width="93.666666666666686" height="138.33333333333334"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="15"/>
-                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
-                                                <state key="normal" title="x15">
-                                                    <color key="titleColor" name="MyGreen"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="XxB-ke-oBj"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBF-DV-eJx">
-                                                <rect key="frame" x="280.66666666666669" y="0.0" width="93.333333333333314" height="138.33333333333334"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="16"/>
-                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
-                                                <state key="normal" title="x16">
-                                                    <color key="titleColor" name="MyGreen"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="HlY-U0-aIw"/>
-                                                </connections>
-                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mG3-Dg-HVM">
+                                                <rect key="frame" x="0.0" y="26" width="374" height="86"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfU-Fo-B2z">
+                                                        <rect key="frame" x="0.0" y="0.0" width="86" height="86"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="13"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="dfU-Fo-B2z" secondAttribute="height" multiplier="1:1" id="aAc-j3-2jf"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                        <state key="normal" title="x13">
+                                                            <color key="titleColor" name="MyGreen"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="2Zq-eV-bJ7"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6C-Ln-328">
+                                                        <rect key="frame" x="96" y="0.0" width="86" height="86"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="14"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                        <state key="normal" title="x14">
+                                                            <color key="titleColor" name="MyGreen"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="pr6-vp-lhE"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eg3-QU-T3r">
+                                                        <rect key="frame" x="192" y="0.0" width="86" height="86"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="15"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                        <state key="normal" title="x15">
+                                                            <color key="titleColor" name="MyGreen"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="XxB-ke-oBj"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBF-DV-eJx">
+                                                        <rect key="frame" x="288" y="0.0" width="86" height="86"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="16"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                        <state key="normal" title="x16">
+                                                            <color key="titleColor" name="MyGreen"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="HlY-U0-aIw"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fNy-qk-Vsk">
+                                        <constraints>
+                                            <constraint firstItem="mG3-Dg-HVM" firstAttribute="leading" secondItem="dpp-br-O9t" secondAttribute="leading" id="Sw1-wV-6g1"/>
+                                            <constraint firstItem="mG3-Dg-HVM" firstAttribute="centerX" secondItem="dpp-br-O9t" secondAttribute="centerX" id="cYu-SK-hxB"/>
+                                            <constraint firstItem="mG3-Dg-HVM" firstAttribute="top" relation="greaterThanOrEqual" secondItem="dpp-br-O9t" secondAttribute="top" id="hAj-vS-ICb"/>
+                                            <constraint firstAttribute="trailing" secondItem="mG3-Dg-HVM" secondAttribute="trailing" id="onW-IN-FZn"/>
+                                            <constraint firstItem="mG3-Dg-HVM" firstAttribute="centerY" secondItem="dpp-br-O9t" secondAttribute="centerY" id="wI4-ys-hI6"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="mG3-Dg-HVM" secondAttribute="bottom" id="xKA-js-Wig"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="795-IA-REc">
                                         <rect key="frame" x="0.0" y="553.66666666666663" width="374" height="138.33333333333337"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzl-OA-TI7">
-                                                <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="138.33333333333334"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="17"/>
-                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
-                                                <state key="normal" title="x17">
-                                                    <color key="titleColor" name="MyGreen"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="Tfn-cU-cds"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ar4-fq-hXk">
-                                                <rect key="frame" x="93.666666666666686" y="0.0" width="93.333333333333314" height="138.33333333333334"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="18"/>
-                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
-                                                <state key="normal" title="x18">
-                                                    <color key="titleColor" name="MyGreen"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="So8-ex-73O"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zeh-IJ-9RF">
-                                                <rect key="frame" x="187" y="0.0" width="93.666666666666686" height="138.33333333333334"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="19"/>
-                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
-                                                <state key="normal" title="x19">
-                                                    <color key="titleColor" name="MyGreen"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="t23-qk-Zb9"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0K-5h-fr1">
-                                                <rect key="frame" x="280.66666666666669" y="0.0" width="93.333333333333314" height="138.33333333333334"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="20"/>
-                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
-                                                <state key="normal" title="x20">
-                                                    <color key="titleColor" name="MyGreen"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="v1a-W7-pqZ"/>
-                                                </connections>
-                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fNy-qk-Vsk">
+                                                <rect key="frame" x="0.0" y="26" width="374" height="86"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzl-OA-TI7">
+                                                        <rect key="frame" x="0.0" y="0.0" width="86" height="86"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="17"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="dzl-OA-TI7" secondAttribute="height" multiplier="1:1" id="IHf-gZ-uOv"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                        <state key="normal" title="x17">
+                                                            <color key="titleColor" name="MyGreen"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="Tfn-cU-cds"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ar4-fq-hXk">
+                                                        <rect key="frame" x="96" y="0.0" width="86" height="86"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="18"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                        <state key="normal" title="x18">
+                                                            <color key="titleColor" name="MyGreen"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="So8-ex-73O"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zeh-IJ-9RF">
+                                                        <rect key="frame" x="192" y="0.0" width="86" height="86"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="19"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                        <state key="normal" title="x19">
+                                                            <color key="titleColor" name="MyGreen"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="t23-qk-Zb9"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0K-5h-fr1">
+                                                        <rect key="frame" x="288" y="0.0" width="86" height="86"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="20"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                        <state key="normal" title="x20">
+                                                            <color key="titleColor" name="MyGreen"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="chargeNumPressed:" destination="2bJ-Z8-sGi" eventType="touchUpInside" id="v1a-W7-pqZ"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
-                                    </stackView>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="fNy-qk-Vsk" secondAttribute="bottom" id="3GZ-dB-xTz"/>
+                                            <constraint firstItem="fNy-qk-Vsk" firstAttribute="top" relation="greaterThanOrEqual" secondItem="795-IA-REc" secondAttribute="top" id="AAt-Pi-v8N"/>
+                                            <constraint firstItem="fNy-qk-Vsk" firstAttribute="centerX" secondItem="795-IA-REc" secondAttribute="centerX" id="dnx-7k-QwN"/>
+                                            <constraint firstAttribute="trailing" secondItem="fNy-qk-Vsk" secondAttribute="trailing" id="k4Q-9I-JfV"/>
+                                            <constraint firstItem="fNy-qk-Vsk" firstAttribute="centerY" secondItem="795-IA-REc" secondAttribute="centerY" id="lBf-2g-Y9l"/>
+                                            <constraint firstItem="fNy-qk-Vsk" firstAttribute="leading" secondItem="795-IA-REc" secondAttribute="leading" id="mPE-Kj-7ZN"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -501,26 +581,26 @@
                     </view>
                     <navigationItem key="navigationItem" title="ВЫБОР ЧИСЛА" id="OTH-oW-VV2"/>
                     <connections>
-                        <outletCollection property="numButtonsCollection" destination="BEA-DY-NZV" collectionClass="NSMutableArray" id="iMS-8D-YMh"/>
                         <outletCollection property="numButtonsCollection" destination="01g-dY-ckn" collectionClass="NSMutableArray" id="PZx-K4-b7G"/>
                         <outletCollection property="numButtonsCollection" destination="4CL-7h-MbP" collectionClass="NSMutableArray" id="eX9-US-cmf"/>
+                        <outletCollection property="numButtonsCollection" destination="BEA-DY-NZV" collectionClass="NSMutableArray" id="iMS-8D-YMh"/>
                         <outletCollection property="numButtonsCollection" destination="ehk-h7-RDM" collectionClass="NSMutableArray" id="BkD-01-bF2"/>
-                        <outletCollection property="numButtonsCollection" destination="Zmx-6G-p8h" collectionClass="NSMutableArray" id="S7M-sL-2Im"/>
-                        <outletCollection property="numButtonsCollection" destination="6i1-kl-i70" collectionClass="NSMutableArray" id="U0s-3N-MGx"/>
                         <outletCollection property="numButtonsCollection" destination="iad-MA-B5I" collectionClass="NSMutableArray" id="pMO-zK-AH5"/>
+                        <outletCollection property="numButtonsCollection" destination="Zmx-6G-p8h" collectionClass="NSMutableArray" id="S7M-sL-2Im"/>
                         <outletCollection property="numButtonsCollection" destination="Otr-zl-rDz" collectionClass="NSMutableArray" id="JeN-uO-23U"/>
+                        <outletCollection property="numButtonsCollection" destination="6i1-kl-i70" collectionClass="NSMutableArray" id="U0s-3N-MGx"/>
                         <outletCollection property="numButtonsCollection" destination="5Mw-Ip-kSf" collectionClass="NSMutableArray" id="lbc-Rs-EcD"/>
                         <outletCollection property="numButtonsCollection" destination="b6R-6n-e4X" collectionClass="NSMutableArray" id="FnQ-fM-F6l"/>
                         <outletCollection property="numButtonsCollection" destination="58n-RY-5PB" collectionClass="NSMutableArray" id="iNh-oH-PLj"/>
                         <outletCollection property="numButtonsCollection" destination="0FI-C5-GwC" collectionClass="NSMutableArray" id="32e-hO-yUM"/>
-                        <outletCollection property="numButtonsCollection" destination="dfU-Fo-B2z" collectionClass="NSMutableArray" id="TLC-o1-10r"/>
                         <outletCollection property="numButtonsCollection" destination="e6C-Ln-328" collectionClass="NSMutableArray" id="ret-Dq-YXR"/>
-                        <outletCollection property="numButtonsCollection" destination="Eg3-QU-T3r" collectionClass="NSMutableArray" id="rXL-as-5Dg"/>
                         <outletCollection property="numButtonsCollection" destination="MBF-DV-eJx" collectionClass="NSMutableArray" id="K2g-Io-osP"/>
+                        <outletCollection property="numButtonsCollection" destination="Eg3-QU-T3r" collectionClass="NSMutableArray" id="rXL-as-5Dg"/>
+                        <outletCollection property="numButtonsCollection" destination="dfU-Fo-B2z" collectionClass="NSMutableArray" id="TLC-o1-10r"/>
+                        <outletCollection property="numButtonsCollection" destination="H0K-5h-fr1" collectionClass="NSMutableArray" id="wyM-nV-1Ns"/>
+                        <outletCollection property="numButtonsCollection" destination="Zeh-IJ-9RF" collectionClass="NSMutableArray" id="DRD-V2-9G4"/>
                         <outletCollection property="numButtonsCollection" destination="dzl-OA-TI7" collectionClass="NSMutableArray" id="Wja-le-rQ8"/>
                         <outletCollection property="numButtonsCollection" destination="Ar4-fq-hXk" collectionClass="NSMutableArray" id="OPM-mu-yoG"/>
-                        <outletCollection property="numButtonsCollection" destination="Zeh-IJ-9RF" collectionClass="NSMutableArray" id="DRD-V2-9G4"/>
-                        <outletCollection property="numButtonsCollection" destination="H0K-5h-fr1" collectionClass="NSMutableArray" id="wyM-nV-1Ns"/>
                         <segue destination="0Dh-hI-YLG" kind="show" identifier="PlayOneNumSegue" id="OaT-Sm-S4C"/>
                     </connections>
                 </viewController>

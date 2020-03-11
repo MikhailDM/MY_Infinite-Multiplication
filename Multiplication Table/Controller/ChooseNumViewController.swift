@@ -11,19 +11,19 @@ import UIKit
 class ChooseNumViewController: UIViewController {
 //MARK: - VARIABLES
     //Размер шрифта
-    let fontSize: CGFloat = K.Fonts.size30
+    private let fontSize: CGFloat = K.Fonts.size30
     //Текущий шрифт
-    let fontCurrent = K.Fonts.maintF
+    private let fontCurrent = K.Fonts.mainF
     //Фактор масштабирования текста
-    let minScaleF: CGFloat = K.Fonts.scaleFactor
+    private let minScaleF: CGFloat = K.Fonts.scaleFactor
     
-    //Цвет прорешенных цифр
-    let solvedNumButton = K.MyColorsUI.green
+    //Цвет прорешенных цифр и границ кнопок
+    private let solvedNumButtonColor = K.MyColorsUI.green
     //Цвет непрорешенных цифр
-    let unSolvedNumButton = K.MyColorsUI.white
+    private let unSolvedNumButtonColor = K.MyColorsUI.white
     
-    //Имя перехода к тренировке 1 цифры
-    let segueToPlay = K.Segues.playOneNumSegue
+    //Толщина границ кнопок
+    private let buttonsBorderWidth: CGFloat = 2
     
     
 //MARK: - OUTLETS
@@ -38,41 +38,57 @@ class ChooseNumViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        premiumUI()
     }
     
-//MARK: - UI SETUP
     
+//MARK: - SETUP UI
     func setupUI(){
         //Показываем Navigation Bar
         navigationController?.isNavigationBarHidden = false
         
-        //Настройки для каждой кнопки
+        //Настройки отображения для каждой кнопки
+        for button in numButtonsCollection {
+            //Размер текста кнопок
+            button.titleLabel!.font = UIFont(name: K.Fonts.mainF, size: fontSize)
+            button.titleLabel!.minimumScaleFactor = minScaleF;
+            button.titleLabel!.adjustsFontSizeToFitWidth = true;
+            
+            //Рамки кнопок
+            button.layer.borderWidth = buttonsBorderWidth
+            button.layer.cornerRadius = button.frame.height / 3
+            button.layer.borderColor = solvedNumButtonColor?.cgColor
+        }
+    }
+
+    
+    //MARK: - PREMIUM UI. КНОПКИ ПРОЙДЕННЫХ ЧИСЕЛ НЕ ПОДСВЕЧИВАЮТСЯ В FREE ВЕРСИИ
+    func premiumUI() {
         for button in numButtonsCollection {
             //ID Кнопки в формате Int
             let id = Int(button.accessibilityIdentifier!)!
             
-            //Размер текста кнопок
-            button.titleLabel!.font = UIFont(name: K.Fonts.maintF, size: fontSize)
-            button.titleLabel!.minimumScaleFactor = minScaleF;
-            button.titleLabel!.adjustsFontSizeToFitWidth = true;
-            
-            //Настройка цвета кнопок. Зависит от прохождения
-            button.setTitleColor(unSolvedNumButton, for: .normal)
-            //Проверка на пройденный числа
-            if save.getSolvedNumsState(numToCheck: id) {
-                button.setTitleColor(solvedNumButton, for: .normal)
+            //Проверка на пройденный числа и наличие Premium
+            if save.getPRO() && save.getSolvedNumsState(numToCheck: id) {
+                button.setTitleColor(solvedNumButtonColor, for: .normal)
+                //button.layer.borderColor = solvedNumButtonColor?.cgColor
+            } else {
+                button.setTitleColor(unSolvedNumButtonColor, for: .normal)
+                //button.layer.borderColor = unSolvedNumButtonColor?.cgColor
             }
         }
     }
-
-//MARK: - ACTIONS
     
+    
+//MARK: - NAVIGATION
+    //Переход к тренировке и назначение числа для нее
     @IBAction func chargeNumPressed(_ sender: UIButton) {
+        //ID Кнопки в формате Int
         let id = Int(sender.accessibilityIdentifier!)!
         //Назначение цифры для тренировки через обменный класс
         Ex.numToTrain = id
         print("NUM TO TRAIN: \(id)")
         //Переход к экрану игры
-        self.performSegue(withIdentifier: segueToPlay, sender: sender)
+        self.performSegue(withIdentifier: K.Segues.playOneNumSegue, sender: sender)
     }
 }

@@ -63,7 +63,6 @@ class MainViewController: UIViewController {
     
         
 //MARK: - SETUP UI
-    
     func setupUI() {
         //Скрытие бара навигации
         navigationController?.isNavigationBarHidden = true
@@ -86,10 +85,8 @@ class MainViewController: UIViewController {
     }
     
     
-//MARK: - PREMIUM UI
-    
+//MARK: - PREMIUM UI. КНОПКА ДОСТИЖЕНИЙ НЕ ДОСТУПНА В FREE ВЕРСИИ
     func premiumUI() {
-        //Кнопка достижений - НЕДОСТУПНА в Free версии
         if !save.getPRO() {
             achievementsButton.isEnabled = false
             achievementsButton.alpha = alphaFree
@@ -100,8 +97,7 @@ class MainViewController: UIViewController {
     }
     
 
-//MARK: - NAVIGATION
-    
+//MARK: - NAVIGATION    
     //Переход к бесконечному умножению
     @IBAction func infiniteButtonPressed(_ sender: UIButton) {
         let id = Int(sender.accessibilityIdentifier!)!

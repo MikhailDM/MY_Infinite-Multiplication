@@ -608,7 +608,7 @@
             </objects>
             <point key="canvasLocation" x="2189.8550724637685" y="138.58695652173915"/>
         </scene>
-        <!--ТРЕНИРОВКА-->
+        <!--УМНОЖЕНИЕ-->
         <scene sceneID="81j-zK-N79">
             <objects>
                 <viewController id="0Dh-hI-YLG" customClass="PlayOneNumViewController" customModule="Multiplication_Table" customModuleProvider="target" sceneMemberID="viewController">
@@ -860,11 +860,23 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Y2V-FJ-RiH"/>
                     </view>
-                    <navigationItem key="navigationItem" title="ТРЕНИРОВКА" id="mqp-ai-zVV"/>
+                    <navigationItem key="navigationItem" title="УМНОЖЕНИЕ" id="mqp-ai-zVV"/>
                     <connections>
                         <outlet property="answerLabel" destination="DBB-5a-K5c" id="REQ-w1-pVH"/>
                         <outlet property="equationLabel" destination="G7Q-eV-0Pz" id="968-e5-uGf"/>
                         <outlet property="scoreLabel" destination="Qds-md-BQ9" id="p2X-6p-Fr6"/>
+                        <outletCollection property="numButtonsCollection" destination="sA6-mw-wZZ" collectionClass="NSMutableArray" id="w6K-1a-Hjn"/>
+                        <outletCollection property="numButtonsCollection" destination="nbM-gX-hNs" collectionClass="NSMutableArray" id="5a8-s6-Gns"/>
+                        <outletCollection property="numButtonsCollection" destination="byA-3P-Dqg" collectionClass="NSMutableArray" id="hL5-P7-gMI"/>
+                        <outletCollection property="numButtonsCollection" destination="iOO-Cg-3eh" collectionClass="NSMutableArray" id="2Ht-aC-ug0"/>
+                        <outletCollection property="numButtonsCollection" destination="0KZ-6Z-zn1" collectionClass="NSMutableArray" id="TWK-id-4E8"/>
+                        <outletCollection property="numButtonsCollection" destination="6VD-DQ-pF7" collectionClass="NSMutableArray" id="wRt-Gn-2CM"/>
+                        <outletCollection property="numButtonsCollection" destination="ynH-dX-BeE" collectionClass="NSMutableArray" id="o6s-E2-I2G"/>
+                        <outletCollection property="numButtonsCollection" destination="gzQ-eE-9uj" collectionClass="NSMutableArray" id="rpY-7J-sXt"/>
+                        <outletCollection property="numButtonsCollection" destination="ywJ-57-yFT" collectionClass="NSMutableArray" id="LeM-aL-LHz"/>
+                        <outletCollection property="numButtonsCollection" destination="r09-kS-JSO" collectionClass="NSMutableArray" id="1Ng-Uk-ved"/>
+                        <outletCollection property="numButtonsCollection" destination="lVe-BQ-5yu" collectionClass="NSMutableArray" id="ht4-wC-wNo"/>
+                        <outletCollection property="numButtonsCollection" destination="LZx-U2-obI" collectionClass="NSMutableArray" id="xTo-VS-yUB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jcr-JG-azj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

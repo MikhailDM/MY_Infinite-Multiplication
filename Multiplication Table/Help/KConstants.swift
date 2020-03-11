@@ -136,6 +136,7 @@ struct K {
         
         //Основные шрифты
         static let mainF = "Futura-Bold"
+        static let mainFMedium = "Futura-Medium"
         
         //Основные размеры шрифтов
         static var size30: CGFloat = 30

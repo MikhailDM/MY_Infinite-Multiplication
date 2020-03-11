@@ -11,19 +11,44 @@ import UIKit
 class PlayOneNumViewController: UIViewController {
 //MARK: - VARIABLES
     //Начальный текст поля ответа
-    let startAnswerT = K.InputSettings.startAnswerText
+    private let startAnswerT = K.InputSettings.startAnswerText
+    //Максимальное число правильных ответов
+    private let maxRightAnswers = K.PlayOne.maxRightAnswers
+    //Максимальное число неправильных ответов
+    private let maxWrongAnswers = K.PlayOne.maxWrongAnswers
+
     
+    //НАСТРОЙКИ UIALERTCONTROLLER
     //Фон UIAlertController
-    let alertBackC = K.MyColorsUI.white
+    private let alertBackC = K.MyColorsUI.white
     //Цвет текста кнопок UIAlertController
-    let alertFontC = K.MyColorsUI.green
+    private let alertFontC = K.MyColorsUI.green
+    //Тексты
+    private let alertTitleTextWin = "ТРЕНИРОВКА ПРОЙДЕНА"
+    private let alertTitleTextLose = "ОШИБКИ - ПУТЬ К УСПЕХУ"
+    private let alertWinText = "ОТЛИЧНЫЙ РЕЗУЛЬТАТ"
+    private let alertLoseText = "ПОПРОБУЙТЕ ЕЩË"
+    private let alertMenuText = "МЕНЮ"
+    private let alertReloadText = "ПОВТОРИТЬ"
+    
+    //НАСТРОЙКИ КНОПОК
+    //Размер шрифта
+    private let fontSize = K.Fonts.size30
+    //Цвет шрифта
+    private let buttonsFontC = K.MyColorsUI.green
+    //Текущий шрифт
+    private let fontCurrent = K.Fonts.mainFMedium
+    //Фактор масштабирования текста
+    private let minScaleF = K.Fonts.scaleFactor
     
     
-//MARK: - LABELS
+//MARK: - OUTLETS
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var equationLabel: UILabel!
     @IBOutlet weak var answerLabel: UILabel!
     
+    //Коллекция кнопок
+    @IBOutlet var numButtonsCollection: [UIButton]!
     
 //MARK: - OBJECTS
     let input = InputBrain()
@@ -34,6 +59,7 @@ class PlayOneNumViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
+        setupUI()
     }
     
     
@@ -45,6 +71,19 @@ class PlayOneNumViewController: UIViewController {
         equationLabel.text = playOne.randomEquation()
         //Начальный счет
         scoreLabel.text! = "+\(playOne.countRightAnswers)/\(playOne.countWrongAnswers)"
+    }
+    
+    
+//MARK: - SETUP UI
+    func setupUI(){
+        //Настройки отображения для каждой кнопки
+        for button in numButtonsCollection {
+            //Размер текста кнопок
+            button.titleLabel!.font = UIFont(name: fontCurrent, size: fontSize)
+            button.setTitleColor(buttonsFontC, for: .normal)
+            button.titleLabel!.minimumScaleFactor = minScaleF;
+            button.titleLabel!.adjustsFontSizeToFitWidth = true;
+        }
     }
     
 //MARK: - ACTIONS. INPUT
@@ -74,7 +113,7 @@ class PlayOneNumViewController: UIViewController {
         //Проверка на конец игры
         if playOne.checkEndGame() {
             print("Game is Over")
-            if playOne.countWrongAnswers <= -K.PlayOne.maxWrongAnswers {
+            if playOne.countWrongAnswers <= -maxWrongAnswers {
                 print("СЛИШКОМ МНОГО ОШИБОК")
                 endGameAlert(isPassTrain: false)
             } else {
@@ -84,32 +123,30 @@ class PlayOneNumViewController: UIViewController {
                 save.saveSolvedNumsMap(numToSave: playOne.firstNum)                
             }
         }
-        
     }
     
     
 // MARK: - END GAME ALERT
     func endGameAlert(isPassTrain: Bool) {
         //Исходный текст правильного ответа
-        var titleText = "ВЫ УСПЕШНО ЗАКОНЧИЛИ ТРЕНИРОВКУ"
-        var message = "ВЫ МОЛОДЕЦ"
-        
+        var titleText = alertTitleTextWin
+        var message = alertWinText
+        //Текст при ошибках
         if !isPassTrain {
-            titleText = "ПОПРОБУЙТЕ ЕЩЕ РАЗ"
-            message = "ОТРАБОТКА ОШИБОК ДЕЛАЕТ ВАС СИЛЬНЕЕ"
+            titleText = alertTitleTextLose
+            message = alertLoseText
         }
         
         let alert = UIAlertController(title: titleText, message: message, preferredStyle: .alert)
         
-        let actionM = UIAlertAction(title: "МЕНЮ", style: .default) { (action) in
-            //what will happen once the user clicks the Add Item button on our UIAlert
+        let actionM = UIAlertAction(title: alertMenuText, style: .default) { (action) in
+            //Переход в корневой контроллер
             self.navigationController?.popToRootViewController(animated: true)
         }
-        let actionR = UIAlertAction(title: "ПОВТОРИТЬ", style: .default) { (action) in
-            //what will happen once the user clicks the Add Item button on our UIAlert
+        let actionR = UIAlertAction(title: alertReloadText, style: .default) { (action) in
+            //Повтор тренировки
             self.navigationController?.reloadInputViews()
-            //self.currentScore = 0
-            self.playOne.countRightAnswers = K.PlayOne.maxRightAnswers
+            self.playOne.countRightAnswers = self.maxRightAnswers
             self.playOne.countWrongAnswers = 0
             self.updateUI()
         }
@@ -118,18 +155,9 @@ class PlayOneNumViewController: UIViewController {
         alert.view.subviews.first?.subviews.first?.subviews.first?.backgroundColor = alertBackC
         //Цвет текста кнопок
         alert.view.tintColor = alertFontC
-        //alert.setValue(NSAttributedString(string: alert.title!, attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.medium), NSAttributedString.Key.foregroundColor : UIColor.white]), forKey: "attributedTitle")
-        //alert.view.col
-        //alert.view.subviews.first?.subviews.first?.subviews.first?.tintColor = alertFontC
-        
-
-        //alert.view.tintColor = UIColor.white
-        //alert.view.backgroundColor = .black
-        //alert.view.alpha = 0.1
         
         alert.addAction(actionM)
         alert.addAction(actionR)
-        
         present(alert, animated: true, completion: nil)
     }
     

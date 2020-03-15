@@ -28,10 +28,10 @@ class PlayViewController: UIViewController {
     //Фон UIAlertController
     private let alertBackC = K.MyColorsUI.white
     //Цвет текста кнопок UIAlertController
-    private let alertFontC = K.MyColorsUI.green
+    private let alertFontC = K.MyColorsUI.blue
     //Тексты
-    private let alertTitleText = "РЕЗУЛЬТАТ "
-    private let alertWinText = "ПРАВИЛЬНЫЙ ОТВЕТ: "
+    private let alertTitleText = "РЕЗУЛЬТАТ: "
+    private let alertText = "ПРАВИЛЬНЫЙ ОТВЕТ: "
     private let alertMenuText = "МЕНЮ"
     private let alertReloadText = "ПОВТОРИТЬ"
     
@@ -64,6 +64,7 @@ class PlayViewController: UIViewController {
 //MARK: - OBJECTS
     var play = PlayMT()
     var timer = Timer()
+    var timerBrain = TimerBrain()
     let save = SaveData.singletonSaveData
     let input = InputBrain()
     
@@ -98,18 +99,21 @@ class PlayViewController: UIViewController {
         currentScoreLabel.text = String(currentScore)
         if Ex.numToTrain == 10 {
             //Значение лучшего результата
-            bestScoreLabel.text = String(save.getMaxScoreX10())
+            if save.getPRO() {
+                bestScoreLabel.text = String(save.getMaxScoreX10())
+            } else {
+                bestScoreLabel.text = K.Premium.freeVersionText
+            }
             bestScoreText.text = "ЛУЧШИЙ X10"
         } else {
             //Значение лучшего результата
-            bestScoreLabel.text = String(save.getMaxScoreX20())
+            if save.getPRO() {
+                bestScoreLabel.text = String(save.getMaxScoreX20())
+            } else {
+                bestScoreLabel.text = K.Premium.freeVersionText
+            }
             bestScoreText.text = "ЛУЧШИЙ X20"
         }
-    }
-    
-    func updateUIAnswer() {
-        //Присвоение стартового текста полю ответа
-        answerLabel.text = play.startAswerText
     }
     
 
@@ -131,25 +135,24 @@ class PlayViewController: UIViewController {
 //MARK: - ACTIONS. INPUT
     //Нажатия на кнопки ввода цифр
     @IBAction func numButtonPressed(_ sender: UIButton) {
-        answerLabel.text! = play.checkEnter(num: sender.accessibilityIdentifier!, length: answerLabel.text!.count, currentText: answerLabel.text!)
+        answerLabel.text! = input.checkEnter(numToAdd: sender.accessibilityIdentifier!, currentText: answerLabel.text!)
     }
     
     //Нажатия на кнопку удаления последней цифры
     @IBAction func delButtonPressed(_ sender: UIButton) {
-        answerLabel.text! = play.delLastNum(currentText: answerLabel.text!)
+        answerLabel.text! = input.delLastNum(currentText: answerLabel.text!)
     }
     
 
 //MARK: - ACTIONS. CHECK ANSWER
-    
     @IBAction func checkPressed(_ sender: UIButton) {
         //Проверка нажатия кнопки OK при отсутствии ввода. Вводить ответ можно и когда время закончилось
-        if answerLabel.text == play.startAswerText {
+        if answerLabel.text == startAnswerT {
             print("ENTER ANSWER")
             //Действия при неправильном ответе или истекшем времени
         } else if isOver || !play.checkAnswer(answer: answerLabel.text!) {
             print("TIME IS OVER OR WRONG ANSWER")
-            print("Right answer is \(play.rightAnswer!)")
+            print("Right answer is \(play.rightAnswer)")
             timer.invalidate()
             endGameAlert()
             isOver = false
@@ -165,7 +168,7 @@ class PlayViewController: UIViewController {
     }
     
     
-// MARK: - TIMER 
+// MARK: - TIMER
     //Таймер обратного отсчета
     func countDown() {
         timerTime = play.totalTime
@@ -185,15 +188,15 @@ class PlayViewController: UIViewController {
     }
     
     
-// MARK: - END GAME ALERT
+//MARK: - END GAME ALERT
     func endGameAlert() {
-        let alert = UIAlertController(title: "РЕЗУЛЬТАТ: \(currentScore)", message: "ПРАВИЛЬНЫЙ ОТВЕТ: \(play.rightAnswer!)", preferredStyle: .alert)
+        let alert = UIAlertController(title: "\(alertTitleText) \(currentScore)", message: "\(alertText) \(play.rightAnswer)", preferredStyle: .alert)
         
-        let actionM = UIAlertAction(title: "МЕНЮ", style: .default) { (action) in
+        let actionM = UIAlertAction(title: alertMenuText, style: .default) { (action) in
             //what will happen once the user clicks the Add Item button on our UIAlert
             self.navigationController?.popToRootViewController(animated: true)
         }
-        let actionR = UIAlertAction(title: "ПОВТОРИТЬ", style: .default) { (action) in
+        let actionR = UIAlertAction(title: alertReloadText, style: .default) { (action) in
             //what will happen once the user clicks the Add Item button on our UIAlert
             self.navigationController?.reloadInputViews()
             self.currentScore = 0

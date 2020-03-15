@@ -9,52 +9,22 @@
 import Foundation
 
 struct PlayMT {
-    //MARK: - VARIABLES
+//MARK: - VARIABLES
     //Максимальное число для умножения. Назначается из главного меню
     var maxNum = Ex.numToTrain
-    
-    //Правильный ответ
-    var rightAnswer: Int?
-    
-    //Максимальная длина поля ответа
-    let maxAnswerLength = 6
-    
-    //STARTING TEXT. Answer Text
-    let startAswerText = "ВВЕДИТЕ ОТВЕТ"
-    
     //TIMER. Количество времени на ответ
-    let totalTime = 10
+    let totalTime = K.PlayInf.totalTimeToAnswer
+    //Правильный ответ
+    var rightAnswer = 0
+    //текущий счет
+    var currentScore = 0
     
     
 //MARK: - OBJECTS
     let save = SaveData.singletonSaveData
     
     
-//MARK: - Функция проверки ввода чисел в поле ответа
-    func checkEnter(num: String, length: Int, currentText: String) -> String {
-        if currentText == startAswerText {
-            return num
-        } else if length >= maxAnswerLength {
-            return currentText
-        } else {
-            return (currentText + num)
-        }
-    }
-    
-    
-//MARK: - Функция удаление последнего символа поля ответа
-    func delLastNum(currentText: String) -> String {
-        if currentText == startAswerText {
-            return startAswerText
-        } else if currentText.count <= 1 {
-            return startAswerText
-        } else {
-            return (String(currentText.dropLast()))
-        }
-    }
-    
-    
-//MARK: - Функция генерации случайного уравнения
+//MARK: - ФУНКЦИЯ ГЕНЕРАЦИЯЯ СЛУЧАЙНОГО УРАВНЕНИЯ
     mutating func randomEquation() -> String {
         let first = Int.random(in: 1...maxNum)
         let second = Int.random(in: 1...maxNum)
@@ -64,10 +34,9 @@ struct PlayMT {
     }
     
 
-    //MARK: - Функция проверки ответа
-
+//MARK: - ФУНКЦИЯ СРАВНЕНИЯ ОТВЕТА С ПРАВИЛЬНЫМ
     func checkAnswer(answer: String) -> Bool {
-        if answer == "\(rightAnswer!)" {
+        if answer == "\(rightAnswer)" {
             return true
         } else {
             return false
@@ -75,7 +44,7 @@ struct PlayMT {
     }
     
     
-    // MARK: - Функция сравнения текущего счета с лучшим
+// MARK: - Функция сравнения текущего счета с лучшим
     func checkScore(score: Int) {
         if Ex.numToTrain == 10 {
             if score > save.getMaxScoreX10() {

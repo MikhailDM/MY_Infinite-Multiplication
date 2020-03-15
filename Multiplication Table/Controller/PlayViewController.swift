@@ -9,8 +9,47 @@
 import UIKit
 
 class PlayViewController: UIViewController {
+//MARK: - VARIABLES
+    //Переменные для таймера
+    var timerTime = 0
+    var secondsPast = 0
+    
+    //Закончилась ли игра
+    var isOver = false
+    
+    //текущий счет
+    var currentScore = 0
+    
+    //Начальный текст поля ответа
+    private let startAnswerT = K.InputSettings.startAnswerText
+
+    
+    //НАСТРОЙКИ UIALERTCONTROLLER
+    //Фон UIAlertController
+    private let alertBackC = K.MyColorsUI.white
+    //Цвет текста кнопок UIAlertController
+    private let alertFontC = K.MyColorsUI.green
+    //Тексты
+    private let alertTitleText = "РЕЗУЛЬТАТ "
+    private let alertWinText = "ПРАВИЛЬНЫЙ ОТВЕТ: "
+    private let alertMenuText = "МЕНЮ"
+    private let alertReloadText = "ПОВТОРИТЬ"
+    
+    
+    //НАСТРОЙКИ КНОПОК
+    //Размер шрифта
+    private let fontSize = K.Fonts.size30
+    //Цвет шрифта
+    private let buttonsFontC = K.MyColorsUI.blue
+    //Текущий шрифт
+    private let fontCurrent = K.Fonts.mainFMedium
+    //Фактор масштабирования текста
+    private let minScaleF = K.Fonts.scaleFactor
+    
+    
 //MARK: - LABELS
-    @IBOutlet var numsButtons: [UIButton]!
+    @IBOutlet var numButtonsCollection: [UIButton]!
+    
     @IBOutlet weak var answerLabel: UILabel!
     @IBOutlet weak var equationLabel: UILabel!
     @IBOutlet weak var timerProgress: UIProgressView!
@@ -26,37 +65,27 @@ class PlayViewController: UIViewController {
     var play = PlayMT()
     var timer = Timer()
     let save = SaveData.singletonSaveData
- 
+    let input = InputBrain()
     
-//MARK: - VARIABLES
-    //Переменные для таймера
-    var timerTime = 0
-    var secondsPast = 0
-    
-    //Закончилась ли игра
-    var isOver = false
-    
-    //текущий счет
-    var currentScore = 0
+
 //MARK: - LOADINGS
-    
-    override func viewWillAppear(_ animated: Bool) {
+    /*override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         //Появление бара навигации
         navigationController?.isNavigationBarHidden = false
-    }
+    }*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
         updateUI()
-        
     }
 
     
 //MARK: - UPDATE UI
     func updateUI() {
         //Присвоение стартового текста полю ответа
-        answerLabel.text = play.startAswerText
+        answerLabel.text = startAnswerT
         //Случайное выражение
         equationLabel.text = play.randomEquation()
         //Перезапуск таймера
@@ -81,6 +110,21 @@ class PlayViewController: UIViewController {
     func updateUIAnswer() {
         //Присвоение стартового текста полю ответа
         answerLabel.text = play.startAswerText
+    }
+    
+
+//MARK: - SETUP UI
+    func setupUI(){
+        //Появление бара навигации
+        navigationController?.isNavigationBarHidden = false
+        //Настройки отображения для каждой кнопки
+        for button in numButtonsCollection {
+            //Размер текста кнопок
+            button.titleLabel!.font = UIFont(name: fontCurrent, size: fontSize)
+            button.setTitleColor(buttonsFontC, for: .normal)
+            button.titleLabel!.minimumScaleFactor = minScaleF;
+            button.titleLabel!.adjustsFontSizeToFitWidth = true;
+        }
     }
     
     
@@ -163,18 +207,5 @@ class PlayViewController: UIViewController {
     }
     
     
-// MARK: - Navigation
-
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+// MARK: - END
 }

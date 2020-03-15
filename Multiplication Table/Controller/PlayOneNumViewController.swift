@@ -31,6 +31,7 @@ class PlayOneNumViewController: UIViewController {
     private let alertMenuText = "МЕНЮ"
     private let alertReloadText = "ПОВТОРИТЬ"
     
+    
     //НАСТРОЙКИ КНОПОК
     //Размер шрифта
     private let fontSize = K.Fonts.size30
@@ -126,7 +127,7 @@ class PlayOneNumViewController: UIViewController {
     }
     
     
-// MARK: - END GAME ALERT
+//MARK: - END GAME ALERT
     func endGameAlert(isPassTrain: Bool) {
         //Исходный текст правильного ответа
         var titleText = alertTitleTextWin

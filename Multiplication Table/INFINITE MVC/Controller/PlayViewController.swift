@@ -64,7 +64,6 @@ class PlayViewController: UIViewController {
 //MARK: - OBJECTS
     var play = PlayMT()
     var timer = Timer()
-    var timerBrain = TimerBrain()
     let save = SaveData.singletonSaveData
     let input = InputBrain()
     

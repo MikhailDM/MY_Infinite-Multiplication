@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		CE02564F240162F600E42BFF /* LevelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02564E240162F600E42BFF /* LevelModel.swift */; };
 		CE025653240170ED00E42BFF /* LevelsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE025652240170ED00E42BFF /* LevelsManager.swift */; };
-		CE05ECFF241E160900C5AE72 /* TimerBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE05ECFE241E160900C5AE72 /* TimerBrain.swift */; };
 		CE128F5023ED286500AEF8F1 /* TheoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE128F4F23ED286500AEF8F1 /* TheoryViewController.swift */; };
 		CE241FAF23EC32B20092C77C /* SaveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE241FAE23EC32B20092C77C /* SaveData.swift */; };
 		CE390C9723FE7F01003A9AD6 /* PlayOneNumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE390C9623FE7F01003A9AD6 /* PlayOneNumViewController.swift */; };
@@ -38,7 +37,6 @@
 /* Begin PBXFileReference section */
 		CE02564E240162F600E42BFF /* LevelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelModel.swift; sourceTree = "<group>"; };
 		CE025652240170ED00E42BFF /* LevelsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsManager.swift; sourceTree = "<group>"; };
-		CE05ECFE241E160900C5AE72 /* TimerBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerBrain.swift; sourceTree = "<group>"; };
 		CE128F4F23ED286500AEF8F1 /* TheoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheoryViewController.swift; sourceTree = "<group>"; };
 		CE241FAE23EC32B20092C77C /* SaveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveData.swift; sourceTree = "<group>"; };
 		CE390C9623FE7F01003A9AD6 /* PlayOneNumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayOneNumViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +103,7 @@
 			children = (
 				CE532A4C24010DBF0069BA8F /* AchievementModel.swift */,
 				CE02564E240162F600E42BFF /* LevelModel.swift */,
+				CED302F023FE8AE20081C30B /* InputBrain.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -377,8 +376,6 @@
 				CE21C381241FF5950045E78E /* ACHIEVES MVC */,
 				CE21C385241FF5D60045E78E /* PREMIUM MVC */,
 				CE21C38C241FF8BD0045E78E /* SUPPORT */,
-				CE05ECFE241E160900C5AE72 /* TimerBrain.swift */,
-				CED302F023FE8AE20081C30B /* InputBrain.swift */,
 			);
 			path = "Multiplication Table";
 			sourceTree = "<group>";
@@ -467,7 +464,6 @@
 				CE241FAF23EC32B20092C77C /* SaveData.swift in Sources */,
 				CE532A4D24010DBF0069BA8F /* AchievementModel.swift in Sources */,
 				CEBD0CF923F7EBCD0042F696 /* Exchange.swift in Sources */,
-				CE05ECFF241E160900C5AE72 /* TimerBrain.swift in Sources */,
 				CE532A4F24010E0F0069BA8F /* AchievementsManager.swift in Sources */,
 				CE025653240170ED00E42BFF /* LevelsManager.swift in Sources */,
 				CE452A7323FE6980000D746B /* ChooseNumViewController.swift in Sources */,

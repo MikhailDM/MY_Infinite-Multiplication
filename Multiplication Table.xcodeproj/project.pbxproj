@@ -77,6 +77,258 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE21C36C241FF2080045E78E /* GLOBAL */ = {
+			isa = PBXGroup;
+			children = (
+				CE21C36D241FF2160045E78E /* Managers */,
+				CE21C36E241FF21F0045E78E /* Model */,
+				CE21C36F241FF2260045E78E /* View */,
+				CE21C370241FF22F0045E78E /* Controller */,
+			);
+			path = GLOBAL;
+			sourceTree = "<group>";
+		};
+		CE21C36D241FF2160045E78E /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				CE025652240170ED00E42BFF /* LevelsManager.swift */,
+				CE532A4E24010E0F0069BA8F /* AchievementsManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		CE21C36E241FF21F0045E78E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE532A4C24010DBF0069BA8F /* AchievementModel.swift */,
+				CE02564E240162F600E42BFF /* LevelModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE21C36F241FF2260045E78E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CEB114C223E97712008E05E0 /* Main.storyboard */,
+				CEB114C723E97714008E05E0 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE21C370241FF22F0045E78E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CEB114BE23E97712008E05E0 /* SceneDelegate.swift */,
+				CEB114BC23E97712008E05E0 /* AppDelegate.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CE21C371241FF34E0045E78E /* MAIN MVC */ = {
+			isa = PBXGroup;
+			children = (
+				CE21C374241FF3750045E78E /* Model */,
+				CE21C373241FF36E0045E78E /* View */,
+				CE21C372241FF3660045E78E /* Controller */,
+			);
+			path = "MAIN MVC";
+			sourceTree = "<group>";
+		};
+		CE21C372241FF3660045E78E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CEB114D823E98096008E05E0 /* MainViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CE21C373241FF36E0045E78E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE21C374241FF3750045E78E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CEB114DA23E982CE008E05E0 /* QuotesData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE21C375241FF49B0045E78E /* INFINITE MVC */ = {
+			isa = PBXGroup;
+			children = (
+				CE21C378241FF4BA0045E78E /* Model */,
+				CE21C377241FF4B50045E78E /* View */,
+				CE21C376241FF4AE0045E78E /* Controller */,
+			);
+			path = "INFINITE MVC";
+			sourceTree = "<group>";
+		};
+		CE21C376241FF4AE0045E78E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CEB114D623E97AE3008E05E0 /* PlayViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CE21C377241FF4B50045E78E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE21C378241FF4BA0045E78E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CEB114DC23E9A465008E05E0 /* InfiniteMTBrain.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE21C379241FF4F40045E78E /* ONE NUM MVC */ = {
+			isa = PBXGroup;
+			children = (
+				CE21C37C241FF5260045E78E /* Model */,
+				CE21C37B241FF5210045E78E /* View */,
+				CE21C37A241FF5140045E78E /* Controller */,
+			);
+			path = "ONE NUM MVC";
+			sourceTree = "<group>";
+		};
+		CE21C37A241FF5140045E78E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CE452A7223FE6980000D746B /* ChooseNumViewController.swift */,
+				CE390C9623FE7F01003A9AD6 /* PlayOneNumViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CE21C37B241FF5210045E78E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE21C37C241FF5260045E78E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CED302F223FE91630081C30B /* OneNumMTBrain.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE21C37D241FF5640045E78E /* THEORY MVC */ = {
+			isa = PBXGroup;
+			children = (
+				CE21C380241FF5860045E78E /* Model */,
+				CE21C37F241FF5810045E78E /* View */,
+				CE21C37E241FF57B0045E78E /* Controller */,
+			);
+			path = "THEORY MVC";
+			sourceTree = "<group>";
+		};
+		CE21C37E241FF57B0045E78E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CE128F4F23ED286500AEF8F1 /* TheoryViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CE21C37F241FF5810045E78E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE21C380241FF5860045E78E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE21C381241FF5950045E78E /* ACHIEVES MVC */ = {
+			isa = PBXGroup;
+			children = (
+				CE21C384241FF5AD0045E78E /* Model */,
+				CE21C383241FF5A90045E78E /* View */,
+				CE21C382241FF5A40045E78E /* Controller */,
+			);
+			path = "ACHIEVES MVC";
+			sourceTree = "<group>";
+		};
+		CE21C382241FF5A40045E78E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CEE94F3A23FFB0ED00A643D2 /* AchieveTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CE21C383241FF5A90045E78E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CEE94F3C23FFB6EB00A643D2 /* AchieveTableViewCell.swift */,
+				CEE94F3D23FFB6EB00A643D2 /* AchieveTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE21C384241FF5AD0045E78E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE21C385241FF5D60045E78E /* PREMIUM MVC */ = {
+			isa = PBXGroup;
+			children = (
+				CE21C388241FF5F00045E78E /* Model */,
+				CE21C387241FF5EA0045E78E /* View */,
+				CE21C386241FF5E40045E78E /* Controller */,
+				CE5AD3632417F0580061A748 /* PremiumViewController.swift */,
+			);
+			path = "PREMIUM MVC";
+			sourceTree = "<group>";
+		};
+		CE21C386241FF5E40045E78E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CE21C387241FF5EA0045E78E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE21C388241FF5F00045E78E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE21C389241FF6470045E78E /* SUPPORT */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SUPPORT;
+			sourceTree = "<group>";
+		};
 		CEB114B023E97712008E05E0 = {
 			isa = PBXGroup;
 			children = (
@@ -96,67 +348,31 @@
 		CEB114BB23E97712008E05E0 /* Multiplication Table */ = {
 			isa = PBXGroup;
 			children = (
-				CEB114BC23E97712008E05E0 /* AppDelegate.swift */,
-				CEB114BE23E97712008E05E0 /* SceneDelegate.swift */,
-				CEB114D123E977AB008E05E0 /* Model */,
-				CEB114D223E977B5008E05E0 /* View */,
-				CEB114D023E97797008E05E0 /* Controller */,
-				CEB114D323E978BF008E05E0 /* Help */,
-				CEB114C523E97714008E05E0 /* Assets.xcassets */,
-				CEB114C723E97714008E05E0 /* LaunchScreen.storyboard */,
+				CE21C36C241FF2080045E78E /* GLOBAL */,
+				CE21C371241FF34E0045E78E /* MAIN MVC */,
+				CE21C375241FF49B0045E78E /* INFINITE MVC */,
+				CE21C379241FF4F40045E78E /* ONE NUM MVC */,
+				CE21C37D241FF5640045E78E /* THEORY MVC */,
+				CE21C381241FF5950045E78E /* ACHIEVES MVC */,
+				CE21C385241FF5D60045E78E /* PREMIUM MVC */,
+				CEB114D323E978BF008E05E0 /* HELP */,
+				CE21C389241FF6470045E78E /* SUPPORT */,
+				CE05ECFE241E160900C5AE72 /* TimerBrain.swift */,
+				CED302F023FE8AE20081C30B /* InputBrain.swift */,
 				CEB114CA23E97714008E05E0 /* Info.plist */,
+				CEB114C523E97714008E05E0 /* Assets.xcassets */,
 			);
 			path = "Multiplication Table";
 			sourceTree = "<group>";
 		};
-		CEB114D023E97797008E05E0 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				CEB114D823E98096008E05E0 /* MainViewController.swift */,
-				CEB114D623E97AE3008E05E0 /* PlayViewController.swift */,
-				CE452A7223FE6980000D746B /* ChooseNumViewController.swift */,
-				CE390C9623FE7F01003A9AD6 /* PlayOneNumViewController.swift */,
-				CE128F4F23ED286500AEF8F1 /* TheoryViewController.swift */,
-				CEE94F3A23FFB0ED00A643D2 /* AchieveTableViewController.swift */,
-				CE5AD3632417F0580061A748 /* PremiumViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		CEB114D123E977AB008E05E0 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				CE02564E240162F600E42BFF /* LevelModel.swift */,
-				CE532A4C24010DBF0069BA8F /* AchievementModel.swift */,
-				CE025652240170ED00E42BFF /* LevelsManager.swift */,
-				CE532A4E24010E0F0069BA8F /* AchievementsManager.swift */,
-				CEB114DA23E982CE008E05E0 /* QuotesData.swift */,
-				CED302F023FE8AE20081C30B /* InputBrain.swift */,
-				CEB114DC23E9A465008E05E0 /* InfiniteMTBrain.swift */,
-				CED302F223FE91630081C30B /* OneNumMTBrain.swift */,
-				CE05ECFE241E160900C5AE72 /* TimerBrain.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		CEB114D223E977B5008E05E0 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				CEB114C223E97712008E05E0 /* Main.storyboard */,
-				CEE94F3C23FFB6EB00A643D2 /* AchieveTableViewCell.swift */,
-				CEE94F3D23FFB6EB00A643D2 /* AchieveTableViewCell.xib */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		CEB114D323E978BF008E05E0 /* Help */ = {
+		CEB114D323E978BF008E05E0 /* HELP */ = {
 			isa = PBXGroup;
 			children = (
 				CEB114D423E978ED008E05E0 /* KConstants.swift */,
 				CE241FAE23EC32B20092C77C /* SaveData.swift */,
 				CEBD0CF823F7EBCD0042F696 /* Exchange.swift */,
 			);
-			path = Help;
+			path = HELP;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -399,6 +615,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BNVRX9T4P8;
 				INFOPLIST_FILE = "Multiplication Table/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -417,6 +634,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BNVRX9T4P8;
 				INFOPLIST_FILE = "Multiplication Table/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

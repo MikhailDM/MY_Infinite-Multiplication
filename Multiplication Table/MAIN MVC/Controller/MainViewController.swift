@@ -9,21 +9,16 @@
 import UIKit
 
 class MainViewController: UIViewController {
-//MARK: - OBJECTS
-    private let quote = Quotes()
-    private let save = SaveData.singletonSaveData
-    private let levelsManager = LevelsManager()
-        
-    
 //MARK: - VARIABLES
     //Толщина границ кнопок
-    private let buttonsBorderWidth: CGFloat = 2
+    private let buttonsBorderWidth = K.UI.buttonsBorderWidth
     //Цвет границ кнопок
     private let buttonsBorderColor = K.MyColorsUI.blue?.cgColor
-    
     //Alpha для Free кнопок
     private let alphaFree = K.Premium.alphaFree
-  
+    //Фактор масштабирования текста
+    private let minScaleF = K.Fonts.scaleFactor
+
     
 //MARK: - OUTLETS
     @IBOutlet weak var quotesLabel: UILabel!
@@ -38,12 +33,29 @@ class MainViewController: UIViewController {
     @IBOutlet weak var achievementsButton: UIButton!
     
     
+//MARK: - OBJECTS
+    private let quote = Quotes()
+    private let save = SaveData.singletonSaveData
+    private let levelsManager = LevelsManager()
+    
     
 //MARK: - LOADING
+    //Действия после загрузки контроллера
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationController?.isNavigationBarHidden = true
+        //Настройки отображения через расширение
+        //setupUI()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        setupUI()
+    }
+    //Действия перед отображением контроллера
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupUI()
         updateUI()
+        //Отображение премиум кнопок
         premiumUI()
     }   
     
@@ -53,7 +65,6 @@ class MainViewController: UIViewController {
         //Применение случайной цитаты
         quotesLabel.text = quote.randomQuote()
         //Присвоение текущего уровня
-        //levelLabel.text = progress.getProgressName()
         levelLabel.text = levelsManager.getCurrentLevelText()
         //Присвоение значения прогресс бару
         progressBar.setProgress(levelsManager.getCurrentScoreFloat(), animated: true)
@@ -63,7 +74,7 @@ class MainViewController: UIViewController {
     
         
 //MARK: - SETUP UI
-    func setupUI() {
+    /*func setupUI() {
         //Скрытие бара навигации
         navigationController?.isNavigationBarHidden = true
         
@@ -82,11 +93,11 @@ class MainViewController: UIViewController {
             achievementsButton.isEnabled = true
             achievementsButton.titleLabel?.alpha = 1.0
         }*/
-    }
+    }*/
     
     
 //MARK: - PREMIUM UI. КНОПКА ДОСТИЖЕНИЙ НЕ ДОСТУПНА В FREE ВЕРСИИ
-    func premiumUI() {
+    /*func premiumUI() {
         if !save.getPRO() {
             achievementsButton.isEnabled = false
             achievementsButton.alpha = alphaFree
@@ -94,7 +105,7 @@ class MainViewController: UIViewController {
             achievementsButton.isEnabled = true
             achievementsButton.alpha = 1.0
         }
-    }
+    }*/
     
 
 //MARK: - NAVIGATION    
@@ -125,5 +136,42 @@ class MainViewController: UIViewController {
         self.performSegue(withIdentifier: K.Segues.premiumSegue, sender: sender)
     }
     
+}
+
+
+
+//MARK: - EXTENSION. НАСТРОЙКИ ОТОБРАЖЕНИЯ UI
+extension MainViewController {
+    
+    //Настройки отображения
+    private func setupUI() {
+        //Скрытие бара навигации
+        navigationController?.isNavigationBarHidden = true
+        
+        //Настройки кнопок начального экрана
+        for button in buttonsCollection {
+            //Ресайз текста кнопок
+            button.titleLabel!.minimumScaleFactor = minScaleF;
+            //button.titleLabel!.adjustsFontSizeToFitWidth = true;
+            
+            //Ширина границ
+            button.layer.borderWidth = buttonsBorderWidth
+            //Цвет границ
+            button.layer.borderColor = buttonsBorderColor
+            //Скругление границ
+            button.layer.cornerRadius = button.frame.height / 2
+        }
+    }
+    
+    //Настройки отображение премиум кнопок
+    private func premiumUI() {
+        if !save.getPRO() {
+            achievementsButton.isEnabled = false
+            achievementsButton.alpha = alphaFree
+        } else {
+            achievementsButton.isEnabled = true
+            achievementsButton.alpha = 1.0
+        }
+    }
 }
 

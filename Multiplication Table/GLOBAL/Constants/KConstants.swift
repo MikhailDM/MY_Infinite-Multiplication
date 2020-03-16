@@ -9,6 +9,9 @@
 import UIKit
 
 struct K {
+//MARK: - ПРЯЧЕМ ИНИЦИАЛИЗАТОР
+    private init(){}
+
 //MARK: - МАССИВ УРОВНЕЙ
     static let levelsArray = [
         LevelModel(levelName: "НОВИЧОК", levelRequirement: 0),
@@ -94,7 +97,6 @@ struct K {
     
         
 //MARK: - КОНСТАНТЫ NAVIGATION
-    
     //Имена переходов
     struct Segues {
         //Segue к бесконечной таблице умножения
@@ -118,7 +120,6 @@ struct K {
     
     
 //MARK: - КОНСТАНТЫ ДОСТИЖЕНИЙ
-    
     //Имена шрифтов
     struct Achieve {
         static let cellID = "achieveCell"
@@ -128,11 +129,10 @@ struct K {
     
     
 //MARK: - КОНСТАНТЫ ШРИФТОВ
-    
     //Имена шрифтов
     struct Fonts {
         //Уровень масштабируемости текста
-        static let scaleFactor: CGFloat = 0.5
+        static let scaleFactor: CGFloat = 0.25
         
         //Основные шрифты
         static let mainF = "Futura-Bold"
@@ -144,7 +144,6 @@ struct K {
     
     
 //MARK: - КОНСТАНТЫ ЦВЕТОВ
-    
     //Имена шрифтов
     struct MyColorsUI {
         static let backGround = UIColor.init(named: "MyBackground")
@@ -154,5 +153,12 @@ struct K {
         
     }
     
+    
+//MARK: - КОНСТАНТЫ UI
+    //Имена шрифтов
+    struct UI {
+        //Толщина границ кнопок
+        static let buttonsBorderWidth: CGFloat = 2
+    }
     
 }

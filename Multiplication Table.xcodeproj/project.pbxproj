@@ -80,6 +80,8 @@
 		CE21C36C241FF2080045E78E /* GLOBAL */ = {
 			isa = PBXGroup;
 			children = (
+				CE21C38B241FF8710045E78E /* Exchange */,
+				CE21C38A241FF8440045E78E /* Constants */,
 				CE21C36D241FF2160045E78E /* Managers */,
 				CE21C36E241FF21F0045E78E /* Model */,
 				CE21C36F241FF2260045E78E /* View */,
@@ -91,6 +93,7 @@
 		CE21C36D241FF2160045E78E /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				CE241FAE23EC32B20092C77C /* SaveData.swift */,
 				CE025652240170ED00E42BFF /* LevelsManager.swift */,
 				CE532A4E24010E0F0069BA8F /* AchievementsManager.swift */,
 			);
@@ -322,9 +325,27 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		CE21C389241FF6470045E78E /* SUPPORT */ = {
+		CE21C38A241FF8440045E78E /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				CEB114D423E978ED008E05E0 /* KConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		CE21C38B241FF8710045E78E /* Exchange */ = {
+			isa = PBXGroup;
+			children = (
+				CEBD0CF823F7EBCD0042F696 /* Exchange.swift */,
+			);
+			path = Exchange;
+			sourceTree = "<group>";
+		};
+		CE21C38C241FF8BD0045E78E /* SUPPORT */ = {
+			isa = PBXGroup;
+			children = (
+				CEB114CA23E97714008E05E0 /* Info.plist */,
+				CEB114C523E97714008E05E0 /* Assets.xcassets */,
 			);
 			path = SUPPORT;
 			sourceTree = "<group>";
@@ -355,24 +376,11 @@
 				CE21C37D241FF5640045E78E /* THEORY MVC */,
 				CE21C381241FF5950045E78E /* ACHIEVES MVC */,
 				CE21C385241FF5D60045E78E /* PREMIUM MVC */,
-				CEB114D323E978BF008E05E0 /* HELP */,
-				CE21C389241FF6470045E78E /* SUPPORT */,
+				CE21C38C241FF8BD0045E78E /* SUPPORT */,
 				CE05ECFE241E160900C5AE72 /* TimerBrain.swift */,
 				CED302F023FE8AE20081C30B /* InputBrain.swift */,
-				CEB114CA23E97714008E05E0 /* Info.plist */,
-				CEB114C523E97714008E05E0 /* Assets.xcassets */,
 			);
 			path = "Multiplication Table";
-			sourceTree = "<group>";
-		};
-		CEB114D323E978BF008E05E0 /* HELP */ = {
-			isa = PBXGroup;
-			children = (
-				CEB114D423E978ED008E05E0 /* KConstants.swift */,
-				CE241FAE23EC32B20092C77C /* SaveData.swift */,
-				CEBD0CF823F7EBCD0042F696 /* Exchange.swift */,
-			);
-			path = HELP;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -614,7 +622,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BNVRX9T4P8;
-				INFOPLIST_FILE = "Multiplication Table/Info.plist";
+				INFOPLIST_FILE = "Multiplication Table/SUPPORT/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -633,7 +641,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BNVRX9T4P8;
-				INFOPLIST_FILE = "Multiplication Table/Info.plist";
+				INFOPLIST_FILE = "Multiplication Table/SUPPORT/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -183,18 +183,18 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4pd-6p-jnU" userLabel="View QUOTES">
                                         <rect key="frame" x="0.0" y="663" width="414" height="111"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Случайные цитаты" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="I29-q6-iut">
-                                                <rect key="frame" x="128.66666666666666" y="45.666666666666629" width="156.99999999999997" height="19.666666666666671"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Случайные цитаты" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="I29-q6-iut">
+                                                <rect key="frame" x="20" y="5" width="374" height="101"/>
                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="I29-q6-iut" firstAttribute="centerX" secondItem="4pd-6p-jnU" secondAttribute="centerX" id="Mcu-Q8-EXb"/>
-                                            <constraint firstItem="I29-q6-iut" firstAttribute="centerX" secondItem="4pd-6p-jnU" secondAttribute="centerX" id="VA4-la-Ze7"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="I29-q6-iut" secondAttribute="trailing" constant="20" id="mTE-wg-YgR"/>
-                                            <constraint firstItem="I29-q6-iut" firstAttribute="centerY" secondItem="4pd-6p-jnU" secondAttribute="centerY" id="qlK-Fh-XLy"/>
+                                            <constraint firstItem="I29-q6-iut" firstAttribute="leading" secondItem="4pd-6p-jnU" secondAttribute="leading" constant="20" id="0KG-OB-QjY"/>
+                                            <constraint firstAttribute="trailing" secondItem="I29-q6-iut" secondAttribute="trailing" constant="20" id="ced-5o-Anz"/>
+                                            <constraint firstAttribute="bottom" secondItem="I29-q6-iut" secondAttribute="bottom" constant="5" id="m0z-ia-7cu"/>
+                                            <constraint firstItem="I29-q6-iut" firstAttribute="top" secondItem="4pd-6p-jnU" secondAttribute="top" constant="5" id="sfb-Uj-d5Q"/>
                                         </constraints>
                                     </view>
                                 </subviews>

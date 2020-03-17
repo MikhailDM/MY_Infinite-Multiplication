@@ -126,13 +126,10 @@ extension MainViewController {
             
             //Ширина границ
             button.layer.borderWidth = buttonsBorderWidth
-            print("Border Width")
             //Цвет границ
             button.layer.borderColor = buttonsBorderColor
-            print("Border Color")
             //Скругление границ
             button.layer.cornerRadius = button.frame.height / 2
-            print("Border Radius")
         }
     }
     

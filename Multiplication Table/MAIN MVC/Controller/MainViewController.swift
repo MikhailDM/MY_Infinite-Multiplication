@@ -40,25 +40,28 @@ class MainViewController: UIViewController {
     
     
 //MARK: - LOADING
-    //Действия после загрузки контроллера
+    //Вызывается единожды при загрузке конролера
     override func viewDidLoad() {
-        super.viewDidLoad()
-        navigationController?.isNavigationBarHidden = true
-        //Настройки отображения через расширение
-        //setupUI()
+        //Прячем бар навигации
+        hideNavigationBar()
     }
-    override func viewDidAppear(_ animated: Bool) {
-        setupUI()
-    }
-    //Действия перед отображением контроллера
+    
+    //Действия перед тем, как обьекты добавлены в иерархию контроллера
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setupUI()
-        updateUI()
+        //Прячем бар навигации
+        hideNavigationBar()
         //Отображение премиум кнопок
         premiumUI()
+        //Обновляем информацию по достижениям
+        updateUI()
     }   
     
+    //Действия после того, как обьекты добавлены в иерархию контроллера
+    override func viewDidAppear(_ animated: Bool) {
+        //Настраиваем отображение кнопок
+        setupUI()
+    }
     
 //MARK: - UPDATE UI
     func updateUI() {
@@ -71,42 +74,7 @@ class MainViewController: UIViewController {
         //Присвоение текущего прогресса в виде 100/100        
         scoreLabel.text = levelsManager.getCurrentScoreText()
     }
-    
         
-//MARK: - SETUP UI
-    /*func setupUI() {
-        //Скрытие бара навигации
-        navigationController?.isNavigationBarHidden = true
-        
-        //Настройки кнопок начального экрана
-        for button in buttonsCollection {
-            button.layer.borderWidth = buttonsBorderWidth
-            button.layer.borderColor = buttonsBorderColor
-            button.layer.cornerRadius = button.frame.height / 2
-        }
-        /*
-        //Кнопка достижений - НЕДОСТУПНА в Free версии
-        if !save.getPRO() {
-            achievementsButton.isEnabled = false
-            achievementsButton.titleLabel?.alpha = 0.1
-        } else {
-            achievementsButton.isEnabled = true
-            achievementsButton.titleLabel?.alpha = 1.0
-        }*/
-    }*/
-    
-    
-//MARK: - PREMIUM UI. КНОПКА ДОСТИЖЕНИЙ НЕ ДОСТУПНА В FREE ВЕРСИИ
-    /*func premiumUI() {
-        if !save.getPRO() {
-            achievementsButton.isEnabled = false
-            achievementsButton.alpha = alphaFree
-        } else {
-            achievementsButton.isEnabled = true
-            achievementsButton.alpha = 1.0
-        }
-    }*/
-    
 
 //MARK: - NAVIGATION    
     //Переход к бесконечному умножению
@@ -142,12 +110,14 @@ class MainViewController: UIViewController {
 
 //MARK: - EXTENSION. НАСТРОЙКИ ОТОБРАЖЕНИЯ UI
 extension MainViewController {
+    //Метод скрытия бара навигации
+    private func hideNavigationBar() {
+        //Скрытие бара навигации
+        navigationController?.isNavigationBarHidden = true
+    }
     
     //Настройки отображения
     private func setupUI() {
-        //Скрытие бара навигации
-        navigationController?.isNavigationBarHidden = true
-        
         //Настройки кнопок начального экрана
         for button in buttonsCollection {
             //Ресайз текста кнопок
@@ -156,10 +126,13 @@ extension MainViewController {
             
             //Ширина границ
             button.layer.borderWidth = buttonsBorderWidth
+            print("Border Width")
             //Цвет границ
             button.layer.borderColor = buttonsBorderColor
+            print("Border Color")
             //Скругление границ
             button.layer.cornerRadius = button.frame.height / 2
+            print("Border Radius")
         }
     }
     

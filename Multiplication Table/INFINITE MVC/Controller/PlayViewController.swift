@@ -17,9 +17,10 @@ class PlayViewController: UIViewController {
     //Закончилась ли игра
     var isOver = false
     
-    //текущий счет
-    var currentScore = 0
+    //Текущий счет
+    //var currentScore = 0
     
+    //ТЕКСТ
     //Начальный текст поля ответа
     private let startAnswerT = K.InputSettings.startAnswerText
 
@@ -59,6 +60,7 @@ class PlayViewController: UIViewController {
     
     @IBOutlet weak var bestScoreText: UILabel!
     @IBOutlet weak var currentScoreText: UILabel!
+    @IBOutlet weak var currentModeText: UILabel!
     
 
 //MARK: - OBJECTS
@@ -69,12 +71,6 @@ class PlayViewController: UIViewController {
     
 
 //MARK: - LOADINGS
-    /*override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        //Появление бара навигации
-        navigationController?.isNavigationBarHidden = false
-    }*/
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -89,45 +85,13 @@ class PlayViewController: UIViewController {
         //Случайное выражение
         equationLabel.text = play.randomEquation()
         //Перезапуск таймера
-        timer.invalidate()
-        timerProgress.setProgress(1, animated: true)
-        countDown()
-        //Значение лучшего результата
-        //bestScoreLabel.text = String(save.getMaxScoreX10())
+        timerReload()
         //Значение текущего результата
-        currentScoreLabel.text = String(currentScore)
-        if Ex.numToTrain == 10 {
-            //Значение лучшего результата
-            if save.getPRO() {
-                bestScoreLabel.text = String(save.getMaxScoreX10())
-            } else {
-                bestScoreLabel.text = K.Premium.freeVersionText
-            }
-            bestScoreText.text = "ЛУЧШИЙ X10"
-        } else {
-            //Значение лучшего результата
-            if save.getPRO() {
-                bestScoreLabel.text = String(save.getMaxScoreX20())
-            } else {
-                bestScoreLabel.text = K.Premium.freeVersionText
-            }
-            bestScoreText.text = "ЛУЧШИЙ X20"
-        }
-    }
-    
-
-//MARK: - SETUP UI
-    func setupUI(){
-        //Появление бара навигации
-        navigationController?.isNavigationBarHidden = false
-        //Настройки отображения для каждой кнопки
-        for button in numButtonsCollection {
-            //Размер текста кнопок
-            button.titleLabel!.font = UIFont(name: fontCurrent, size: fontSize)
-            button.setTitleColor(buttonsFontC, for: .normal)
-            button.titleLabel!.minimumScaleFactor = minScaleF;
-            button.titleLabel!.adjustsFontSizeToFitWidth = true;
-        }
+        currentScoreLabel.text = String(play.currentScore)
+        //Текущий режим
+        currentModeText.text = play.currentMode()
+        //Лучший результат
+        bestScoreLabel.text = play.bestScore()
     }
     
     
@@ -155,25 +119,81 @@ class PlayViewController: UIViewController {
             timer.invalidate()
             endGameAlert()
             isOver = false
-            //self.performSegue(withIdentifier: "ResultsVC", sender: self)
-            //В остальных случаях это правильный ответ
         } else {
             print("RIGHT")
-            currentScore += 1
-            play.checkScore(score: currentScore)
+            //currentScore += 1
+            //play.checkScore(score: currentScore)
             save.saveTotalSolved()
             updateUI()
         }
     }
     
     
-// MARK: - TIMER
-    //Таймер обратного отсчета
+//MARK: - END GAME ALERT
+    func endGameAlert() {
+        let alert = UIAlertController(title: "\(alertTitleText) \(play.currentScore)", message: "\(alertText) \(play.rightAnswer)", preferredStyle: .alert)
+        
+        let actionM = UIAlertAction(title: alertMenuText, style: .default) { (action) in
+            //what will happen once the user clicks the Add Item button on our UIAlert
+            self.navigationController?.popToRootViewController(animated: true)
+        }
+        let actionR = UIAlertAction(title: alertReloadText, style: .default) { (action) in
+            //what will happen once the user clicks the Add Item button on our UIAlert
+            self.navigationController?.reloadInputViews()
+            //self.currentScore = 0
+            self.play.currentScore = 0
+            self.updateUI()
+        }
+        
+        alert.addAction(actionM)
+        alert.addAction(actionR)
+        
+        present(alert, animated: true, completion: nil)
+    }
+
+}
+
+
+
+//MARK: - EXTENSION. НАСТРОЙКИ ОТОБРАЖЕНИЯ UI
+extension PlayViewController {
+    //Настройки отображения
+    private func setupUI() {
+        //Появление бара навигации
+        navigationController?.isNavigationBarHidden = false
+        //Настройки отображения для каждой кнопки
+        for button in numButtonsCollection {
+            //Размер текста кнопок
+            button.titleLabel!.font = UIFont(name: fontCurrent, size: fontSize)
+            //Цвет текста кнопок
+            button.setTitleColor(buttonsFontC, for: .normal)
+            //Масштабируемость кнопок
+            button.titleLabel!.minimumScaleFactor = minScaleF;
+            //Подгонка по ширине
+            button.titleLabel!.adjustsFontSizeToFitWidth = true;
+        }
+    }
+}
+
+//MARK: - EXTENSION. TIMER
+extension PlayViewController {
+    //Запуск таймера обратного отсчета
     func countDown() {
         timerTime = play.totalTime
         secondsPast = timerTime
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
     }
+    
+    //Перезапуск таймера
+    private func timerReload() {
+        //Остановка
+        timer.invalidate()
+        //Установка прогресса на максимум
+        timerProgress.setProgress(1, animated: true)
+        //Запуск нового таймера
+        countDown()
+    }
+    
     //Функция уменьшения времени
     @objc func updateTimer() {
         if secondsPast > 0 {
@@ -185,29 +205,4 @@ class PlayViewController: UIViewController {
             isOver = true
         }
     }
-    
-    
-//MARK: - END GAME ALERT
-    func endGameAlert() {
-        let alert = UIAlertController(title: "\(alertTitleText) \(currentScore)", message: "\(alertText) \(play.rightAnswer)", preferredStyle: .alert)
-        
-        let actionM = UIAlertAction(title: alertMenuText, style: .default) { (action) in
-            //what will happen once the user clicks the Add Item button on our UIAlert
-            self.navigationController?.popToRootViewController(animated: true)
-        }
-        let actionR = UIAlertAction(title: alertReloadText, style: .default) { (action) in
-            //what will happen once the user clicks the Add Item button on our UIAlert
-            self.navigationController?.reloadInputViews()
-            self.currentScore = 0
-            self.updateUI()
-        }
-        
-        alert.addAction(actionM)
-        alert.addAction(actionR)
-        
-        present(alert, animated: true, completion: nil)
-    }
-    
-    
-// MARK: - END
 }

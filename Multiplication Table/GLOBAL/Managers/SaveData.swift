@@ -52,9 +52,11 @@ class SaveData {
     //Имя для сохранения
     private let maxScoreNameX10 = "MaxScoreX10"
     
-    //Метод сохранения. МОЖНО СДЕЛАТЬ РЕАЛИЗАЦИЮ ТУТ
+    //Метод сохранения. Сохраняет значение если оно больше сохраненного
     func saveMaxScoreX10(score: Int) {
-        defaults.set(score, forKey: maxScoreNameX10)
+        if score > getMaxScoreX10() {
+            defaults.set(score, forKey: maxScoreNameX10)
+        }
     }
     //Метод получения
     func getMaxScoreX10() -> Int {
@@ -68,9 +70,11 @@ class SaveData {
     //Имя для сохранения
     private let maxScoreNameX20 = "MaxScoreX20"
     
-    //Метод сохранения. МОЖНО СДЕЛАТЬ РЕАЛИЗАЦИЮ ТУТ
+    //Метод сохранения. Сохраняет значение если оно больше сохраненного
     func saveMaxScoreX20(score: Int) {
-        defaults.set(score, forKey: maxScoreNameX20)
+        if score > getMaxScoreX20() {
+            defaults.set(score, forKey: maxScoreNameX20)
+        }
     }
     
     //Метод получения

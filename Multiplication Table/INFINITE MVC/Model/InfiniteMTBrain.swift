@@ -11,20 +11,21 @@ import Foundation
 struct PlayMT {
 //MARK: - VARIABLES
     //Максимальное число для умножения. Назначается из главного меню
-    var maxNum = Ex.numToTrain
+    private var maxNum = Ex.numToTrain
     //TIMER. Количество времени на ответ
     let totalTime = K.PlayInf.totalTimeToAnswer
+    
     //Правильный ответ
     var rightAnswer = 0
-    //текущий счет
+    //Текущий счет
     var currentScore = 0
     
     
 //MARK: - OBJECTS
-    let save = SaveData.singletonSaveData
+    private let save = SaveData.singletonSaveData
     
     
-//MARK: - ФУНКЦИЯ ГЕНЕРАЦИЯЯ СЛУЧАЙНОГО УРАВНЕНИЯ
+//MARK: - ФУНКЦИЯ ГЕНЕРАЦИИ СЛУЧАЙНОГО УРАВНЕНИЯ
     mutating func randomEquation() -> String {
         let first = Int.random(in: 1...maxNum)
         let second = Int.random(in: 1...maxNum)
@@ -35,29 +36,53 @@ struct PlayMT {
     
 
 //MARK: - ФУНКЦИЯ СРАВНЕНИЯ ОТВЕТА С ПРАВИЛЬНЫМ
-    func checkAnswer(answer: String) -> Bool {
+    mutating func checkAnswer(answer: String) -> Bool {
         if answer == "\(rightAnswer)" {
+            currentScore += 1
+            checkScore(score: currentScore)
             return true
         } else {
             return false
         }
     }
     
+ 
+//MARK: - ФУНКЦИЯ КОТОРАЯ ВОЗВРАЩАЕТ ТЕКУЩИЙ РЕЖИМ
+    func currentMode() -> String {
+            return "X\(Ex.numToTrain)"
+    }
     
-// MARK: - Функция сравнения текущего счета с лучшим
-    func checkScore(score: Int) {
-        if Ex.numToTrain == 10 {
-            if score > save.getMaxScoreX10() {
-                save.saveMaxScoreX10(score: score)
-            }
+  
+//MARK: - PREMIUM. ФУНКЦИЯ КОТОРАЯ ВОЗВРАЩАЕТ ЛУЧШИЙ РЕЗУЛЬТАТ
+    func bestScore() -> String {
+        if save.getPRO() {
+            return getScoreForCurrentMode()
         } else {
-            if score > save.getMaxScoreX20() {
-                save.saveMaxScoreX20(score: score)
-            }
+            return K.Premium.freeVersionText
+        }
+    }
+    
+    
+    
+    
+//MARK: - PRIVATE. ФУНКЦИЯ СОХРАНЕНИЯ СЧЕТА В ЗАВИСИМОСТИ ОТ РЕЖИМА
+    private func checkScore(score: Int) {
+        if Ex.numToTrain == 10 {
+            save.saveMaxScoreX10(score: score)
+        } else {
+            save.saveMaxScoreX20(score: score)
         }        
     }
     
     
+//MARK: - PRIVATE. ФУНКЦИЯ ВОЗВРАЩЕНИЯ ЛУЧШЕГО РЕЗУЛЬТАТА В ЗАВИСИМОСТИ ОТ РЕЖИМА
+    private func getScoreForCurrentMode() -> String {
+        if Ex.numToTrain == 10 {
+            return String(save.getMaxScoreX10())
+        } else {
+            return String(save.getMaxScoreX20())
+        }
+    }
 }
 
 

@@ -153,7 +153,7 @@ class PlayOneNumViewController: UIViewController {
         }
         
         //Цвет фона
-        alert.view.subviews.first?.subviews.first?.subviews.first?.backgroundColor = alertBackC
+        //alert.view.subviews.first?.subviews.first?.subviews.first?.backgroundColor = alertBackC
         //Цвет текста кнопок
         alert.view.tintColor = alertFontC
         
@@ -163,4 +163,8 @@ class PlayOneNumViewController: UIViewController {
     }
     
 }
+
+
+
+
 

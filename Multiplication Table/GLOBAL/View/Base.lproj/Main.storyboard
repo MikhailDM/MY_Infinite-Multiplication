@@ -214,7 +214,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="jlS-Zo-n31"/>
+                    <navigationItem key="navigationItem" id="jlS-Zo-n31">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="qEG-jD-01D"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="achievementsButton" destination="CUb-tY-yUe" id="G4S-nv-Xj3"/>
                         <outlet property="levelLabel" destination="56R-ms-trB" id="ZRp-VD-hx8"/>
@@ -586,7 +588,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jhx-P8-rhj"/>
                     </view>
-                    <navigationItem key="navigationItem" title="ВЫБОР ЧИСЛА" id="OTH-oW-VV2"/>
+                    <navigationItem key="navigationItem" title="ВЫБОР ЧИСЛА" id="OTH-oW-VV2">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="jN8-Kp-ywo"/>
+                    </navigationItem>
                     <connections>
                         <outletCollection property="numButtonsCollection" destination="01g-dY-ckn" collectionClass="NSMutableArray" id="PZx-K4-b7G"/>
                         <outletCollection property="numButtonsCollection" destination="4CL-7h-MbP" collectionClass="NSMutableArray" id="eX9-US-cmf"/>
@@ -890,7 +894,7 @@
             </objects>
             <point key="canvasLocation" x="3001" y="139"/>
         </scene>
-        <!--БЕСКОНЕЧНОСТЬ-->
+        <!--УМНОЖЕНИЕ-->
         <scene sceneID="ckK-tI-ouZ">
             <objects>
                 <viewController storyboardIdentifier="PlayMultiplicationVC" id="D0W-ZK-u20" customClass="PlayViewController" customModule="Multiplication_Table" customModuleProvider="target" sceneMemberID="viewController">
@@ -911,51 +915,65 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="77.333333333333329"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="zMg-I6-bzs" userLabel="Stack View Best">
-                                                                <rect key="frame" x="0.0" y="0.0" width="207" height="77.333333333333329"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="138" height="77.333333333333329"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ЛУЧШИЙ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="o5i-gX-ooF">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="207" height="38.666666666666664"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ЛУЧШИЙ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="o5i-gX-ooF">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="138" height="38.666666666666664"/>
                                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
-                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <color key="textColor" name="MyWhite"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VpD-re-5gR">
-                                                                        <rect key="frame" x="0.0" y="38.666666666666671" width="207" height="38.666666666666671"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="VpD-re-5gR">
+                                                                        <rect key="frame" x="0.0" y="38.666666666666671" width="138" height="38.666666666666671"/>
                                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
-                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <color key="textColor" name="MyWhite"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="MnR-WJ-WVw" userLabel="Stack View Current">
-                                                                <rect key="frame" x="207" y="0.0" width="207" height="77.333333333333329"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="OcR-2R-0qf">
+                                                                <rect key="frame" x="138" y="0.0" width="138" height="77.333333333333329"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ТЕКУЩИЙ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Sbh-MO-uPt">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="207" height="38.666666666666664"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="ZCu-fN-kPw" userLabel="X10">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="138" height="38.666666666666664"/>
                                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
-                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <color key="textColor" name="MyWhite"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Fqe-ax-biK">
-                                                                        <rect key="frame" x="0.0" y="38.666666666666671" width="207" height="38.666666666666671"/>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d8D-1V-LJE">
+                                                                        <rect key="frame" x="0.0" y="38.666666666666671" width="138" height="38.666666666666671"/>
+                                                                    </view>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="MnR-WJ-WVw" userLabel="Stack View Current">
+                                                                <rect key="frame" x="276" y="0.0" width="138" height="77.333333333333329"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ТЕКУЩИЙ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="Sbh-MO-uPt">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="138" height="38.666666666666664"/>
                                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
-                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <color key="textColor" name="MyWhite"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="Fqe-ax-biK">
+                                                                        <rect key="frame" x="0.0" y="38.666666666666671" width="138" height="38.666666666666671"/>
+                                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                                                        <color key="textColor" name="MyWhite"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
                                                         </subviews>
                                                     </stackView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="УРАВНЕНИЕ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Jv7-rU-fVW">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="УРАВНЕНИЕ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="Jv7-rU-fVW">
                                                         <rect key="frame" x="0.0" y="77.333333333333343" width="414" height="103.33333333333334"/>
                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="textColor" name="MyWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ОТВЕТ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="W1c-NJ-PCh">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ОТВЕТ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="W1c-NJ-PCh">
                                                         <rect key="frame" x="0.0" y="180.66666666666669" width="414" height="51.666666666666657"/>
                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="textColor" name="MyWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6AS-TU-vbh" userLabel="View Timer">
@@ -1144,8 +1162,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hlr-rg-VOV"/>
                     </view>
-                    <navigationItem key="navigationItem" title="БЕСКОНЕЧНОСТЬ" id="Jx8-Oo-CLO">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="pYN-Ph-DqT">
+                    <navigationItem key="navigationItem" title="УМНОЖЕНИЕ" id="Jx8-Oo-CLO">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="pYN-Ph-DqT">
                             <connections>
                                 <action selector="backPressed:" destination="D0W-ZK-u20" id="U23-hp-Yqp"/>
                             </connections>
@@ -1155,6 +1173,7 @@
                         <outlet property="answerLabel" destination="W1c-NJ-PCh" id="gal-4k-eYt"/>
                         <outlet property="bestScoreLabel" destination="VpD-re-5gR" id="eZP-Ki-8fM"/>
                         <outlet property="bestScoreText" destination="o5i-gX-ooF" id="0ow-3q-tn5"/>
+                        <outlet property="currentModeText" destination="ZCu-fN-kPw" id="9Nw-2X-PTR"/>
                         <outlet property="currentScoreLabel" destination="Fqe-ax-biK" id="MbW-TK-BLF"/>
                         <outlet property="currentScoreText" destination="Sbh-MO-uPt" id="2dS-88-cF3"/>
                         <outlet property="equationLabel" destination="Jv7-rU-fVW" id="75S-wA-pEk"/>

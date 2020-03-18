@@ -18,18 +18,18 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="d9P-tU-Ktg">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                        <rect key="frame" x="20" y="5" width="280" height="70"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ЗАГОЛОВОК" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1OM-tk-FTC">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
-                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ЗАГОЛОВОК" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="1OM-tk-FTC">
+                                <rect key="frame" x="0.0" y="0.0" width="280" height="35"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                 <color key="textColor" name="MyWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ОПИСАНИЕ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lEL-57-MJj">
-                                <rect key="frame" x="0.0" y="40" width="320" height="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ОПИСАНИЕ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="lEL-57-MJj">
+                                <rect key="frame" x="0.0" y="35" width="280" height="35"/>
                                 <color key="tintColor" name="MyWhite"/>
-                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="12"/>
                                 <color key="textColor" name="MyWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -39,10 +39,10 @@
                 <color key="backgroundColor" name="MyBackground"/>
                 <color key="tintColor" name="MyWhite"/>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="d9P-tU-Ktg" secondAttribute="trailing" id="4UK-bw-ZRl"/>
-                    <constraint firstAttribute="bottom" secondItem="d9P-tU-Ktg" secondAttribute="bottom" id="5Cw-OK-eBA"/>
-                    <constraint firstItem="d9P-tU-Ktg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ffB-ii-l9Y"/>
-                    <constraint firstItem="d9P-tU-Ktg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ksL-pc-OFw"/>
+                    <constraint firstAttribute="trailing" secondItem="d9P-tU-Ktg" secondAttribute="trailing" constant="20" id="4UK-bw-ZRl"/>
+                    <constraint firstAttribute="bottom" secondItem="d9P-tU-Ktg" secondAttribute="bottom" constant="5" id="5Cw-OK-eBA"/>
+                    <constraint firstItem="d9P-tU-Ktg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="ffB-ii-l9Y"/>
+                    <constraint firstItem="d9P-tU-Ktg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="ksL-pc-OFw"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -50,7 +50,7 @@
                 <outlet property="descriptionLabel" destination="lEL-57-MJj" id="qJc-2E-5W9"/>
                 <outlet property="titleLabel" destination="1OM-tk-FTC" id="g9B-ds-4cW"/>
             </connections>
-            <point key="canvasLocation" x="132" y="154"/>
+            <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>
         </tableViewCell>
     </objects>
     <resources>

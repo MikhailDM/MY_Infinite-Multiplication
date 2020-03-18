@@ -18,7 +18,7 @@ struct K {
         LevelModel(levelName: "УЧЕНИК", levelRequirement: 2),
         LevelModel(levelName: "СТУДЕНТ", levelRequirement: 5),
         LevelModel(levelName: "МАТЕМАТИК", levelRequirement: 7),
-        LevelModel(levelName: "ПРОФЕССОР", levelRequirement: 10)
+        LevelModel(levelName: "ПРОФЕССОР", levelRequirement: 1000)
     ]
  
     
@@ -44,19 +44,21 @@ struct K {
                           titleAch: levelsArray[4].levelName,
                           descriptionAch: "РЕШИТЬ ПРИМЕРОВ: \(levelsArray[4].levelRequirement)"),
         
-        AchievementModel(id: "LevelsAch20",
+        
+        
+        AchievementModel(id: "NumsAch01",
                          titleAch: "УЧИМСЯ УМНОЖАТЬ",
                          descriptionAch: "ПРОРЕШАТЬ ВСЕ ЧИСЛА ОТ 1 ДО 5"),
         
-        AchievementModel(id: "LevelsAch21",
+        AchievementModel(id: "NumsAch02",
                          titleAch: "МАСТЕР УМНОЖЕНИЯ",
                          descriptionAch: "ПРОРЕШАТЬ ВСЕ ЧИСЛА ОТ 1 ДО 10"),
         
-        AchievementModel(id: "LevelsAch22",
+        AchievementModel(id: "NumsAch03",
                          titleAch: "МАГИСТР УМНОЖЕНИЯ",
                          descriptionAch: "ПРОРЕШАТЬ ВСЕ ЧИСЛА ОТ 1 ДО 15"),
         
-        AchievementModel(id: "LevelsAch23",
+        AchievementModel(id: "NumsAch04",
                          titleAch: "ПОВЕЛИТЕЛЬ УМНОЖЕНИЯ",
                          descriptionAch: "ПРОРЕШАТЬ ВСЕ ЧИСЛА ОТ 1 ДО 20"),
     ]

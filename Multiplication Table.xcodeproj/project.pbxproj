@@ -16,6 +16,7 @@
 		CE532A4D24010DBF0069BA8F /* AchievementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE532A4C24010DBF0069BA8F /* AchievementModel.swift */; };
 		CE532A4F24010E0F0069BA8F /* AchievementsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE532A4E24010E0F0069BA8F /* AchievementsManager.swift */; };
 		CE5AD3642417F0580061A748 /* PremiumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5AD3632417F0580061A748 /* PremiumViewController.swift */; };
+		CEA3410B242159A000EE6029 /* TimerBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3410A242159A000EE6029 /* TimerBrain.swift */; };
 		CEB114BD23E97712008E05E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB114BC23E97712008E05E0 /* AppDelegate.swift */; };
 		CEB114BF23E97712008E05E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB114BE23E97712008E05E0 /* SceneDelegate.swift */; };
 		CEB114C423E97712008E05E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB114C223E97712008E05E0 /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		CE532A4C24010DBF0069BA8F /* AchievementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementModel.swift; sourceTree = "<group>"; };
 		CE532A4E24010E0F0069BA8F /* AchievementsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsManager.swift; sourceTree = "<group>"; };
 		CE5AD3632417F0580061A748 /* PremiumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumViewController.swift; sourceTree = "<group>"; };
+		CEA3410A242159A000EE6029 /* TimerBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerBrain.swift; sourceTree = "<group>"; };
 		CEB114B923E97712008E05E0 /* Multiplication Table.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Multiplication Table.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB114BC23E97712008E05E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEB114BE23E97712008E05E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				CEB114DC23E9A465008E05E0 /* InfiniteMTBrain.swift */,
+				CEA3410A242159A000EE6029 /* TimerBrain.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 				CE241FAF23EC32B20092C77C /* SaveData.swift in Sources */,
 				CE532A4D24010DBF0069BA8F /* AchievementModel.swift in Sources */,
 				CEBD0CF923F7EBCD0042F696 /* Exchange.swift in Sources */,
+				CEA3410B242159A000EE6029 /* TimerBrain.swift in Sources */,
 				CE532A4F24010E0F0069BA8F /* AchievementsManager.swift in Sources */,
 				CE025653240170ED00E42BFF /* LevelsManager.swift in Sources */,
 				CE452A7323FE6980000D746B /* ChooseNumViewController.swift in Sources */,

@@ -11,11 +11,11 @@ import UIKit
 class PlayViewController: UIViewController {
 //MARK: - VARIABLES
     //Переменные для таймера
-    var timerTime = 0
-    var secondsPast = 0
+    //var timerTime = 0
+    //var secondsPast = 0
     
     //Закончилась ли игра
-    var isOver = false
+    //var isOver = false
     
     //Текущий счет
     //var currentScore = 0
@@ -64,10 +64,11 @@ class PlayViewController: UIViewController {
     
 
 //MARK: - OBJECTS
-    var play = PlayMT()
-    var timer = Timer()
-    let save = SaveData.singletonSaveData
-    let input = InputBrain()
+    private var play = PlayMT()
+    private var timer = Timer()
+    private let save = SaveData.singletonSaveData
+    private let input = InputBrain()
+    private var timerBrain = TimerBrain.singletonTimerBrain
     
 
 //MARK: - LOADINGS
@@ -109,49 +110,26 @@ class PlayViewController: UIViewController {
 
 //MARK: - ACTIONS. CHECK ANSWER
     @IBAction func checkPressed(_ sender: UIButton) {
-        //Проверка нажатия кнопки OK при отсутствии ввода. Вводить ответ можно и когда время закончилось
+        //Проверка нажатия кнопки OK при отсутствии ввода
+        //Вводить ответ можно и когда время закончилось
         if answerLabel.text == startAnswerT {
             print("ENTER ANSWER")
             //Действия при неправильном ответе или истекшем времени
-        } else if isOver || !play.checkAnswer(answer: answerLabel.text!) {
+        } else if timerBrain.isTimeOver() || !play.checkAnswer(answer: answerLabel.text!) {
             print("TIME IS OVER OR WRONG ANSWER")
             print("Right answer is \(play.rightAnswer)")
             timer.invalidate()
             endGameAlert()
-            isOver = false
+            //isOver = false
         } else {
             print("RIGHT")
-            //currentScore += 1
-            //play.checkScore(score: currentScore)
+            //Сохранение +1 решенного примера
             save.saveTotalSolved()
             updateUI()
         }
     }
-    
-    
-//MARK: - END GAME ALERT
-    func endGameAlert() {
-        let alert = UIAlertController(title: "\(alertTitleText) \(play.currentScore)", message: "\(alertText) \(play.rightAnswer)", preferredStyle: .alert)
-        
-        let actionM = UIAlertAction(title: alertMenuText, style: .default) { (action) in
-            //what will happen once the user clicks the Add Item button on our UIAlert
-            self.navigationController?.popToRootViewController(animated: true)
-        }
-        let actionR = UIAlertAction(title: alertReloadText, style: .default) { (action) in
-            //what will happen once the user clicks the Add Item button on our UIAlert
-            self.navigationController?.reloadInputViews()
-            //self.currentScore = 0
-            self.play.currentScore = 0
-            self.updateUI()
-        }
-        
-        alert.addAction(actionM)
-        alert.addAction(actionR)
-        
-        present(alert, animated: true, completion: nil)
-    }
-
 }
+
 
 
 
@@ -179,9 +157,13 @@ extension PlayViewController {
 extension PlayViewController {
     //Запуск таймера обратного отсчета
     func countDown() {
-        timerTime = play.totalTime
-        secondsPast = timerTime
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+        timerBrain.resetTimer()
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimerUI), userInfo: nil, repeats: true)
+    }
+    
+    //Обновление UI таймера
+    @objc private func updateTimerUI() {
+        timerProgress.setProgress(timerBrain.getTimerProgress(), animated: true)
     }
     
     //Перезапуск таймера
@@ -193,16 +175,30 @@ extension PlayViewController {
         //Запуск нового таймера
         countDown()
     }
-    
-    //Функция уменьшения времени
-    @objc func updateTimer() {
-        if secondsPast > 0 {
-            secondsPast -= 1
-            let progress = Float(secondsPast) / Float(timerTime)
-            timerProgress.setProgress(progress, animated: true)
-        } else {
-            timer.invalidate()
-            isOver = true
+}
+
+
+//MARK: - EXTENSION. UIALERT
+extension PlayViewController {
+    func endGameAlert() {
+        let alert = UIAlertController(title: "\(alertTitleText) \(play.currentScore)", message: "\(alertText) \(play.rightAnswer)", preferredStyle: .alert)
+        
+        let actionM = UIAlertAction(title: alertMenuText, style: .default) { (action) in
+            //what will happen once the user clicks the Add Item button on our UIAlert
+            self.navigationController?.popToRootViewController(animated: true)
         }
+        let actionR = UIAlertAction(title: alertReloadText, style: .default) { (action) in
+            //what will happen once the user clicks the Add Item button on our UIAlert
+            self.navigationController?.reloadInputViews()
+            //self.currentScore = 0
+            self.play.currentScore = 0
+            self.updateUI()
+        }
+        
+        alert.addAction(actionM)
+        alert.addAction(actionR)
+        
+        present(alert, animated: true, completion: nil)
     }
+
 }

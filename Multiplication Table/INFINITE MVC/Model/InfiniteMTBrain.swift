@@ -13,7 +13,7 @@ struct PlayMT {
     //Максимальное число для умножения. Назначается из главного меню
     private var maxNum = Ex.numToTrain
     //TIMER. Количество времени на ответ
-    let totalTime = K.PlayInf.totalTimeToAnswer
+    let totalTime = K.PlayInf.totalTimeToAnswerX10
     
     //Правильный ответ
     var rightAnswer = 0

@@ -1207,14 +1207,15 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oVk-3F-fgg">
                                 <rect key="frame" x="20" y="93" width="374" height="764"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vcd-iJ-eVO">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="vcd-iJ-eVO">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="76.333333333333329"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="40"/>
+                                        <color key="textColor" name="MyWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="1" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZV4-MK-Tja">
                                         <rect key="frame" x="-2" y="76.333333333333343" width="378" height="77.333333333333343"/>
+                                        <color key="tintColor" name="MyBlue"/>
                                         <connections>
                                             <action selector="sliderPressed:" destination="HNu-jF-Jk9" eventType="valueChanged" id="OyT-6W-bkJ"/>
                                         </connections>
@@ -1222,8 +1223,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fxo-9y-6Ti">
                                         <rect key="frame" x="0.0" y="152.66666666666669" width="374" height="611.33333333333326"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5IK-78-sX0">
-                                                <rect key="frame" x="123" y="20.000000000000057" width="128" height="571.33333333333348"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5IK-78-sX0">
+                                                <rect key="frame" x="103" y="20.000000000000057" width="168" height="571.33333333333348"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="pV9-Cu-Lkh">
                                                         <rect key="frame" x="0.0" y="0.0" width="9.6666666666666661" height="571.33333333333337"/>
@@ -1291,7 +1292,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Zf1-IH-RlW">
-                                                        <rect key="frame" x="19.666666666666657" y="0.0" width="13.333333333333336" height="571.33333333333337"/>
+                                                        <rect key="frame" x="29.666666666666654" y="0.0" width="13.333333333333332" height="571.33333333333337"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sP-CR-dSR">
                                                                 <rect key="frame" x="0.0" y="0.0" width="13.333333333333334" height="57.333333333333336"/>
@@ -1356,7 +1357,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="umD-Eh-mN1">
-                                                        <rect key="frame" x="43" y="0.0" width="25.666666666666671" height="571.33333333333337"/>
+                                                        <rect key="frame" x="62.999999999999993" y="0.0" width="25.666666666666664" height="571.33333333333337"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVn-Ed-mEp">
                                                                 <rect key="frame" x="0.0" y="0.0" width="25.666666666666668" height="57.333333333333336"/>
@@ -1421,7 +1422,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="sWA-S4-XL9">
-                                                        <rect key="frame" x="78.666666666666657" y="0.0" width="13.666666666666671" height="571.33333333333337"/>
+                                                        <rect key="frame" x="108.66666666666666" y="0.0" width="13.666666666666671" height="571.33333333333337"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="=" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcT-Cv-eAW">
                                                                 <rect key="frame" x="0.0" y="0.0" width="13.666666666666666" height="57.333333333333336"/>
@@ -1486,7 +1487,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="GN7-kR-Nbo">
-                                                        <rect key="frame" x="102.33333333333334" y="0.0" width="25.666666666666657" height="571.33333333333337"/>
+                                                        <rect key="frame" x="142.33333333333331" y="0.0" width="25.666666666666657" height="571.33333333333337"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ot-UV-fXn">
                                                                 <rect key="frame" x="0.0" y="0.0" width="25.666666666666668" height="57.333333333333336"/>
@@ -1613,6 +1614,56 @@
                         <outletCollection property="currentNumColumn" destination="uA9-pu-N43" collectionClass="NSMutableArray" id="5zD-ap-K8A"/>
                         <outletCollection property="currentNumColumn" destination="fOx-xK-mXB" collectionClass="NSMutableArray" id="Pfh-nz-gIK"/>
                         <outletCollection property="currentNumAnswerColumn" destination="NDC-Lp-nll" collectionClass="NSMutableArray" id="sZd-vg-QDx"/>
+                        <outletCollection property="labelsCollection" destination="CfM-1Z-qCi" collectionClass="NSMutableArray" id="DzP-c8-quz"/>
+                        <outletCollection property="labelsCollection" destination="ed5-u2-HZ5" collectionClass="NSMutableArray" id="Vfw-5E-fvW"/>
+                        <outletCollection property="labelsCollection" destination="WQh-Ef-V2k" collectionClass="NSMutableArray" id="nma-5t-tmT"/>
+                        <outletCollection property="labelsCollection" destination="Usn-vb-voa" collectionClass="NSMutableArray" id="wSW-ZV-Aq7"/>
+                        <outletCollection property="labelsCollection" destination="fOx-xK-mXB" collectionClass="NSMutableArray" id="ZcO-4g-MHp"/>
+                        <outletCollection property="labelsCollection" destination="Dbf-gd-mh1" collectionClass="NSMutableArray" id="9Bu-6u-nxv"/>
+                        <outletCollection property="labelsCollection" destination="uA9-pu-N43" collectionClass="NSMutableArray" id="FeU-hp-55A"/>
+                        <outletCollection property="labelsCollection" destination="a4D-Ds-qSC" collectionClass="NSMutableArray" id="VsX-Nl-Pyi"/>
+                        <outletCollection property="labelsCollection" destination="HRC-Sk-bOq" collectionClass="NSMutableArray" id="AtY-3P-G62"/>
+                        <outletCollection property="labelsCollection" destination="TJb-MP-cPV" collectionClass="NSMutableArray" id="5eY-aB-d4u"/>
+                        <outletCollection property="labelsCollection" destination="2sP-CR-dSR" collectionClass="NSMutableArray" id="spc-Bg-s3o"/>
+                        <outletCollection property="labelsCollection" destination="oEq-V3-B7Y" collectionClass="NSMutableArray" id="oS2-Z0-rnC"/>
+                        <outletCollection property="labelsCollection" destination="o8Y-Ze-JYm" collectionClass="NSMutableArray" id="NZf-ND-Rey"/>
+                        <outletCollection property="labelsCollection" destination="f81-mV-Mb9" collectionClass="NSMutableArray" id="w2A-pA-DQF"/>
+                        <outletCollection property="labelsCollection" destination="U9g-BO-4Wh" collectionClass="NSMutableArray" id="2Zd-EP-oPv"/>
+                        <outletCollection property="labelsCollection" destination="SRS-DM-sFW" collectionClass="NSMutableArray" id="Ibp-RJ-jCq"/>
+                        <outletCollection property="labelsCollection" destination="FgW-jF-eSZ" collectionClass="NSMutableArray" id="S7f-DB-rcr"/>
+                        <outletCollection property="labelsCollection" destination="ZPb-Pm-ptL" collectionClass="NSMutableArray" id="y0c-Ra-zq2"/>
+                        <outletCollection property="labelsCollection" destination="U7H-Fr-l9C" collectionClass="NSMutableArray" id="hDI-G0-OtB"/>
+                        <outletCollection property="labelsCollection" destination="2Se-LP-t4w" collectionClass="NSMutableArray" id="guV-JX-aK8"/>
+                        <outletCollection property="labelsCollection" destination="kVn-Ed-mEp" collectionClass="NSMutableArray" id="tyr-Vi-4yf"/>
+                        <outletCollection property="labelsCollection" destination="j35-8z-UQG" collectionClass="NSMutableArray" id="fEw-UC-1e3"/>
+                        <outletCollection property="labelsCollection" destination="rrW-i2-EK0" collectionClass="NSMutableArray" id="dZN-Wc-mAZ"/>
+                        <outletCollection property="labelsCollection" destination="HzS-6A-iIK" collectionClass="NSMutableArray" id="Zt4-7y-5qN"/>
+                        <outletCollection property="labelsCollection" destination="8av-HW-b7E" collectionClass="NSMutableArray" id="bg6-ew-mpG"/>
+                        <outletCollection property="labelsCollection" destination="bqv-vW-QGS" collectionClass="NSMutableArray" id="dNM-EA-Rzi"/>
+                        <outletCollection property="labelsCollection" destination="ioH-8p-d99" collectionClass="NSMutableArray" id="eEy-xP-3ed"/>
+                        <outletCollection property="labelsCollection" destination="qaI-tE-u0A" collectionClass="NSMutableArray" id="dRy-5E-oMc"/>
+                        <outletCollection property="labelsCollection" destination="15L-K5-FfK" collectionClass="NSMutableArray" id="oYH-Vb-jBh"/>
+                        <outletCollection property="labelsCollection" destination="kNP-9e-Mav" collectionClass="NSMutableArray" id="Cjm-jo-hlS"/>
+                        <outletCollection property="labelsCollection" destination="bcT-Cv-eAW" collectionClass="NSMutableArray" id="0aE-eO-7lK"/>
+                        <outletCollection property="labelsCollection" destination="Gru-RO-edK" collectionClass="NSMutableArray" id="Do8-wW-s3G"/>
+                        <outletCollection property="labelsCollection" destination="nkH-qr-3VX" collectionClass="NSMutableArray" id="4KS-A7-coG"/>
+                        <outletCollection property="labelsCollection" destination="HX1-HD-t42" collectionClass="NSMutableArray" id="wBK-ux-XPC"/>
+                        <outletCollection property="labelsCollection" destination="Gmp-FQ-wfR" collectionClass="NSMutableArray" id="OuL-vJ-cdP"/>
+                        <outletCollection property="labelsCollection" destination="GWv-B7-tpX" collectionClass="NSMutableArray" id="fax-Mx-AW3"/>
+                        <outletCollection property="labelsCollection" destination="y47-Ee-BSb" collectionClass="NSMutableArray" id="tNT-N8-iBr"/>
+                        <outletCollection property="labelsCollection" destination="48G-MY-i9f" collectionClass="NSMutableArray" id="9di-NK-0Fh"/>
+                        <outletCollection property="labelsCollection" destination="Hu5-Pq-FfA" collectionClass="NSMutableArray" id="MCs-gg-YRT"/>
+                        <outletCollection property="labelsCollection" destination="Wc6-hn-2oK" collectionClass="NSMutableArray" id="5Su-fI-AQc"/>
+                        <outletCollection property="labelsCollection" destination="1Ot-UV-fXn" collectionClass="NSMutableArray" id="iIp-Ud-Cg2"/>
+                        <outletCollection property="labelsCollection" destination="6Y4-Me-k2V" collectionClass="NSMutableArray" id="Cbq-pU-8n9"/>
+                        <outletCollection property="labelsCollection" destination="6CR-4K-mD8" collectionClass="NSMutableArray" id="ygs-dW-cOA"/>
+                        <outletCollection property="labelsCollection" destination="DjU-6s-VkG" collectionClass="NSMutableArray" id="M1B-8o-XKc"/>
+                        <outletCollection property="labelsCollection" destination="J3E-IP-VYD" collectionClass="NSMutableArray" id="mVI-gf-QuC"/>
+                        <outletCollection property="labelsCollection" destination="WpR-BQ-luw" collectionClass="NSMutableArray" id="n3h-Nu-rAG"/>
+                        <outletCollection property="labelsCollection" destination="ECb-qx-wim" collectionClass="NSMutableArray" id="9nE-oI-CQi"/>
+                        <outletCollection property="labelsCollection" destination="uZr-PU-fw2" collectionClass="NSMutableArray" id="4eR-Ic-Jxv"/>
+                        <outletCollection property="labelsCollection" destination="gwW-08-A8h" collectionClass="NSMutableArray" id="Ycn-51-e5H"/>
+                        <outletCollection property="labelsCollection" destination="NDC-Lp-nll" collectionClass="NSMutableArray" id="7Qa-37-LHU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CkK-ps-O9X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

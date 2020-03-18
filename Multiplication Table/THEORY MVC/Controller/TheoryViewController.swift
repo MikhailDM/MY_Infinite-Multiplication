@@ -9,6 +9,18 @@
 import UIKit
 
 class TheoryViewController: UIViewController {
+//MARK: - VARIABLES
+    //Размер шрифта
+    private let fontSize = K.Fonts.size25
+    //Текущий шрифт
+    private let fontCurrent = K.Fonts.mainF
+    //Цвет шрифта
+    private let colorCurrent = K.MyColorsUI.white
+    //Фактор масштабирования текста
+    private let minScaleF = K.Fonts.scaleFactor
+    
+    
+    
 //MARK: - LABELS
     @IBOutlet weak var currentNumLabel: UILabel!
     
@@ -18,6 +30,8 @@ class TheoryViewController: UIViewController {
     
     @IBOutlet var currentNumAnswerColumn: [UILabel]!
     
+    //Коллекция всех Labels
+    @IBOutlet var labelsCollection: [UILabel]!
     
 //MARK: - LOADING
     override func viewDidLoad() {
@@ -33,6 +47,22 @@ class TheoryViewController: UIViewController {
         //Настройки слайдера при загрузке
         slider.value = 10
         currentNumShow()
+        
+        //Настройки отображения для каждой кнопки
+        for num in labelsCollection {
+            //Размер текста
+            num.textColor = colorCurrent
+            //Шрифт
+            num.font = UIFont(name: fontCurrent, size: fontSize)
+            //Масштабирование
+            num.minimumScaleFactor = minScaleF
+            
+            
+            //Фактор масштаба
+            //button.titleLabel!.minimumScaleFactor = minScaleF
+            //Подгонка по ширине текста кнопки
+            //button.titleLabel!.adjustsFontSizeToFitWidth = true
+        }
     }
         
     

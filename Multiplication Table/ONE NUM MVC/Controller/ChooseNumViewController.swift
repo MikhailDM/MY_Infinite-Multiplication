@@ -52,9 +52,9 @@ class ChooseNumViewController: UIViewController {
             //Размер текста кнопок
             button.titleLabel!.font = UIFont(name: K.Fonts.mainF, size: fontSize)
             //Фактор масштаба
-            button.titleLabel!.minimumScaleFactor = minScaleF;
+            button.titleLabel!.minimumScaleFactor = minScaleF
             //Подгонка по ширине текста кнопки
-            button.titleLabel!.adjustsFontSizeToFitWidth = true;
+            button.titleLabel!.adjustsFontSizeToFitWidth = true
             
             //Рамки кнопок
             //button.layer.borderWidth = buttonsBorderWidth

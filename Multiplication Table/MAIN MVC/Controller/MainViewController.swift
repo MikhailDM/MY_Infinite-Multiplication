@@ -61,6 +61,7 @@ class MainViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         //Настраиваем отображение кнопок
         setupUI()
+        //hideNavigationBar()
     }
     
 //MARK: - UPDATE UI
@@ -114,6 +115,8 @@ extension MainViewController {
     private func hideNavigationBar() {
         //Скрытие бара навигации
         navigationController?.isNavigationBarHidden = true
+        //Отключаем навигацию жестами
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
     }
     
     //Настройки отображения

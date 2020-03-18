@@ -11,11 +11,11 @@ import UIKit
 class ChooseNumViewController: UIViewController {
 //MARK: - VARIABLES
     //Размер шрифта
-    private let fontSize: CGFloat = K.Fonts.size30
+    private let fontSize = K.Fonts.size25
     //Текущий шрифт
     private let fontCurrent = K.Fonts.mainF
     //Фактор масштабирования текста
-    private let minScaleF: CGFloat = K.Fonts.scaleFactor
+    private let minScaleF = K.Fonts.scaleFactor
     
     //Цвет прорешенных цифр и границ кнопок
     private let solvedNumButtonColor = K.MyColorsUI.green
@@ -57,10 +57,10 @@ class ChooseNumViewController: UIViewController {
             button.titleLabel!.adjustsFontSizeToFitWidth = true;
             
             //Рамки кнопок
-            button.layer.borderWidth = buttonsBorderWidth
-            button.layer.cornerRadius = button.frame.height / 3
-            button.layer.borderColor = solvedNumButtonColor?.cgColor
-            button.clipsToBounds = true
+            //button.layer.borderWidth = buttonsBorderWidth
+            //button.layer.cornerRadius = button.frame.height / 3
+            //button.layer.borderColor = solvedNumButtonColor?.cgColor
+            //button.clipsToBounds = true
         }
     }
 

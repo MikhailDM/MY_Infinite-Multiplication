@@ -9,26 +9,19 @@
 import Foundation
 
 struct PlayOneNumMT {
-//MARK: - OBJECTS
-    let save = SaveData.singletonSaveData
-    
+
     
 //MARK: - VARIABLES
     //Первое постоянное число для умножения. Назначается из главного меню
-    var firstNum = Ex.numToTrain
+    let firstNum = Ex.numToTrain
     
-    //Максимальное значение для второго случайного числа. Зависит от первого числа
-    var maxSecondNum: Int {
-        if firstNum <= 10 {
-            return 10
-        } else {
-            return 20
-        }
-    }
+    //Максимальное значение для второго случайного числа.
+    private var maxSecondNum = 10
+    
     //Предыдущее случайное число. Для исключения повторений
-    var previosRandomNum = 0
+    private var previosRandomNum = 0
     //Правильный ответ
-    var rightAnswer = 0
+    private var rightAnswer = 0
     
     //Количество правильных ответов. Изначально берется из констант и будет уменьшаться
     var countRightAnswers = K.PlayOne.maxRightAnswers
@@ -36,7 +29,11 @@ struct PlayOneNumMT {
     var countWrongAnswers = 0
     
     
-//MARK: - Функция генерации случайного уравнения
+//MARK: - OBJECTS
+    private let save = SaveData.singletonSaveData
+    
+    
+//MARK: - ГЕНЕРАЦИЯ СЛУЧАЙНОГО УРАВНЕНИЯ
     mutating func randomEquation() -> String {
         let first = firstNum
         var second = Int.random(in: 1...maxSecondNum)
@@ -55,8 +52,7 @@ struct PlayOneNumMT {
     }
 
     
-//MARK: - Функция проверки ответа
-
+//MARK: - ПРОВЕРКА ОТВЕТА
     mutating func checkAnswer(answer: String) -> Bool {
         //Правильный ответ
         if answer == "\(rightAnswer)" {
@@ -72,8 +68,7 @@ struct PlayOneNumMT {
         }
     }
     
-//MARK: - Функция проверки конца игры. Когда решены все примеры или превышено число неправильных ответов
-    
+//MARK: - ПРОВЕРКА КОНЦА ИГРЫ. ВСЕ ПРИМЕРЫ РЕШЕНЫ ИЛИ ПРЕВЫШЕНО ЧИСЛО НЕПРАВИЛЬНЫХ ОТВЕТОВ
     func checkEndGame() -> Bool {
         //Превышен лимит неправильных ответов
         if countWrongAnswers <= -K.PlayOne.maxWrongAnswers {

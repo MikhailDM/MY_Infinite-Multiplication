@@ -151,9 +151,7 @@ class PlayOneNumViewController: UIViewController {
             self.playOne.countWrongAnswers = 0
             self.updateUI()
         }
-        
-        //Цвет фона
-        //alert.view.subviews.first?.subviews.first?.subviews.first?.backgroundColor = alertBackC
+                
         //Цвет текста кнопок
         alert.view.tintColor = alertFontC
         

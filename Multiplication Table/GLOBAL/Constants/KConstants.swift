@@ -84,7 +84,7 @@ struct K {
 //MARK: - КОНСТАНТЫ БЕСКОНЕЧНОГО УМНОЖЕНИЯ
     struct PlayInf {
         static let totalTimeToAnswerX10 = 10
-        static let totalTimeToAnswerX20 = 15
+        static let totalTimeToAnswerX20 = 10
     }
     
     
@@ -141,6 +141,7 @@ struct K {
         
         //Основные размеры шрифтов
         static var size30: CGFloat = 30
+        static var size25: CGFloat = 25
     }
     
     

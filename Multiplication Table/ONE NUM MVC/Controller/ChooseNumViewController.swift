@@ -23,7 +23,7 @@ class ChooseNumViewController: UIViewController {
     private let unSolvedNumButtonColor = K.MyColorsUI.white
     
     //Толщина границ кнопок
-    private let buttonsBorderWidth: CGFloat = 2
+    private let buttonsBorderWidth = K.UI.buttonsBorderWidth
     
     
 //MARK: - OUTLETS
@@ -51,13 +51,16 @@ class ChooseNumViewController: UIViewController {
         for button in numButtonsCollection {
             //Размер текста кнопок
             button.titleLabel!.font = UIFont(name: K.Fonts.mainF, size: fontSize)
+            //Фактор масштаба
             button.titleLabel!.minimumScaleFactor = minScaleF;
+            //Подгонка по ширине текста кнопки
             button.titleLabel!.adjustsFontSizeToFitWidth = true;
             
             //Рамки кнопок
             button.layer.borderWidth = buttonsBorderWidth
             button.layer.cornerRadius = button.frame.height / 3
             button.layer.borderColor = solvedNumButtonColor?.cgColor
+            button.clipsToBounds = true
         }
     }
 

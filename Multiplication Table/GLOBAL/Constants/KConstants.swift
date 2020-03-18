@@ -84,7 +84,7 @@ struct K {
 //MARK: - КОНСТАНТЫ БЕСКОНЕЧНОГО УМНОЖЕНИЯ
     struct PlayInf {
         static let totalTimeToAnswerX10 = 10
-        static let totalTimeToAnswerX20 = 20
+        static let totalTimeToAnswerX20 = 15
     }
     
     

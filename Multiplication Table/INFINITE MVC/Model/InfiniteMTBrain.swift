@@ -27,8 +27,17 @@ struct PlayMT {
     
 //MARK: - ФУНКЦИЯ ГЕНЕРАЦИИ СЛУЧАЙНОГО УРАВНЕНИЯ
     mutating func randomEquation() -> String {
-        let first = Int.random(in: 1...maxNum)
-        let second = Int.random(in: 1...maxNum)
+        var first = 0
+        var second = 0
+        //Режим х10 - 10х10
+        //Режим Х20 - 10х20
+        if Ex.numToTrain == 10 {
+            first = Int.random(in: 1...maxNum)
+            second = Int.random(in: 1...maxNum)
+        } else {
+            first = Int.random(in: 1...10)
+            second = Int.random(in: 10...maxNum)
+        }        
         rightAnswer = first * second
         let equation = "\(first) x \(second) = ?"
         return equation

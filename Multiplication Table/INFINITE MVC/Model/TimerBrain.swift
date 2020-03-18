@@ -16,8 +16,8 @@ class TimerBrain {
 
 //MARK: - VARIABLES
     //Переменные для таймера
-    var timerTime = K.PlayInf.totalTimeToAnswerX10
-    var secondsPast = K.PlayInf.totalTimeToAnswerX10
+    private var timerTime = 0
+    private var secondsPast = 0
     
     
 //MARK: - TIMER. ПРОГРЕСС ТАЙМЕРА
@@ -36,10 +36,23 @@ class TimerBrain {
             return true
         }
     }
+    
+    
 //MARK: - TIMER. ОБНУЛЕНИЕ ЗНАЧЕНИЙ
     @objc func resetTimer(){
-        timerTime = K.PlayInf.totalTimeToAnswerX10
-        secondsPast = K.PlayInf.totalTimeToAnswerX10
+        timerTime = getTotalTime()
+        secondsPast = getTotalTime()
+    }
+
+//MARK: - TIMER. ПОЛУЧЕНИЕ ВРЕМЕНИ ОТ РЕЖИМА
+    @objc private func getTotalTime() -> Int {
+        if Ex.numToTrain == 10 {
+            //print("TIME IS: \(K.PlayInf.totalTimeToAnswerX10)")
+            return K.PlayInf.totalTimeToAnswerX10
+        } else {
+            //print("TIME IS: \(K.PlayInf.totalTimeToAnswerX20)")
+            return K.PlayInf.totalTimeToAnswerX20
+        }
     }
 
 }

@@ -10,16 +10,6 @@ import UIKit
 
 class PlayViewController: UIViewController {
 //MARK: - VARIABLES
-    //Переменные для таймера
-    //var timerTime = 0
-    //var secondsPast = 0
-    
-    //Закончилась ли игра
-    //var isOver = false
-    
-    //Текущий счет
-    //var currentScore = 0
-    
     //ТЕКСТ
     //Начальный текст поля ответа
     private let startAnswerT = K.InputSettings.startAnswerText
@@ -72,21 +62,27 @@ class PlayViewController: UIViewController {
     
 
 //MARK: - LOADINGS
+    //Загрузка контроллера
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         updateUI()
     }
+    
+    //Отключаем таймер при выходе с экрана
+    override func viewWillDisappear(_ animated: Bool) {
+        timer.invalidate()
+    }
 
     
 //MARK: - UPDATE UI
-    func updateUI() {
+    private func updateUI() {
         //Присвоение стартового текста полю ответа
         answerLabel.text = startAnswerT
         //Случайное выражение
         equationLabel.text = play.randomEquation()
         //Перезапуск таймера
-        timerReload()
+        countDown()
         //Значение текущего результата
         currentScoreLabel.text = String(play.currentScore)
         //Текущий режим
@@ -120,7 +116,6 @@ class PlayViewController: UIViewController {
             print("Right answer is \(play.rightAnswer)")
             timer.invalidate()
             endGameAlert()
-            //isOver = false
         } else {
             print("RIGHT")
             //Сохранение +1 решенного примера
@@ -156,7 +151,12 @@ extension PlayViewController {
 //MARK: - EXTENSION. TIMER
 extension PlayViewController {
     //Запуск таймера обратного отсчета
-    func countDown() {
+    private func countDown() {
+        //Остановка
+        timer.invalidate()
+        //Установка прогресса на максимум
+        timerProgress.setProgress(1, animated: true)
+        //Скидывание времени
         timerBrain.resetTimer()
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimerUI), userInfo: nil, repeats: true)
     }
@@ -164,23 +164,13 @@ extension PlayViewController {
     //Обновление UI таймера
     @objc private func updateTimerUI() {
         timerProgress.setProgress(timerBrain.getTimerProgress(), animated: true)
-    }
-    
-    //Перезапуск таймера
-    private func timerReload() {
-        //Остановка
-        timer.invalidate()
-        //Установка прогресса на максимум
-        timerProgress.setProgress(1, animated: true)
-        //Запуск нового таймера
-        countDown()
-    }
+    }    
 }
 
 
 //MARK: - EXTENSION. UIALERT
 extension PlayViewController {
-    func endGameAlert() {
+    private func endGameAlert() {
         let alert = UIAlertController(title: "\(alertTitleText) \(play.currentScore)", message: "\(alertText) \(play.rightAnswer)", preferredStyle: .alert)
         
         let actionM = UIAlertAction(title: alertMenuText, style: .default) { (action) in

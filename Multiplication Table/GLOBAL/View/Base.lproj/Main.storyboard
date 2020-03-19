@@ -1210,7 +1210,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="vcd-iJ-eVO">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="76.333333333333329"/>
                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="40"/>
-                                        <color key="textColor" name="MyWhite"/>
+                                        <color key="textColor" name="MyBlue"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="1" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZV4-MK-Tja">

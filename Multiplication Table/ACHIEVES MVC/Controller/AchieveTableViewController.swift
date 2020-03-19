@@ -11,11 +11,11 @@ import UIKit
 class AchieveTableViewController: UITableViewController {
 //MARK: - VARIABLES
     
-    //let array = ["РЕШИТЬ ВСЕ ПРИМЕРЫ", "5 ТРЕНИРОВОК ПО ЧИСЛАМ", "1000 РЕШЕННЫЙ ПРИМЕРОВ"]
+    
     
 
 //MARK: - OBJECTS
-    var achievementsManager = AchievementsManager()
+    private var achievementsManager = AchievementsManager()
     
     
 //MARK: - LOADINGS
@@ -25,8 +25,7 @@ class AchieveTableViewController: UITableViewController {
     }
     
 
-    //MARK: - UI SETUP
-    
+//MARK: - UI SETUP
     func setupUI(){
         //Показ бара навигации
         navigationController?.isNavigationBarHidden = false
@@ -50,18 +49,19 @@ class AchieveTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        
+        //Приводим ячейку к классу кастомной ячейки
         let cell = tableView.dequeueReusableCell(withIdentifier: "achieveCell", for: indexPath) as! AchieveTableViewCell
-        
+        //Присваиваем заголовок и описание
         cell.titleLabel.text = K.achievementsArray[indexPath.row].titleAch
         cell.descriptionLabel.text = K.achievementsArray[indexPath.row].descriptionAch
         
         //Проверка на достижение
         if achievementsManager.checkAchievement(id: K.achievementsArray[indexPath.row].id) {
             cell.titleLabel.textColor = K.MyColorsUI.green
+            cell.descriptionLabel.textColor = K.MyColorsUI.green
         } else {
             cell.titleLabel.textColor = K.MyColorsUI.white
+            cell.descriptionLabel.textColor = K.MyColorsUI.white
         }
 
         return cell

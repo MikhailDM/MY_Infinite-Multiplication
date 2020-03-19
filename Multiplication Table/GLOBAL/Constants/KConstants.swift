@@ -94,8 +94,7 @@ struct K {
     ]
 
     
-//MARK: - КОНСТАНТЫ PREMIUM
-    
+//MARK: - КОНСТАНТЫ PREMIUM    
     struct Premium {
         //Отображаемый текст для Free версии
         static let freeVersionText = "XXX"
@@ -105,7 +104,6 @@ struct K {
 
 
 //MARK: - КОНСТАНТЫ ВВОДА
-    
     struct InputSettings {
         //Максимальная длина ввода символов
         static let maxAnswerLength = 3

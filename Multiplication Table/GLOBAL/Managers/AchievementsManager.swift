@@ -111,6 +111,50 @@ struct AchievementsManager {
             return isAllSolved
             
             
+        //X10. ПЕРВОЕ ДОСТИЖЕНИЕ
+        case "X10Ach01":
+            if save.getMaxScoreX10() >= K.PlayInf.x10FirstLevel {
+                return true
+            } else {
+                return false
+            }
+        //X10. ВТОРОЕ ДОСТИЖЕНИЕ
+        case "X10Ach02":
+            if save.getMaxScoreX10() >= K.PlayInf.x10SecondLevel {
+                return true
+            } else {
+                return false
+            }
+        //X10. ТРЕТЬЕ ДОСТИЖЕНИЕ
+        case "X10Ach03":
+            if save.getMaxScoreX10() >= K.PlayInf.x10ThirdLevel {
+                return true
+            } else {
+                return false
+            }
+        //X20. ПЕРВОЕ ДОСТИЖЕНИЕ
+        case "X20Ach01":
+            if save.getMaxScoreX20() >= K.PlayInf.x20FirstLevel {
+                return true
+            } else {
+                return false
+            }
+        //X20. ВТОРОЕ ДОСТИЖЕНИЕ
+        case "X20Ach02":
+            if save.getMaxScoreX20() >= K.PlayInf.x20SecondLevel {
+                return true
+            } else {
+                return false
+            }
+        //X20. ТРЕТЬЕ ДОСТИЖЕНИЕ
+        case "X20Ach03":
+            if save.getMaxScoreX20() >= K.PlayInf.x20ThirdLevel {
+                return true
+            } else {
+                return false
+            }
+            
+            
             
         //Стандартное значение
         default:

@@ -47,20 +47,44 @@ struct K {
         
         
         AchievementModel(id: "NumsAch01",
-                         titleAch: "УЧИМСЯ УМНОЖАТЬ",
+                         titleAch: "ПОДМАСТЕРЬЕ",
                          descriptionAch: "ПРОРЕШАТЬ ВСЕ ЧИСЛА ОТ 1 ДО 5"),
         
         AchievementModel(id: "NumsAch02",
-                         titleAch: "МАСТЕР УМНОЖЕНИЯ",
+                         titleAch: "МАСТЕР",
                          descriptionAch: "ПРОРЕШАТЬ ВСЕ ЧИСЛА ОТ 1 ДО 10"),
         
         AchievementModel(id: "NumsAch03",
-                         titleAch: "МАГИСТР УМНОЖЕНИЯ",
+                         titleAch: "МАГИСТР",
                          descriptionAch: "ПРОРЕШАТЬ ВСЕ ЧИСЛА ОТ 1 ДО 15"),
         
         AchievementModel(id: "NumsAch04",
-                         titleAch: "ПОВЕЛИТЕЛЬ УМНОЖЕНИЯ",
+                         titleAch: "ПОВЕЛИТЕЛЬ",
                          descriptionAch: "ПРОРЕШАТЬ ВСЕ ЧИСЛА ОТ 1 ДО 20"),
+        
+        
+        
+        AchievementModel(id: "X10Ach01",
+                         titleAch: "X10 - УМЕЛЕЦ",
+                         descriptionAch: "РЕШИТЬ СЕРИЮ ИЗ \(PlayInf.x10FirstLevel) ПРИМЕРОВ"),
+        AchievementModel(id: "X10Ach02",
+                         titleAch: "X10 - СПЕЦИАЛИСТ",
+                         descriptionAch: "РЕШИТЬ СЕРИЮ ИЗ \(PlayInf.x10SecondLevel) ПРИМЕРОВ"),
+        AchievementModel(id: "X10Ach03",
+                         titleAch: "X10 - ЭКСПЕРТ",
+                         descriptionAch: "РЕШИТЬ СЕРИЮ ИЗ \(PlayInf.x10ThirdLevel) ПРИМЕРОВ"),
+        
+        
+        
+        AchievementModel(id: "X20Ach01",
+                         titleAch: "X20 - АДЕПТ",
+                         descriptionAch: "РЕШИТЬ СЕРИЮ ИЗ \(PlayInf.x20FirstLevel) ПРИМЕРОВ"),
+        AchievementModel(id: "X20Ach02",
+                         titleAch: "X20 - ПОСЛЕДОВАТЕЛЬ",
+                         descriptionAch: "РЕШИТЬ СЕРИЮ ИЗ \(PlayInf.x20SecondLevel) ПРИМЕРОВ"),
+        AchievementModel(id: "X20Ach03",
+                         titleAch: "X20 - ВОЛХВ",
+                         descriptionAch: "РЕШИТЬ СЕРИЮ ИЗ \(PlayInf.x20ThirdLevel) ПРИМЕРОВ"),
     ]
 
     
@@ -87,6 +111,15 @@ struct K {
     struct PlayInf {
         static let totalTimeToAnswerX10 = 10
         static let totalTimeToAnswerX20 = 10
+        
+        //Достижения. необходимые числа для получения достижений
+        static let x10FirstLevel = 1
+        static let x10SecondLevel = 3
+        static let x10ThirdLevel = 5
+        
+        static let x20FirstLevel = 1
+        static let x20SecondLevel = 3
+        static let x20ThirdLevel = 5
     }
     
     

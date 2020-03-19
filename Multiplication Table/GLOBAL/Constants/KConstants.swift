@@ -85,6 +85,12 @@ struct K {
         AchievementModel(id: "X20Ach03",
                          titleAch: "X20 - ВОЛХВ",
                          descriptionAch: "РЕШИТЬ СЕРИЮ ИЗ \(PlayInf.x20ThirdLevel) ПРИМЕРОВ"),
+        
+        
+        
+        AchievementModel(id: "AllAchieves",
+                         titleAch: "КОЛЛЕКЦИОНЕР",
+                         descriptionAch: "ПОЛУЧИТЬ ВСЕ ДОСТИЖЕНИЯ"),
     ]
 
     

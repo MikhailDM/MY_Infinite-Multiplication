@@ -9,15 +9,28 @@
 import UIKit
 
 class PremiumViewController: UIViewController {
+//MARK: - VARIABLES
+    let proText = """
+    Доступ к достижениям
+
+    Возможность отслеживать свой прогресс
+
+    Результаты пройденных тренировок
+
+    Лучшие результаты в бесконечных режимах
+
+    Новые фишки следующих версий
+    
+    Поддержка развития проекта
+    """
+    
 //MARK: - OBJECTS
     private let save = SaveData.singletonSaveData
     
-    
-//MARK: - VARIABLES
-    
 
 //MARK: - OUTLETS
-    @IBOutlet weak var premiumStateLabel: UILabel!
+    @IBOutlet weak var purchaseButton: UIButton!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     
 //MARK: - LOADING
@@ -26,24 +39,45 @@ class PremiumViewController: UIViewController {
         setupUI()
         updateUI()
     }
+   
     
     
 //MARK: - UI SETUP
     private func setupUI(){
+        
         //Показ бара навигации
         navigationController?.isNavigationBarHidden = false
+        //Фактор масштаба
+        purchaseButton.titleLabel!.minimumScaleFactor = K.Fonts.scaleFactor
+        //Подгонка по ширине текста кнопки
+        //purchaseButton.titleLabel!.adjustsFontSizeToFitWidth = true
+        
+        //Текст описания премиум
+        descriptionLabel.text = proText
+        
+        //Ширина границ
+        purchaseButton.layer.borderWidth = K.UI.buttonsBorderWidth
+        //Цвет границ
+        purchaseButton.layer.borderColor = K.MyColorsUI.green?.cgColor
+        //Скругление границ
+        purchaseButton.layer.cornerRadius = purchaseButton.frame.height / 4
+        
         
     }
     
-
-//MARK: - UI UPDATE
+    
+//MARK: - UI UPDATE. РЕАЛИЗОВАТЬ БЛОКИРОВКУ КНОПКИ ПОСЛЕ ПОКУПКИ
     private func updateUI(){
         let isPro = save.getPRO()
         //Обновление состояния Premium
         if isPro {
-            premiumStateLabel.text = "PREMIUM КУПЛЕН"
+            purchaseButton.setTitle("PREMIUM", for: .normal)
+            //Цвет границ
+            purchaseButton.layer.borderColor = K.MyColorsUI.green?.cgColor
         } else {
-            premiumStateLabel.text = "ЗАПЛАТИ БАБКИ"
+            purchaseButton.setTitle("BUY PREMIUM", for: .normal)
+            //Цвет границ
+            purchaseButton.layer.borderColor = K.MyColorsUI.blue?.cgColor
         }
         
     }
@@ -66,3 +100,5 @@ class PremiumViewController: UIViewController {
     
    
 }
+
+

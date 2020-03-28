@@ -1678,7 +1678,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2Kb-2m-gyO">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2Kb-2m-gyO">
                                 <rect key="frame" x="20" y="93" width="374" height="764"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPU-TM-isZ">
@@ -1691,22 +1691,23 @@
                                             <action selector="premiumButtonPressed:" destination="kaM-20-RoH" eventType="touchUpInside" id="iEg-il-uEi"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="СТАНЬ PRO В УМНОЖЕНИИ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="17y-sg-t8H">
-                                        <rect key="frame" x="0.0" y="114.66666666666666" width="374" height="114.66666666666666"/>
-                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ОПИСАНИЕ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="JtM-Do-Rp8">
+                                        <rect key="frame" x="0.0" y="119.66666666666663" width="374" height="563"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="15"/>
                                         <color key="textColor" name="MyWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ОПИСАНИЕ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="JtM-Do-Rp8">
-                                        <rect key="frame" x="0.0" y="229.33333333333331" width="374" height="534.66666666666674"/>
-                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
-                                        <color key="textColor" name="MyWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccK-iS-iM7" userLabel="Restore Button">
+                                        <rect key="frame" x="0.0" y="687.66666666666663" width="374" height="76.333333333333371"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="15"/>
+                                        <state key="normal" title="ВОССТАНОВИТЬ ПОКУПКИ">
+                                            <color key="titleColor" name="MyWhite"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="bPU-TM-isZ" firstAttribute="height" secondItem="2Kb-2m-gyO" secondAttribute="height" multiplier="0.15" id="6Oz-Co-0Vh"/>
-                                    <constraint firstItem="17y-sg-t8H" firstAttribute="height" secondItem="2Kb-2m-gyO" secondAttribute="height" multiplier="0.15" id="RAl-RH-pru"/>
+                                    <constraint firstItem="ccK-iS-iM7" firstAttribute="height" secondItem="2Kb-2m-gyO" secondAttribute="height" multiplier="0.1" id="WD3-1l-zbt"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -1723,6 +1724,7 @@
                     <connections>
                         <outlet property="descriptionLabel" destination="JtM-Do-Rp8" id="iWj-57-1YW"/>
                         <outlet property="purchaseButton" destination="bPU-TM-isZ" id="B4O-Fh-Lhc"/>
+                        <outlet property="restoreButton" destination="ccK-iS-iM7" id="b6V-NM-dwf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J5x-eT-Fh0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

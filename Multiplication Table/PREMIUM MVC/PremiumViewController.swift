@@ -11,9 +11,15 @@ import UIKit
 class PremiumViewController: UIViewController {
 //MARK: - VARIABLES
     let proText = """
+    Стань PRO в умножении
+    
     Доступ к достижениям
 
-    Возможность отслеживать свой прогресс
+    Возможность отслеживать прогресс
+
+    Все ХХХ отображают Ваши результаты
+
+    Отображение текущего уровня
 
     Результаты пройденных тренировок
 
@@ -30,6 +36,9 @@ class PremiumViewController: UIViewController {
 
 //MARK: - OUTLETS
     @IBOutlet weak var purchaseButton: UIButton!
+    @IBOutlet weak var restoreButton: UIButton!
+    
+    
     @IBOutlet weak var descriptionLabel: UILabel!
     
     
@@ -52,6 +61,12 @@ class PremiumViewController: UIViewController {
         //Подгонка по ширине текста кнопки
         //purchaseButton.titleLabel!.adjustsFontSizeToFitWidth = true
         
+        //Фактор масштаба
+        restoreButton.titleLabel!.minimumScaleFactor = K.Fonts.scaleFactor
+        //Подгонка по ширине текста кнопки
+        //restoreButton.titleLabel!.adjustsFontSizeToFitWidth = true
+        
+        
         //Текст описания премиум
         descriptionLabel.text = proText
         
@@ -62,6 +77,12 @@ class PremiumViewController: UIViewController {
         //Скругление границ
         purchaseButton.layer.cornerRadius = purchaseButton.frame.height / 4
         
+        //Ширина границ
+        restoreButton.layer.borderWidth = K.UI.buttonsBorderWidth
+        //Цвет границ
+        restoreButton.layer.borderColor = K.MyColorsUI.green?.cgColor
+        //Скругление границ
+        restoreButton.layer.cornerRadius = restoreButton.frame.height / 4
         
     }
     

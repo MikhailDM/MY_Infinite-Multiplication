@@ -46,7 +46,7 @@
 		CE532A4E24010E0F0069BA8F /* AchievementsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsManager.swift; sourceTree = "<group>"; };
 		CE5AD3632417F0580061A748 /* PremiumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumViewController.swift; sourceTree = "<group>"; };
 		CEA3410A242159A000EE6029 /* TimerBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerBrain.swift; sourceTree = "<group>"; };
-		CEB114B923E97712008E05E0 /* Multiplication Table.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Multiplication Table.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEB114B923E97712008E05E0 /* IMulti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMulti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB114BC23E97712008E05E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEB114BE23E97712008E05E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CEB114C323E97712008E05E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -363,7 +363,7 @@
 		CEB114BA23E97712008E05E0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CEB114B923E97712008E05E0 /* Multiplication Table.app */,
+				CEB114B923E97712008E05E0 /* IMulti.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -400,7 +400,7 @@
 			);
 			name = "Multiplication Table";
 			productName = "Multiplication Table";
-			productReference = CEB114B923E97712008E05E0 /* Multiplication Table.app */;
+			productReference = CEB114B923E97712008E05E0 /* IMulti.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -623,13 +623,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BNVRX9T4P8;
 				INFOPLIST_FILE = "Multiplication Table/SUPPORT/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.mike.Multiplication-Table";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = IMulti;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -642,13 +642,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BNVRX9T4P8;
 				INFOPLIST_FILE = "Multiplication Table/SUPPORT/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.mike.Multiplication-Table";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = IMulti;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

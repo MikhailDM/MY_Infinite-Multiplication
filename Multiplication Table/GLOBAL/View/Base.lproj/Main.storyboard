@@ -11,7 +11,7 @@
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Multiplication_Table" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="IMulti" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -243,7 +243,7 @@
         <!--ВЫБОР ЧИСЛА-->
         <scene sceneID="P0v-Lh-ZDH">
             <objects>
-                <viewController id="2bJ-Z8-sGi" customClass="ChooseNumViewController" customModule="Multiplication_Table" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2bJ-Z8-sGi" customClass="ChooseNumViewController" customModule="IMulti" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Enx-fa-Yah">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -622,7 +622,7 @@
         <!--УМНОЖЕНИЕ-->
         <scene sceneID="81j-zK-N79">
             <objects>
-                <viewController id="0Dh-hI-YLG" customClass="PlayOneNumViewController" customModule="Multiplication_Table" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0Dh-hI-YLG" customClass="PlayOneNumViewController" customModule="IMulti" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3px-nJ-iRz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -897,7 +897,7 @@
         <!--УМНОЖЕНИЕ-->
         <scene sceneID="ckK-tI-ouZ">
             <objects>
-                <viewController storyboardIdentifier="PlayMultiplicationVC" id="D0W-ZK-u20" customClass="PlayViewController" customModule="Multiplication_Table" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlayMultiplicationVC" id="D0W-ZK-u20" customClass="PlayViewController" customModule="IMulti" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oFR-Fg-bhz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1199,7 +1199,7 @@
         <!--ИЗУЧЕНИЕ-->
         <scene sceneID="uCg-Ls-4ef">
             <objects>
-                <viewController id="HNu-jF-Jk9" customClass="TheoryViewController" customModule="Multiplication_Table" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="HNu-jF-Jk9" customClass="TheoryViewController" customModule="IMulti" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sxa-Ca-Ru3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1673,7 +1673,7 @@
         <!--PREMIUM-->
         <scene sceneID="hJK-tT-ggU">
             <objects>
-                <viewController id="kaM-20-RoH" customClass="PremiumViewController" customModule="Multiplication_Table" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="kaM-20-RoH" customClass="PremiumViewController" customModule="IMulti" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QIO-YH-zrA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1734,7 +1734,7 @@
         <!--ДОСТИЖЕНИЯ-->
         <scene sceneID="PEd-MV-DrX">
             <objects>
-                <tableViewController id="bEX-KX-eOC" customClass="AchieveTableViewController" customModule="Multiplication_Table" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="bEX-KX-eOC" customClass="AchieveTableViewController" customModule="IMulti" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Vd3-gg-aWy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
